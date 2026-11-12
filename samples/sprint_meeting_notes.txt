@@ -1,0 +1,30 @@
+# Sprint 3 Retrospective & Standup Meeting Notes
+Date: 2026-11-10
+Attendees: Sarah (Tech Lead), David (Frontend), Priya (Backend), Alex (ML/Data), Elena (Product Owner)
+
+## Executive Summary
+The team reviewed progress on the Unified Project Intelligence Platform. While the Core Ingestion and Text Parsers are ahead of schedule, the RAG embedding vector store and third-party LLM quota management are experiencing friction.
+
+## Sprint Blockers & Critical Impediments
+- BLOCKER: Alex reported that external third-party API rate limits (HTTP 429) are causing vector batch embedding failures during load testing. Currently blocking RAG Pipeline Milestone 1 verification.
+  - Action: Implement local embeddings fallback (SentenceTransformers MiniLM) and request an enterprise API tier.
+  - Owner: Alex | Priority: Critical
+- BLOCKER: Frontend team waiting on API contract specifications for the conversational assistant citations modal.
+  - Action: Priya to publish OpenAPI schema and Swagger specs by Wednesday.
+  - Owner: Priya | Priority: High
+
+## Delivery & Milestone Challenges
+- Target Milestone 1 delivery is set for Week 2.
+- Due to API rate limit troubleshooting, schedule variance has slipped by an estimated 5 days.
+- If Alex cannot resolve the embeddings batching by Friday, Milestone 1 sign-off will slip to Week 3.
+
+## Decisions Made
+1. Out of Scope for Phase 1: Native iOS/Android mobile apps and direct SAP/Oracle ERP integration are explicitly deferred to Phase 2.
+2. We must enforce Definition of Ready (DoR) on all user stories prior to implementation.
+3. Every API endpoint must return clickable citation references grounded in the uploaded artifacts.
+
+## Action Items
+1. ACT-01: Alex to integrate offline Scikit-Learn TF-IDF / SentenceTransformer fallback for embedding pipeline. (Due: Nov 14)
+2. ACT-02: Priya to implement Pydantic validation schemas for ChatQuery and IngestionResult. (Due: Nov 13)
+3. ACT-03: David to build glassmorphism UI with radar chart for Project Health metrics. (Due: Nov 15)
+4. ACT-04: Elena to conduct backlog grooming for Documentation Generation user stories. (Due: Nov 16)

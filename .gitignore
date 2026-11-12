@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest cache
+.pytest_cache/
+
+# Environments & secrets
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Temporary data uploads (preserves directory structure)
+data/uploads/*
+!data/uploads/.gitkeep
+
+# Operating system files
+.DS_Store
+Thumbs.db

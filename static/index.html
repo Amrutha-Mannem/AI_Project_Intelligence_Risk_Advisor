@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Project Intelligence & Risk Advisor</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Marked.js for markdown parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#1e3a8a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen bg-[#0b0f19] text-slate-100 flex flex-col antialiased">
+
+  <!-- Top Navigation Bar -->
+  <header class="border-b border-slate-800/80 bg-slate-900/70 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Logo & Title -->
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
+          <i data-lucide="shield-alert" class="w-6 h-6 text-white"></i>
+        </div>
+        <div>
+          <h1 class="text-lg font-bold bg-gradient-to-r from-white via-slate-200 to-blue-400 bg-clip-text text-transparent">
+            AI Project Intelligence & Risk Advisor
+          </h1>
+          <div class="flex items-center space-x-2 text-xs text-slate-400">
+            <span class="flex items-center text-emerald-400">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block mr-1.5 badge-pulse"></span>
+              RAG Engine Active
+            </span>
+            <span>•</span>
+            <span id="active-llm-label" class="text-blue-400 font-mono">Engine: Initializing...</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex items-center space-x-2">
+        <button id="btn-load-samples" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">
+          <i data-lucide="folder-down" class="w-4 h-4 mr-1.5 text-blue-400"></i>
+          Load Samples
+        </button>
+
+        <button id="btn-run-pipeline" class="inline-flex items-center px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white shadow-md shadow-blue-600/20 transition">
+          <i data-lucide="play" class="w-4 h-4 mr-1.5"></i>
+          Run Multi-Agent Analysis
+        </button>
+
+        <div class="h-5 w-px bg-slate-800 mx-1"></div>
+
+        <button id="btn-open-settings" title="Settings / API Keys" class="p-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">
+          <i data-lucide="settings" class="w-4 h-4"></i>
+        </button>
+
+        <div class="relative group">
+          <button id="btn-export-menu" class="p-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">
+            <i data-lucide="download" class="w-4 h-4"></i>
+          </button>
+          <div class="absolute right-0 mt-2 w-48 rounded-xl bg-slate-900 border border-slate-800 shadow-xl hidden group-hover:block z-50 p-1 text-xs">
+            <a href="/api/export/markdown" target="_blank" class="flex items-center px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-200">
+              <i data-lucide="file-text" class="w-4 h-4 mr-2 text-blue-400"></i> Export Markdown
+            </a>
+            <a href="/api/export/json" target="_blank" class="flex items-center px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-200">
+              <i data-lucide="code" class="w-4 h-4 mr-2 text-emerald-400"></i> Export JSON Data
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/60 flex space-x-1 overflow-x-auto text-xs py-1.5">
+      <button class="nav-tab active px-3.5 py-1.5 rounded-lg font-medium text-blue-400 bg-blue-500/10 flex items-center space-x-1.5" data-tab="tab-overview">
+        <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+        <span>Health Dashboard</span>
+      </button>
+      <button class="nav-tab px-3.5 py-1.5 rounded-lg font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 flex items-center space-x-1.5" data-tab="tab-knowledge">
+        <i data-lucide="database" class="w-4 h-4"></i>
+        <span>Knowledge Base (RAG)</span>
+      </button>
+      <button class="nav-tab px-3.5 py-1.5 rounded-lg font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 flex items-center space-x-1.5" data-tab="tab-risks">
+        <i data-lucide="alert-triangle" class="w-4 h-4"></i>
+        <span>Risks & Forecasting</span>
+      </button>
+      <button class="nav-tab px-3.5 py-1.5 rounded-lg font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 flex items-center space-x-1.5" data-tab="tab-scope">
+        <i data-lucide="target" class="w-4 h-4"></i>
+        <span>Scope & Deliverables</span>
+      </button>
+      <button class="nav-tab px-3.5 py-1.5 rounded-lg font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 flex items-center space-x-1.5" data-tab="tab-blockers">
+        <i data-lucide="check-square" class="w-4 h-4"></i>
+        <span>Blockers & Actions</span>
+      </button>
+      <button class="nav-tab px-3.5 py-1.5 rounded-lg font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 flex items-center space-x-1.5" data-tab="tab-documentation">
+        <i data-lucide="book-open" class="w-4 h-4"></i>
+        <span>Generated Docs & Stories</span>
+      </button>
+      <button class="nav-tab px-3.5 py-1.5 rounded-lg font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 flex items-center space-x-1.5" data-tab="tab-assistant">
+        <i data-lucide="bot" class="w-4 h-4"></i>
+        <span>Grounded Assistant</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 w-full">
+
+    <!-- Notification Toast -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col space-y-2 pointer-events-none"></div>
+
+    <!-- ==================== TAB 1: OVERVIEW DASHBOARD ==================== -->
+    <section id="tab-overview" class="tab-content block space-y-6">
+      
+      <!-- Top Metric Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Metric 1: Health Score -->
+        <div class="glass-card p-5 glass-card-hover relative overflow-hidden">
+          <div class="flex items-center justify-between">
+            <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Overall Project Health</span>
+            <div id="health-grade-badge" class="px-2 py-0.5 rounded-full text-xs font-bold bg-blue-500/20 text-blue-400">Grade B</div>
+          </div>
+          <div class="mt-3 flex items-baseline space-x-2">
+            <span id="health-score-val" class="text-4xl font-extrabold text-white">74.5</span>
+            <span class="text-slate-400 text-sm">/ 100</span>
+          </div>
+          <div class="mt-2 w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
+            <div id="health-score-bar" class="bg-gradient-to-r from-blue-500 to-indigo-500 h-1.5 rounded-full" style="width: 74.5%"></div>
+          </div>
+          <p id="health-grade-desc" class="text-xs text-slate-400 mt-2">Moderate schedule pressure requiring team mitigation.</p>
+        </div>
+
+        <!-- Metric 2: Delivery Forecast -->
+        <div class="glass-card p-5 glass-card-hover">
+          <div class="flex items-center justify-between">
+            <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Delivery Forecast</span>
+            <i data-lucide="clock" class="w-4 h-4 text-amber-400"></i>
+          </div>
+          <div class="mt-3 flex items-baseline space-x-2">
+            <span id="forecast-status-val" class="text-2xl font-bold text-amber-400">At Risk</span>
+          </div>
+          <div class="mt-1 text-xs text-slate-300 flex items-center space-x-1">
+            <span>Delay Buffer:</span>
+            <span id="forecast-delay-val" class="font-bold text-amber-300">~5 Days</span>
+          </div>
+          <p id="forecast-subtext" class="text-xs text-slate-400 mt-2">External API rate limit bottlenecks threatening Milestone 1.</p>
+        </div>
+
+        <!-- Metric 3: Active High Risks -->
+        <div class="glass-card p-5 glass-card-hover">
+          <div class="flex items-center justify-between">
+            <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Risk Exposure</span>
+            <i data-lucide="flame" class="w-4 h-4 text-rose-400"></i>
+          </div>
+          <div class="mt-3 flex items-baseline space-x-2">
+            <span id="risk-count-val" class="text-4xl font-extrabold text-rose-400">3</span>
+            <span class="text-slate-400 text-xs">High Severity Risks</span>
+          </div>
+          <div class="mt-2 text-xs text-slate-300">
+            <span>Highest Severity Score: </span>
+            <span id="top-severity-val" class="font-bold text-rose-300">20 / 25</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-2">Mitigation plans established for identified vulnerabilities.</p>
+        </div>
+
+        <!-- Metric 4: Open Blockers -->
+        <div class="glass-card p-5 glass-card-hover">
+          <div class="flex items-center justify-between">
+            <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Blockers & Actions</span>
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+          </div>
+          <div class="mt-3 flex items-baseline space-x-2">
+            <span id="blocker-count-val" class="text-4xl font-extrabold text-amber-400">2</span>
+            <span class="text-slate-400 text-xs">Open Impediments</span>
+          </div>
+          <div class="mt-2 text-xs text-slate-300">
+            <span>Tracked Actions: </span>
+            <span id="action-count-val" class="font-bold text-emerald-400">4 Items</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-2">Assigned to team members for active unblocking.</p>
+        </div>
+      </div>
+
+      <!-- Charts & Executive Breakdown Row -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Radar Chart: 5 Health Dimensions -->
+        <div class="glass-card p-6">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-sm font-bold text-white flex items-center">
+              <i data-lucide="radar" class="w-4 h-4 mr-2 text-blue-400"></i>
+              Project Health Radar (5 Dimensions)
+            </h3>
+          </div>
+          <div class="h-64 flex items-center justify-center relative">
+            <canvas id="healthRadarChart"></canvas>
+          </div>
+          <div class="mt-3 text-xs text-slate-400 text-center">
+            Weighted composite scoring across Planning, Timeline, Risk, Docs, and Blockers.
+          </div>
+        </div>
+
+        <!-- Category Progress Bars & Summary -->
+        <div class="glass-card p-6 lg:col-span-2 flex flex-col justify-between">
+          <div>
+            <h3 class="text-sm font-bold text-white mb-3 flex items-center">
+              <i data-lucide="bar-chart-2" class="w-4 h-4 mr-2 text-indigo-400"></i>
+              Health Category Breakdowns & Weights
+            </h3>
+            <div id="category-progress-list" class="space-y-3.5">
+              <!-- Dynamically populated categories -->
+            </div>
+          </div>
+
+          <div class="mt-5 p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+            <div class="text-xs font-semibold text-slate-300 mb-1 flex items-center">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 mr-1.5 text-blue-400"></i>
+              Executive Summary
+            </div>
+            <p id="executive-summary-text" class="text-xs text-slate-400 leading-relaxed">
+              Run the multi-agent analysis to generate an automated executive briefing synthesized across all uploaded project documents.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vulnerabilities & Recommendations Row -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Top Positives -->
+        <div class="glass-card p-5">
+          <h3 class="text-xs uppercase tracking-wider font-bold text-emerald-400 mb-3 flex items-center">
+            <i data-lucide="shield-check" class="w-4 h-4 mr-1.5"></i>
+            Key Project Strengths & Positives
+          </h3>
+          <ul id="positives-list" class="space-y-2 text-xs text-slate-300">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+
+        <!-- Top Vulnerabilities & Immediate Actions -->
+        <div class="glass-card p-5">
+          <h3 class="text-xs uppercase tracking-wider font-bold text-rose-400 mb-3 flex items-center">
+            <i data-lucide="alert-octagon" class="w-4 h-4 mr-1.5"></i>
+            Top Vulnerabilities & Recommended Immediate Actions
+          </h3>
+          <ul id="vulnerabilities-list" class="space-y-2 text-xs text-slate-300">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== TAB 2: KNOWLEDGE BASE (RAG) ==================== -->
+    <section id="tab-knowledge" class="tab-content hidden space-y-6">
+      
+      <!-- Ingestion Dropzone -->
+      <div class="glass-card p-6">
+        <h2 class="text-base font-bold text-white mb-2 flex items-center">
+          <i data-lucide="upload-cloud" class="w-5 h-5 mr-2 text-blue-400"></i>
+          Document Ingestion & Multi-Format Knowledge Base
+        </h2>
+        <p class="text-xs text-slate-400 mb-4">
+          Upload any combination of project artifacts — PDF proposals, SRS specifications (.docx), sprint task lists (.csv), meeting notes (.txt), or progress reports (.md).
+        </p>
+
+        <div id="dropzone" class="border-2 border-dashed border-slate-700 hover:border-blue-500 rounded-xl p-8 text-center cursor-pointer transition bg-slate-900/40">
+          <input type="file" id="file-input" multiple class="hidden" accept=".pdf,.docx,.csv,.txt,.md">
+          <i data-lucide="file-up" class="w-10 h-10 mx-auto text-blue-400 mb-2"></i>
+          <p class="text-sm font-semibold text-slate-200">Drag & drop project files here, or <span class="text-blue-400 underline">browse files</span></p>
+          <p class="text-xs text-slate-500 mt-1">Supports PDF, DOCX, CSV, TXT, MD up to 25MB each</p>
+        </div>
+
+        <div id="upload-progress-container" class="mt-4 hidden space-y-2">
+          <!-- Dynamic upload items -->
+        </div>
+      </div>
+
+      <!-- Semantic Search Test Bar -->
+      <div class="glass-card p-5">
+        <h3 class="text-sm font-bold text-white mb-2 flex items-center">
+          <i data-lucide="search" class="w-4 h-4 mr-2 text-blue-400"></i>
+          RAG Vector Retrieval Explorer
+        </h3>
+        <div class="flex space-x-2">
+          <input type="text" id="rag-search-input" placeholder="Test semantic search across indexed chunks (e.g., 'API rate limit', 'Milestone 1 deadline', 'blockers')..." class="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500">
+          <button id="btn-rag-search" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-semibold transition">
+            Search Vector Index
+          </button>
+        </div>
+
+        <div id="rag-search-results" class="mt-4 space-y-2 hidden">
+          <!-- Dynamically populated search chunks -->
+        </div>
+      </div>
+
+      <!-- Indexed Document List -->
+      <div class="glass-card p-6">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-sm font-bold text-white flex items-center">
+            <i data-lucide="files" class="w-4 h-4 mr-2 text-indigo-400"></i>
+            Indexed Project Artifacts in Knowledge Base
+          </h3>
+          <button id="btn-clear-kb" class="text-xs text-rose-400 hover:text-rose-300 font-medium">Clear All Documents</button>
+        </div>
+
+        <div id="document-table-container" class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-900/60 text-slate-400 border-b border-slate-800">
+              <tr>
+                <th class="p-3">File Name</th>
+                <th class="p-3">Format</th>
+                <th class="p-3">Chunks Created</th>
+                <th class="p-3">Word Count</th>
+                <th class="p-3">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="document-table-body" class="divide-y divide-slate-800">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== TAB 3: RISKS & FORECASTING ==================== -->
+    <section id="tab-risks" class="tab-content hidden space-y-6">
+      
+      <!-- Delivery Forecast Banner -->
+      <div class="glass-card p-6 border-l-4 border-amber-500">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-1 flex items-center">
+              <i data-lucide="trending-down" class="w-4 h-4 mr-1.5"></i> Delivery Schedule Forecast
+            </div>
+            <h2 id="forecast-header-status" class="text-lg font-bold text-white">Status: At Risk (~5 Days Schedule Delay)</h2>
+            <p id="forecast-narrative-p" class="text-xs text-slate-400 mt-1">
+              Third-party API rate limits and developer bandwidth saturation are elevating schedule variance on Milestone 1.
+            </p>
+          </div>
+          <div class="text-right">
+            <span class="text-xs text-slate-400">Confidence Level</span>
+            <div id="forecast-confidence-badge" class="text-xl font-extrabold text-blue-400">88%</div>
+          </div>
+        </div>
+
+        <div class="mt-4 pt-4 border-t border-slate-800/80">
+          <div class="text-xs font-semibold text-slate-300 mb-2">Critical Path Factors:</div>
+          <div id="critical-factors-tags" class="flex flex-wrap gap-2 text-xs">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Risk Heatmap Matrix (5x5) -->
+      <div class="glass-card p-6">
+        <h3 class="text-sm font-bold text-white mb-1 flex items-center">
+          <i data-lucide="grid" class="w-4 h-4 mr-2 text-rose-400"></i>
+          Quantitative Risk Severity Matrix (Probability vs Impact)
+        </h3>
+        <p class="text-xs text-slate-400 mb-4">Color-coded probability x impact severity rubric with active project risks mapped.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <!-- 5x5 Grid Visual -->
+          <div class="p-4 bg-slate-900/60 rounded-xl border border-slate-800">
+            <div class="text-center text-xs font-semibold text-slate-400 mb-2">Impact (Low &rarr; Critical)</div>
+            <div class="grid grid-cols-5 gap-1.5 text-center text-[10px] font-bold">
+              <!-- Row 5 High Probability -->
+              <div class="risk-matrix-cell p-2.5 rounded bg-amber-500/30 text-amber-300">5</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-amber-500/40 text-amber-200">10</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-rose-500/50 text-rose-200">15</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-rose-500/70 text-rose-100 ring-2 ring-rose-400" title="RSK-01 (Severity 20)">20 ★</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-rose-600 text-white">25</div>
+
+              <!-- Row 4 Medium-High -->
+              <div class="risk-matrix-cell p-2.5 rounded bg-emerald-500/20 text-emerald-400">4</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-amber-500/30 text-amber-300">8</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-amber-500/50 text-amber-200" title="RSK-04 (Severity 12)">12 ★</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-rose-500/60 text-rose-200" title="RSK-03 (Severity 16)">16 ★</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-rose-500/80 text-rose-100">20</div>
+
+              <!-- Row 3 Medium -->
+              <div class="risk-matrix-cell p-2.5 rounded bg-emerald-500/20 text-emerald-400">3</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-emerald-500/40 text-emerald-300">6</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-amber-500/40 text-amber-200">9</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-amber-500/60 text-amber-100">12</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-rose-500/60 text-rose-200" title="RSK-02 (Severity 15)">15 ★</div>
+
+              <!-- Row 2 Low-Med -->
+              <div class="risk-matrix-cell p-2.5 rounded bg-emerald-500/20 text-emerald-400">2</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-emerald-500/30 text-emerald-300">4</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-emerald-500/40 text-emerald-200">6</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-amber-500/30 text-amber-300">8</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-amber-500/40 text-amber-200">10</div>
+
+              <!-- Row 1 Low -->
+              <div class="risk-matrix-cell p-2.5 rounded bg-emerald-500/10 text-emerald-500">1</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-emerald-500/20 text-emerald-400">2</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-emerald-500/30 text-emerald-300">3</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-emerald-500/40 text-emerald-200">4</div>
+              <div class="risk-matrix-cell p-2.5 rounded bg-amber-500/30 text-amber-300">5</div>
+            </div>
+            <div class="mt-2 text-right text-[10px] text-slate-500">★ = Mapped Project Risks</div>
+          </div>
+
+          <!-- Risk Legend & Metrics -->
+          <div class="space-y-3 text-xs text-slate-300">
+            <div class="flex items-center space-x-2">
+              <span class="w-3 h-3 rounded bg-rose-600 inline-block"></span>
+              <span class="font-semibold text-rose-300">Critical / High Severity (15 - 25):</span>
+              <span>Requires immediate architectural or mitigation plan.</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="w-3 h-3 rounded bg-amber-500 inline-block"></span>
+              <span class="font-semibold text-amber-300">Moderate Severity (8 - 14):</span>
+              <span>Active sprint tracking and capacity buffering.</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="w-3 h-3 rounded bg-emerald-500 inline-block"></span>
+              <span class="font-semibold text-emerald-300">Low Severity (1 - 7):</span>
+              <span>Periodic review in retrospective backlog.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Risk Register Cards -->
+      <div class="glass-card p-6">
+        <h3 class="text-sm font-bold text-white mb-4 flex items-center">
+          <i data-lucide="shield" class="w-4 h-4 mr-2 text-rose-400"></i>
+          Formal Project Risk Register
+        </h3>
+        <div id="risk-cards-container" class="space-y-4">
+          <!-- Dynamically populated risk cards -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== TAB 4: SCOPE & DELIVERABLES ==================== -->
+    <section id="tab-scope" class="tab-content hidden space-y-6">
+      
+      <!-- Scope Header Card -->
+      <div class="glass-card p-6">
+        <div class="flex items-start justify-between">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-400">Extracted Scope Overview</span>
+            <h2 id="scope-project-title" class="text-xl font-bold text-white mt-1">AI Project Intelligence Platform</h2>
+            <p id="scope-project-obj" class="text-xs text-slate-300 mt-2 max-w-3xl leading-relaxed">
+              Unified project intelligence and risk advisory platform accepting varied project documents to construct an actionable RAG knowledge base.
+            </p>
+          </div>
+          <div class="text-right">
+            <span class="text-xs text-slate-400">Target Audience</span>
+            <div id="scope-target-aud" class="text-xs font-semibold text-slate-200 mt-0.5">Software Engineering Teams</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- In-Scope vs Out-of-Scope Split -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- In Scope -->
+        <div class="glass-card p-6">
+          <h3 class="text-sm font-bold text-emerald-400 mb-3 flex items-center">
+            <i data-lucide="check-circle" class="w-4 h-4 mr-2"></i>
+            In-Scope Modules & Capabilities
+          </h3>
+          <div id="in-scope-items-container" class="space-y-2.5">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Out of Scope -->
+        <div class="glass-card p-6">
+          <h3 class="text-sm font-bold text-slate-400 mb-3 flex items-center">
+            <i data-lucide="x-circle" class="w-4 h-4 mr-2 text-rose-400"></i>
+            Explicit Out-of-Scope Boundaries (Deferred)
+          </h3>
+          <div id="out-of-scope-items-container" class="space-y-2.5">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Deliverables & Milestones Table -->
+      <div class="glass-card p-6">
+        <h3 class="text-sm font-bold text-white mb-3 flex items-center">
+          <i data-lucide="milestone" class="w-4 h-4 mr-2 text-indigo-400"></i>
+          Key Deliverables & Milestone Roadmap
+        </h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-900/60 text-slate-400 border-b border-slate-800">
+              <tr>
+                <th class="p-3">ID</th>
+                <th class="p-3">Deliverable</th>
+                <th class="p-3">Milestone</th>
+                <th class="p-3">Target Date</th>
+                <th class="p-3">Type</th>
+                <th class="p-3">Status</th>
+              </tr>
+            </thead>
+            <tbody id="deliverables-table-body" class="divide-y divide-slate-800">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== TAB 5: BLOCKERS & ACTIONS ==================== -->
+    <section id="tab-blockers" class="tab-content hidden space-y-6">
+      
+      <!-- Active Blockers Section -->
+      <div class="glass-card p-6">
+        <h3 class="text-sm font-bold text-rose-400 mb-3 flex items-center">
+          <i data-lucide="alert-circle" class="w-4 h-4 mr-2"></i>
+          Active Sprint Impediments & Blockers
+        </h3>
+        <p class="text-xs text-slate-400 mb-4">Blockers extracted across meeting notes, standup reports, and backlog statuses.</p>
+        <div id="blockers-list-container" class="space-y-3">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+      <!-- Action Items Checklist -->
+      <div class="glass-card p-6">
+        <h3 class="text-sm font-bold text-emerald-400 mb-3 flex items-center">
+          <i data-lucide="list-checks" class="w-4 h-4 mr-2"></i>
+          Prioritized Action Items & Next Steps
+        </h3>
+        <p class="text-xs text-slate-400 mb-4">Derived follow-ups with designated owners, priorities, and deadlines.</p>
+        <div id="actions-list-container" class="space-y-2.5">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== TAB 6: DOCUMENTATION & STORIES ==================== -->
+    <section id="tab-documentation" class="tab-content hidden space-y-6">
+      
+      <!-- Missing Documentation Gaps Callout -->
+      <div class="glass-card p-6 border-l-4 border-blue-500">
+        <h3 class="text-sm font-bold text-blue-400 mb-2 flex items-center">
+          <i data-lucide="file-question" class="w-4 h-4 mr-2"></i>
+          Detected Missing Project Documentation Gaps
+        </h3>
+        <p class="text-xs text-slate-400 mb-3">
+          The Documentation Generation Agent analyzed project artifacts and identified key missing specifications required for production readiness:
+        </p>
+        <ul id="doc-gaps-list" class="space-y-1.5 text-xs text-slate-300">
+          <!-- Dynamically populated -->
+        </ul>
+      </div>
+
+      <!-- Generated Agile User Stories -->
+      <div class="glass-card p-6">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h3 class="text-sm font-bold text-white flex items-center">
+              <i data-lucide="layers" class="w-4 h-4 mr-2 text-indigo-400"></i>
+              Synthesized Agile User Stories
+            </h3>
+            <p class="text-xs text-slate-400">Canonical user stories with Gherkin acceptance criteria ready for Jira / GitHub export.</p>
+          </div>
+          <button id="btn-copy-stories" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-medium text-slate-200 border border-slate-700 transition">
+            Copy All Stories
+          </button>
+        </div>
+
+        <div id="user-stories-container" class="space-y-4">
+          <!-- Dynamically populated user stories -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== TAB 7: GROUNDED CONVERSATIONAL ASSISTANT ==================== -->
+    <section id="tab-assistant" class="tab-content hidden space-y-4">
+      
+      <div class="glass-card p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-600/30 text-blue-400 flex items-center justify-center">
+            <i data-lucide="bot" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white">Project Intelligence Assistant</h3>
+            <p class="text-xs text-slate-400">Grounded exclusively in uploaded project artifacts with verifiable source citations.</p>
+          </div>
+        </div>
+        <button id="btn-clear-chat" class="text-xs text-slate-400 hover:text-slate-200">Clear Chat</button>
+      </div>
+
+      <!-- Chat Log Container -->
+      <div id="chat-messages-container" class="glass-card p-6 min-h-[420px] max-h-[560px] overflow-y-auto space-y-4">
+        <!-- Welcome Message -->
+        <div class="flex items-start space-x-3">
+          <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+            AI
+          </div>
+          <div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl rounded-tl-sm p-4 text-xs text-slate-200 max-w-2xl leading-relaxed">
+            <p class="font-semibold text-white mb-1">Hello! I am your AI Project Intelligence & Risk Advisor Assistant.</p>
+            <p>I can help you query project status, inspect active blockers, evaluate schedule variance, or review technical scope — grounded directly in the project documents you uploaded.</p>
+            <p class="mt-2 text-slate-400">Try clicking one of the suggested prompts below, or ask your own question!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Suggested Prompts Chips -->
+      <div id="suggested-prompts-container" class="flex flex-wrap gap-2 text-xs">
+        <button class="prompt-chip px-3 py-1.5 rounded-full bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">
+          What are the highest severity risks identified?
+        </button>
+        <button class="prompt-chip px-3 py-1.5 rounded-full bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">
+          Who is assigned to open critical blockers?
+        </button>
+        <button class="prompt-chip px-3 py-1.5 rounded-full bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">
+          What is our estimated schedule delay and critical path?
+        </button>
+        <button class="prompt-chip px-3 py-1.5 rounded-full bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">
+          What items are officially out-of-scope for Phase 1?
+        </button>
+      </div>
+
+      <!-- Chat Input Form -->
+      <form id="chat-form" class="flex space-x-2">
+        <input type="text" id="chat-input" placeholder="Ask anything about your project documents..." class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-blue-500 shadow-inner">
+        <button type="submit" id="btn-send-chat" class="px-5 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-semibold flex items-center space-x-1.5 shadow-md shadow-blue-600/30 transition">
+          <span>Send</span>
+          <i data-lucide="send" class="w-3.5 h-3.5"></i>
+        </button>
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- Settings Modal -->
+  <div id="settings-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="glass-card max-w-md w-full p-6 bg-slate-900 border border-slate-700 shadow-2xl relative">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-sm font-bold text-white flex items-center">
+          <i data-lucide="settings" class="w-4 h-4 mr-2 text-blue-400"></i>
+          Engine & API Settings
+        </h3>
+        <button id="btn-close-settings" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <p class="text-xs text-slate-400 mb-4">
+        The system comes with a built-in deterministic Project Intelligence Engine. You can optionally connect your Google Gemini API key or OpenAI API key for advanced generative reasoning.
+      </p>
+
+      <form id="settings-form" class="space-y-4 text-xs">
+        <div>
+          <label class="block text-slate-300 font-semibold mb-1">Google Gemini API Key</label>
+          <input type="password" id="input-gemini-key" placeholder="AIzaSy..." class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-blue-500">
+        </div>
+        <div>
+          <label class="block text-slate-300 font-semibold mb-1">OpenAI API Key (Optional)</label>
+          <input type="password" id="input-openai-key" placeholder="sk-..." class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-blue-500">
+        </div>
+        <div class="pt-2 flex justify-end space-x-2">
+          <button type="button" id="btn-cancel-settings" class="px-3 py-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700">Cancel</button>
+          <button type="submit" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold">Save Settings</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Citation Excerpt Modal -->
+  <div id="citation-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="glass-card max-w-lg w-full p-6 bg-slate-900 border border-slate-700 shadow-2xl relative">
+      <div class="flex items-center justify-between mb-3">
+        <h4 id="citation-modal-title" class="text-xs font-bold text-blue-400 flex items-center">
+          <i data-lucide="file-text" class="w-4 h-4 mr-1.5"></i>
+          Source Citation
+        </h4>
+        <button id="btn-close-citation" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <div class="p-3 bg-slate-950 rounded-lg border border-slate-800 text-xs font-mono text-slate-300 max-h-60 overflow-y-auto leading-relaxed" id="citation-modal-content">
+      </div>
+    </div>
+  </div>
+
+  <footer class="border-t border-slate-800/80 bg-slate-950/40 py-3 text-center text-[11px] text-slate-500">
+    AI Project Intelligence & Risk Advisor • Powered by RAG & Multi-Agent Architecture • Milestone 1-3
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

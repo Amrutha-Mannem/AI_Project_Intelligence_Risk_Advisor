@@ -1,0 +1,11 @@
+Task_ID,Module,Title,Assignee,Status,Priority,Est_Days,Due_Date
+TSK-101,Ingestion,"Develop PDF, DOCX, CSV parsers",Priya,Completed,High,3,2026-11-05
+TSK-102,RAG Pipeline,Implement Document Chunker with Overlap,Alex,Completed,High,2,2026-11-07
+TSK-103,RAG Pipeline,Embeddings generation & Vector Store indexing,Alex,Blocked,Critical,4,2026-11-10
+TSK-104,Multi-Agent,Scope & Deliverable Extraction Agent,Sarah,In Progress,High,3,2026-11-12
+TSK-105,Multi-Agent,Risk Detection & Delivery Forecasting Agent,Sarah,In Progress,High,3,2026-11-13
+TSK-106,Multi-Agent,Blocker & Action Item Identification Agent,Sarah,Todo,Medium,2,2026-11-14
+TSK-107,Documentation,User Stories and Risk Register Generator,Elena,Todo,Medium,3,2026-11-16
+TSK-108,Health Scoring,Holistic 100-point Project Health Scorer,Sarah,Todo,High,2,2026-11-17
+TSK-109,Assistant,Grounded Conversational RAG Assistant,Priya,Todo,Critical,4,2026-11-19
+TSK-110,Frontend,Interactive Web Dashboard & Health Radar,David,In Progress,High,5,2026-11-20

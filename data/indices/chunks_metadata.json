@@ -1,0 +1,1055 @@
+[
+  {
+    "chunk_id": "test_sprint_meeting_notes_chk_0_284165",
+    "document_id": "test_sprint_meeting_notes",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "# Sprint 3 Retrospective & Standup Meeting Notes\nDate: 2026-11-10\nAttendees: Sarah (Tech Lead), David (Frontend), Priya (Backend), Alex (ML/Data), Elena (Product Owner)\n\n## Executive Summary\nThe team reviewed progress on the Unified Project Intelligence Platform. While the Core Ingestion and Text Parsers are ahead of schedule, the RAG embedding vector store and third-party LLM quota management are experiencing friction.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 423,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 60,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "test_sprint_meeting_notes_chk_1_321c9d",
+    "document_id": "test_sprint_meeting_notes",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "## Sprint Blockers & Critical Impediments\n- BLOCKER: Alex reported that external third-party API rate limits (HTTP 429) are causing vector batch embedding failures during load testing. Currently blocking RAG Pipeline Milestone 1 verification.\n  - Action: Implement local embeddings fallback (SentenceTransformers MiniLM) and request an enterprise API tier.\n  - Owner: Alex | Priority: Critical",
+    "chunk_index": 1,
+    "char_start": 425,
+    "char_end": 818,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 54,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "test_sprint_meeting_notes_chk_2_60f5da",
+    "document_id": "test_sprint_meeting_notes",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "BLOCKER: Frontend team waiting on API contract specifications for the conversational assistant citations modal.\n  - Action: Priya to publish OpenAPI schema and Swagger specs by Wednesday.\n  - Owner: Priya | Priority: High",
+    "chunk_index": 2,
+    "char_start": 821,
+    "char_end": 1042,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 32,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "test_sprint_meeting_notes_chk_3_81311a",
+    "document_id": "test_sprint_meeting_notes",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "## Delivery & Milestone Challenges\n- Target Milestone 1 delivery is set for Week 2.\n- Due to API rate limit troubleshooting, schedule variance has slipped by an estimated 5 days.\n- If Alex cannot resolve the embeddings batching by Friday, Milestone 1 sign-off will slip to Week 3.",
+    "chunk_index": 3,
+    "char_start": 1044,
+    "char_end": 1324,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 49,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "test_sprint_meeting_notes_chk_4_7e4043",
+    "document_id": "test_sprint_meeting_notes",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "## Decisions Made\n1. Out of Scope for Phase 1: Native iOS/Android mobile apps and direct SAP/Oracle ERP integration are explicitly deferred to Phase 2.\n2. We must enforce Definition of Ready (DoR) on all user stories prior to implementation.\n3. Every API endpoint must return clickable citation references grounded in the uploaded artifacts.",
+    "chunk_index": 4,
+    "char_start": 1326,
+    "char_end": 1667,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 54,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "test_sprint_meeting_notes_chk_5_199f71",
+    "document_id": "test_sprint_meeting_notes",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "## Action Items\n1. ACT-01: Alex to integrate offline Scikit-Learn TF-IDF / SentenceTransformer fallback for embedding pipeline. (Due: Nov 14)\n2. ACT-02: Priya to implement Pydantic validation schemas for ChatQuery and IngestionResult. (Due: Nov 13)\n3. ACT-03: David to build glassmorphism UI with radar chart for Project Health metrics. (Due: Nov 15)\n4. ACT-04: Elena to conduct backlog grooming for Documentation Generation user stories. (Due: Nov 16)",
+    "chunk_index": 5,
+    "char_start": 1669,
+    "char_end": 2121,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 67,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "test_tasks_backlog_chk_0_1664a4",
+    "document_id": "test_tasks_backlog",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "# Tabular Project Artifact: tasks_backlog.csv\nTotal Records: 10\nColumns: Task_ID, Module, Title, Assignee, Status, Priority, Est_Days, Due_Date",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 143,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 17,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "test_tasks_backlog_chk_1_46b71f",
+    "document_id": "test_tasks_backlog",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "--- Row Records ---\nRow 1 -> Task_ID: TSK-101 | Module: Ingestion | Title: Develop PDF, DOCX, CSV parsers | Assignee: Priya | Status: Completed | Priority: High | Est_Days: 3 | Due_Date: 2026-11-05\nRow 2 -> Task_ID: TSK-102 | Module: RAG Pipeline | Title: Implement Document Chunker with Overlap | Assignee: Alex | Status: Completed | Priority: High | Est_Days: 2 | Due_Date: 2026-11-07",
+    "chunk_index": 1,
+    "char_start": 145,
+    "char_end": 531,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 65,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "test_tasks_backlog_chk_2_399de4",
+    "document_id": "test_tasks_backlog",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "Row 3 -> Task_ID: TSK-103 | Module: RAG Pipeline | Title: Embeddings generation & Vector Store indexing | Assignee: Alex | Status: Blocked | Priority: Critical | Est_Days: 4 | Due_Date: 2026-11-10\nRow 4 -> Task_ID: TSK-104 | Module: Multi-Agent | Title: Scope & Deliverable Extraction Agent | Assignee: Sarah | Status: In Progress | Priority: High | Est_Days: 3 | Due_Date: 2026-11-12",
+    "chunk_index": 2,
+    "char_start": 532,
+    "char_end": 916,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 63,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "test_tasks_backlog_chk_3_2a147e",
+    "document_id": "test_tasks_backlog",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "Row 5 -> Task_ID: TSK-105 | Module: Multi-Agent | Title: Risk Detection & Delivery Forecasting Agent | Assignee: Sarah | Status: In Progress | Priority: High | Est_Days: 3 | Due_Date: 2026-11-13\nRow 6 -> Task_ID: TSK-106 | Module: Multi-Agent | Title: Blocker & Action Item Identification Agent | Assignee: Sarah | Status: Todo | Priority: Medium | Est_Days: 2 | Due_Date: 2026-11-14",
+    "chunk_index": 3,
+    "char_start": 917,
+    "char_end": 1300,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 63,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "test_tasks_backlog_chk_4_1f7a7d",
+    "document_id": "test_tasks_backlog",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "Row 7 -> Task_ID: TSK-107 | Module: Documentation | Title: User Stories and Risk Register Generator | Assignee: Elena | Status: Todo | Priority: Medium | Est_Days: 3 | Due_Date: 2026-11-16\nRow 8 -> Task_ID: TSK-108 | Module: Health Scoring | Title: Holistic 100-point Project Health Scorer | Assignee: Sarah | Status: Todo | Priority: High | Est_Days: 2 | Due_Date: 2026-11-17",
+    "chunk_index": 4,
+    "char_start": 1301,
+    "char_end": 1677,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 62,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "test_tasks_backlog_chk_5_87c2d5",
+    "document_id": "test_tasks_backlog",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "Row 9 -> Task_ID: TSK-109 | Module: Assistant | Title: Grounded Conversational RAG Assistant | Assignee: Priya | Status: Todo | Priority: Critical | Est_Days: 4 | Due_Date: 2026-11-19\nRow 10 -> Task_ID: TSK-110 | Module: Frontend | Title: Interactive Web Dashboard & Health Radar | Assignee: David | Status: In Progress | Priority: High | Est_Days: 5 | Due_Date: 2026-11-20",
+    "chunk_index": 5,
+    "char_start": 1678,
+    "char_end": 2051,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 61,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "test_sprint_meeting_notes_chk_0_45ce69",
+    "document_id": "test_sprint_meeting_notes",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "# Sprint 3 Retrospective & Standup Meeting Notes\nDate: 2026-11-10\nAttendees: Sarah (Tech Lead), David (Frontend), Priya (Backend), Alex (ML/Data), Elena (Product Owner)\n\n## Executive Summary\nThe team reviewed progress on the Unified Project Intelligence Platform. While the Core Ingestion and Text Parsers are ahead of schedule, the RAG embedding vector store and third-party LLM quota management are experiencing friction.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 423,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 60,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "test_sprint_meeting_notes_chk_1_3d0145",
+    "document_id": "test_sprint_meeting_notes",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "## Sprint Blockers & Critical Impediments\n- BLOCKER: Alex reported that external third-party API rate limits (HTTP 429) are causing vector batch embedding failures during load testing. Currently blocking RAG Pipeline Milestone 1 verification.\n  - Action: Implement local embeddings fallback (SentenceTransformers MiniLM) and request an enterprise API tier.\n  - Owner: Alex | Priority: Critical",
+    "chunk_index": 1,
+    "char_start": 425,
+    "char_end": 818,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 54,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "test_sprint_meeting_notes_chk_2_b8c173",
+    "document_id": "test_sprint_meeting_notes",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "BLOCKER: Frontend team waiting on API contract specifications for the conversational assistant citations modal.\n  - Action: Priya to publish OpenAPI schema and Swagger specs by Wednesday.\n  - Owner: Priya | Priority: High",
+    "chunk_index": 2,
+    "char_start": 821,
+    "char_end": 1042,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 32,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "test_sprint_meeting_notes_chk_3_d1e339",
+    "document_id": "test_sprint_meeting_notes",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "## Delivery & Milestone Challenges\n- Target Milestone 1 delivery is set for Week 2.\n- Due to API rate limit troubleshooting, schedule variance has slipped by an estimated 5 days.\n- If Alex cannot resolve the embeddings batching by Friday, Milestone 1 sign-off will slip to Week 3.",
+    "chunk_index": 3,
+    "char_start": 1044,
+    "char_end": 1324,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 49,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "test_sprint_meeting_notes_chk_4_ebe0d8",
+    "document_id": "test_sprint_meeting_notes",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "## Decisions Made\n1. Out of Scope for Phase 1: Native iOS/Android mobile apps and direct SAP/Oracle ERP integration are explicitly deferred to Phase 2.\n2. We must enforce Definition of Ready (DoR) on all user stories prior to implementation.\n3. Every API endpoint must return clickable citation references grounded in the uploaded artifacts.",
+    "chunk_index": 4,
+    "char_start": 1326,
+    "char_end": 1667,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 54,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "test_sprint_meeting_notes_chk_5_ff1f3d",
+    "document_id": "test_sprint_meeting_notes",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "## Action Items\n1. ACT-01: Alex to integrate offline Scikit-Learn TF-IDF / SentenceTransformer fallback for embedding pipeline. (Due: Nov 14)\n2. ACT-02: Priya to implement Pydantic validation schemas for ChatQuery and IngestionResult. (Due: Nov 13)\n3. ACT-03: David to build glassmorphism UI with radar chart for Project Health metrics. (Due: Nov 15)\n4. ACT-04: Elena to conduct backlog grooming for Documentation Generation user stories. (Due: Nov 16)",
+    "chunk_index": 5,
+    "char_start": 1669,
+    "char_end": 2121,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 67,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "test_tasks_backlog_chk_0_8eadd4",
+    "document_id": "test_tasks_backlog",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "# Tabular Project Artifact: tasks_backlog.csv\nTotal Records: 10\nColumns: Task_ID, Module, Title, Assignee, Status, Priority, Est_Days, Due_Date",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 143,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 17,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "test_tasks_backlog_chk_1_967778",
+    "document_id": "test_tasks_backlog",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "--- Row Records ---\nRow 1 -> Task_ID: TSK-101 | Module: Ingestion | Title: Develop PDF, DOCX, CSV parsers | Assignee: Priya | Status: Completed | Priority: High | Est_Days: 3 | Due_Date: 2026-11-05\nRow 2 -> Task_ID: TSK-102 | Module: RAG Pipeline | Title: Implement Document Chunker with Overlap | Assignee: Alex | Status: Completed | Priority: High | Est_Days: 2 | Due_Date: 2026-11-07",
+    "chunk_index": 1,
+    "char_start": 145,
+    "char_end": 531,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 65,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "test_tasks_backlog_chk_2_adb5d2",
+    "document_id": "test_tasks_backlog",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "Row 3 -> Task_ID: TSK-103 | Module: RAG Pipeline | Title: Embeddings generation & Vector Store indexing | Assignee: Alex | Status: Blocked | Priority: Critical | Est_Days: 4 | Due_Date: 2026-11-10\nRow 4 -> Task_ID: TSK-104 | Module: Multi-Agent | Title: Scope & Deliverable Extraction Agent | Assignee: Sarah | Status: In Progress | Priority: High | Est_Days: 3 | Due_Date: 2026-11-12",
+    "chunk_index": 2,
+    "char_start": 532,
+    "char_end": 916,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 63,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "test_tasks_backlog_chk_3_c6c360",
+    "document_id": "test_tasks_backlog",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "Row 5 -> Task_ID: TSK-105 | Module: Multi-Agent | Title: Risk Detection & Delivery Forecasting Agent | Assignee: Sarah | Status: In Progress | Priority: High | Est_Days: 3 | Due_Date: 2026-11-13\nRow 6 -> Task_ID: TSK-106 | Module: Multi-Agent | Title: Blocker & Action Item Identification Agent | Assignee: Sarah | Status: Todo | Priority: Medium | Est_Days: 2 | Due_Date: 2026-11-14",
+    "chunk_index": 3,
+    "char_start": 917,
+    "char_end": 1300,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 63,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "test_tasks_backlog_chk_4_932037",
+    "document_id": "test_tasks_backlog",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "Row 7 -> Task_ID: TSK-107 | Module: Documentation | Title: User Stories and Risk Register Generator | Assignee: Elena | Status: Todo | Priority: Medium | Est_Days: 3 | Due_Date: 2026-11-16\nRow 8 -> Task_ID: TSK-108 | Module: Health Scoring | Title: Holistic 100-point Project Health Scorer | Assignee: Sarah | Status: Todo | Priority: High | Est_Days: 2 | Due_Date: 2026-11-17",
+    "chunk_index": 4,
+    "char_start": 1301,
+    "char_end": 1677,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 62,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "test_tasks_backlog_chk_5_f833b7",
+    "document_id": "test_tasks_backlog",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "Row 9 -> Task_ID: TSK-109 | Module: Assistant | Title: Grounded Conversational RAG Assistant | Assignee: Priya | Status: Todo | Priority: Critical | Est_Days: 4 | Due_Date: 2026-11-19\nRow 10 -> Task_ID: TSK-110 | Module: Frontend | Title: Interactive Web Dashboard & Health Radar | Assignee: David | Status: In Progress | Priority: High | Est_Days: 5 | Due_Date: 2026-11-20",
+    "chunk_index": 5,
+    "char_start": 1678,
+    "char_end": 2051,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 61,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "sample_progress_upd_chk_0_4087d8",
+    "document_id": "sample_progress_upd",
+    "source_name": "progress_update.md",
+    "file_type": "md",
+    "content": "# Bi-Weekly Sprint Progress Update & Advisory Report\n**Project:** AI Project Intelligence & Risk Advisor  \n**Reporting Period:** Week 2  \n**Overall Status:** Amber / At Risk (Schedule pressure on RAG Vector Store)",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 213,
+    "metadata": {
+      "file_name": "progress_update.md",
+      "file_type": "md",
+      "word_count": 31,
+      "encoding": "utf-8",
+      "is_markdown": true
+    }
+  },
+  {
+    "chunk_id": "sample_progress_upd_chk_1_c8e1dd",
+    "document_id": "sample_progress_upd",
+    "source_name": "progress_update.md",
+    "file_type": "md",
+    "content": "## 1. Accomplishments This Period\n- Successfully implemented unified document parser supporting PDF, DOCX, CSV, and TXT artifacts.\n- Created recursive document chunking engine preserving heading hierarchies and metadata tags.\n- Built normalized cosine similarity vector search engine with on-disk index persistence.\n- Initialized multi-agent orchestrator scaffolding for scope and risk extraction.",
+    "chunk_index": 1,
+    "char_start": 215,
+    "char_end": 612,
+    "metadata": {
+      "file_name": "progress_update.md",
+      "file_type": "md",
+      "word_count": 52,
+      "encoding": "utf-8",
+      "is_markdown": true
+    }
+  },
+  {
+    "chunk_id": "sample_progress_upd_chk_2_89d2d5",
+    "document_id": "sample_progress_upd",
+    "source_name": "progress_update.md",
+    "file_type": "md",
+    "content": "## 2. Schedule Variance & Delivery Challenges\n- **Milestone 1 Completion:** Currently tracking 4 days behind original schedule due to external API throttling during embedding generation.\n- **Critical Path Bottleneck:** Alex is currently the sole engineer working on vector store indexing (Key-Person Dependency). Cross-training Priya to co-own vector indexing.\n- **Forecast:** Estimated delivery slip of 5 to 7 days if external API quota is not supplemented with local models.",
+    "chunk_index": 2,
+    "char_start": 614,
+    "char_end": 1090,
+    "metadata": {
+      "file_name": "progress_update.md",
+      "file_type": "md",
+      "word_count": 69,
+      "encoding": "utf-8",
+      "is_markdown": true
+    }
+  },
+  {
+    "chunk_id": "sample_progress_upd_chk_3_8e1b80",
+    "document_id": "sample_progress_upd",
+    "source_name": "progress_update.md",
+    "file_type": "md",
+    "content": "## 3. High-Priority Risks Identified\n1. **API Rate Limiting & Latency Spikes (Severity 20/25):** Third-party LLM providers experiencing intermittent throttling under bulk document load.\n2. **Missing Test Automation Suite (Severity 15/25):** No automated regression testing currently verifies PDF table parsing fidelity.\n3. **Requirement Drift in Health Scoring (Severity 12/25):** Stakeholders debating subjective vs objective weights for health score calculation.",
+    "chunk_index": 3,
+    "char_start": 1092,
+    "char_end": 1556,
+    "metadata": {
+      "file_name": "progress_update.md",
+      "file_type": "md",
+      "word_count": 59,
+      "encoding": "utf-8",
+      "is_markdown": true
+    }
+  },
+  {
+    "chunk_id": "sample_progress_upd_chk_4_b5abfd",
+    "document_id": "sample_progress_upd",
+    "source_name": "progress_update.md",
+    "file_type": "md",
+    "content": "## 4. Key Decisions & Out-of-Scope Confirmations\n- Out of scope: Direct Jira Cloud webhook bi-directional synchronization deferred to Phase 2.\n- In-Scope: Instant one-click Markdown & JSON report export for sprint retrospectives.",
+    "chunk_index": 4,
+    "char_start": 1558,
+    "char_end": 1787,
+    "metadata": {
+      "file_name": "progress_update.md",
+      "file_type": "md",
+      "word_count": 33,
+      "encoding": "utf-8",
+      "is_markdown": true
+    }
+  },
+  {
+    "chunk_id": "sample_proposal_pro_chk_0_f8ee8a",
+    "document_id": "sample_proposal_pro",
+    "source_name": "proposal_project.pdf",
+    "file_type": "pdf",
+    "content": "--- Page 1 ---\nAI Project Intelligence & Risk Advisor - Project\nProposal\nTarget Domain: Software Development & Team Collaboration Intelligence\n1. Executive Summary & Problem Statement\nModern development teams face fragmented artifacts across chat notes, SRS documents, and task\nlists. Manually synthesizing these artifacts leads to reactive management, unspotted blockers, and\nmissed delivery milestones. This project proposes an AI Project Intelligence & Risk Advisor powered by",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 479,
+    "metadata": {
+      "file_name": "proposal_project.pdf",
+      "file_type": "pdf",
+      "word_count": 67,
+      "page_count": 1,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "sample_proposal_pro_chk_1_091cfc",
+    "document_id": "sample_proposal_pro",
+    "source_name": "proposal_project.pdf",
+    "file_type": "pdf",
+    "content": "RAG and a multi-agent pipeline.\n2. Strategic Objectives\n(cid:127) Construct a unified project knowledge base accepting PDF, DOCX, CSV, and plain text artifacts.\n(cid:127) Automatically extract project scope boundaries, risks, blockers, and deliverable roadmaps.\n(cid:127) Calculate an objective 100-point project health score across 5 vital dimensions.\n(cid:127) Deliver a conversational assistant grounded with verifiable source document citations.\n3. Preliminary Risk Assessment",
+    "chunk_index": 1,
+    "char_start": 480,
+    "char_end": 960,
+    "metadata": {
+      "file_name": "proposal_project.pdf",
+      "file_type": "pdf",
+      "word_count": 61,
+      "page_count": 1,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "sample_proposal_pro_chk_2_951385",
+    "document_id": "sample_proposal_pro",
+    "source_name": "proposal_project.pdf",
+    "file_type": "pdf",
+    "content": "3. Preliminary Risk Assessment\nRisk ID Risk Description Category Probability Impact Mitigation\nRSK-01 Third-party LLM API rate limits Dependency High High Local SentenceTransformers fallback\nRSK-02 Single developer bottleneck on vector indexinRgesource Medium High Cross-train backend engineers\nRSK-03 Incomplete acceptance criteria in meeting notSecsope Medium Medium Agile User Story Generator Agent",
+    "chunk_index": 2,
+    "char_start": 930,
+    "char_end": 1331,
+    "metadata": {
+      "file_name": "proposal_project.pdf",
+      "file_type": "pdf",
+      "word_count": 50,
+      "page_count": 1,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "sample_proposal_pro_chk_3_ae6dad",
+    "document_id": "sample_proposal_pro",
+    "source_name": "proposal_project.pdf",
+    "file_type": "pdf",
+    "content": "[Table Page 1]:\nRisk ID | Risk Description | Category | Probability | Impact | Mitigation\nRSK-01 | Third-party LLM API rate limits | Dependency | High | High | Local SentenceTransformers fallba\nRSK-02 | Single developer bottleneck on vector index | inRgesource | Medium | High | Cross-train backend engineers\nRSK-03 | Incomplete acceptance criteria in meeting n | otSecsope | Medium | Medium | Agile User Story Generator Agent",
+    "chunk_index": 3,
+    "char_start": 1333,
+    "char_end": 1759,
+    "metadata": {
+      "file_name": "proposal_project.pdf",
+      "file_type": "pdf",
+      "word_count": 71,
+      "page_count": 1,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "sample_sprint_meeti_chk_0_072854",
+    "document_id": "sample_sprint_meeti",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "# Sprint 3 Retrospective & Standup Meeting Notes\nDate: 2026-11-10\nAttendees: Sarah (Tech Lead), David (Frontend), Priya (Backend), Alex (ML/Data), Elena (Product Owner)\n\n## Executive Summary\nThe team reviewed progress on the Unified Project Intelligence Platform. While the Core Ingestion and Text Parsers are ahead of schedule, the RAG embedding vector store and third-party LLM quota management are experiencing friction.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 423,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 60,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "sample_sprint_meeti_chk_1_0b3e83",
+    "document_id": "sample_sprint_meeti",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "## Sprint Blockers & Critical Impediments\n- BLOCKER: Alex reported that external third-party API rate limits (HTTP 429) are causing vector batch embedding failures during load testing. Currently blocking RAG Pipeline Milestone 1 verification.\n  - Action: Implement local embeddings fallback (SentenceTransformers MiniLM) and request an enterprise API tier.\n  - Owner: Alex | Priority: Critical",
+    "chunk_index": 1,
+    "char_start": 425,
+    "char_end": 818,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 54,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "sample_sprint_meeti_chk_2_eb0c22",
+    "document_id": "sample_sprint_meeti",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "BLOCKER: Frontend team waiting on API contract specifications for the conversational assistant citations modal.\n  - Action: Priya to publish OpenAPI schema and Swagger specs by Wednesday.\n  - Owner: Priya | Priority: High",
+    "chunk_index": 2,
+    "char_start": 821,
+    "char_end": 1042,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 32,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "sample_sprint_meeti_chk_3_600dd6",
+    "document_id": "sample_sprint_meeti",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "## Delivery & Milestone Challenges\n- Target Milestone 1 delivery is set for Week 2.\n- Due to API rate limit troubleshooting, schedule variance has slipped by an estimated 5 days.\n- If Alex cannot resolve the embeddings batching by Friday, Milestone 1 sign-off will slip to Week 3.",
+    "chunk_index": 3,
+    "char_start": 1044,
+    "char_end": 1324,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 49,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "sample_sprint_meeti_chk_4_80ca57",
+    "document_id": "sample_sprint_meeti",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "## Decisions Made\n1. Out of Scope for Phase 1: Native iOS/Android mobile apps and direct SAP/Oracle ERP integration are explicitly deferred to Phase 2.\n2. We must enforce Definition of Ready (DoR) on all user stories prior to implementation.\n3. Every API endpoint must return clickable citation references grounded in the uploaded artifacts.",
+    "chunk_index": 4,
+    "char_start": 1326,
+    "char_end": 1667,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 54,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "sample_sprint_meeti_chk_5_0a18e1",
+    "document_id": "sample_sprint_meeti",
+    "source_name": "sprint_meeting_notes.txt",
+    "file_type": "txt",
+    "content": "## Action Items\n1. ACT-01: Alex to integrate offline Scikit-Learn TF-IDF / SentenceTransformer fallback for embedding pipeline. (Due: Nov 14)\n2. ACT-02: Priya to implement Pydantic validation schemas for ChatQuery and IngestionResult. (Due: Nov 13)\n3. ACT-03: David to build glassmorphism UI with radar chart for Project Health metrics. (Due: Nov 15)\n4. ACT-04: Elena to conduct backlog grooming for Documentation Generation user stories. (Due: Nov 16)",
+    "chunk_index": 5,
+    "char_start": 1669,
+    "char_end": 2121,
+    "metadata": {
+      "file_name": "sprint_meeting_notes.txt",
+      "file_type": "txt",
+      "word_count": 67,
+      "encoding": "utf-8",
+      "is_markdown": false
+    }
+  },
+  {
+    "chunk_id": "sample_srs_specific_chk_0_cfd943",
+    "document_id": "sample_srs_specific",
+    "source_name": "srs_specifications.docx",
+    "file_type": "docx",
+    "content": "System Requirements Specification (SRS)\n\nProject: AI Project Intelligence & Risk Advisor\n\nAuthor: Systems Architecture Team | Version: 1.0\n\n### 1. Project Scope & Purpose",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 170,
+    "metadata": {
+      "file_name": "srs_specifications.docx",
+      "file_type": "docx",
+      "word_count": 24,
+      "heading_count": 4,
+      "paragraph_count": 16,
+      "table_count": 1
+    }
+  },
+  {
+    "chunk_id": "sample_srs_specific_chk_1_995914",
+    "document_id": "sample_srs_specific",
+    "source_name": "srs_specifications.docx",
+    "file_type": "docx",
+    "content": "Author: Systems Architecture Team | Version: 1.0\n\n### 1. Project Scope & Purpose\n\nSoftware engineering teams and academic project groups suffer from fragmented planning, undetected schedule risks, and missing documentation. The objective is to establish an intelligent, multi-agent platform where teams upload project artifacts (PDF, DOCX, CSV, TXT) and receive automated scope extraction, risk forecasts, blocker resolutions, and an interactive grounded conversational assistant.",
+    "chunk_index": 1,
+    "char_start": 90,
+    "char_end": 570,
+    "metadata": {
+      "file_name": "srs_specifications.docx",
+      "file_type": "docx",
+      "word_count": 63,
+      "heading_count": 4,
+      "paragraph_count": 16,
+      "table_count": 1
+    }
+  },
+  {
+    "chunk_id": "sample_srs_specific_chk_2_bf95d5",
+    "document_id": "sample_srs_specific",
+    "source_name": "srs_specifications.docx",
+    "file_type": "docx",
+    "content": "### 2. In-Scope Modules & Deliverables\n\n- DEL-01: Document Ingestion Pipeline supporting PDF, DOCX, CSV, and plain text.\n\n- DEL-02: RAG Pipeline with recursive chunking, dense vector embeddings, and persistent indexing.\n\n- DEL-03: Scope and Deliverable Extraction Agent for automated boundary mapping.\n\n- DEL-04: Risk Detection & Delivery Forecasting Agent computing quantitative severity scores.\n\n- DEL-05: Blocker and Action Item Identification Agent for sprint impediments.",
+    "chunk_index": 2,
+    "char_start": 572,
+    "char_end": 1048,
+    "metadata": {
+      "file_name": "srs_specifications.docx",
+      "file_type": "docx",
+      "word_count": 65,
+      "heading_count": 4,
+      "paragraph_count": 16,
+      "table_count": 1
+    }
+  },
+  {
+    "chunk_id": "sample_srs_specific_chk_3_786884",
+    "document_id": "sample_srs_specific",
+    "source_name": "srs_specifications.docx",
+    "file_type": "docx",
+    "content": "- DEL-05: Blocker and Action Item Identification Agent for sprint impediments.\n\n- DEL-06: Documentation Generation Agent producing User Stories with Acceptance Criteria.\n\n- DEL-07: Holistic 100-Point Project Health Scoring Algorithm with category breakdowns.\n\n- DEL-08: Conversational Project Intelligence Assistant grounded strictly in uploaded documents.\n\n### 3. Explicit Out-of-Scope Items\n\n- OOS-01: Native mobile applications (iOS and Android); web dashboard is fully responsive.",
+    "chunk_index": 3,
+    "char_start": 970,
+    "char_end": 1454,
+    "metadata": {
+      "file_name": "srs_specifications.docx",
+      "file_type": "docx",
+      "word_count": 62,
+      "heading_count": 4,
+      "paragraph_count": 16,
+      "table_count": 1
+    }
+  },
+  {
+    "chunk_id": "sample_srs_specific_chk_4_4ea686",
+    "document_id": "sample_srs_specific",
+    "source_name": "srs_specifications.docx",
+    "file_type": "docx",
+    "content": "- OOS-02: Direct real-time bidirectional syncing with enterprise SAP/Oracle ERP databases.\n\n### 4. Non-Functional & Security Requirements\n\n- Retrieval latency must remain under 1.5 seconds for semantic vector queries.\n\n- System must function seamlessly offline using local embeddings and heuristic agents when API keys are not supplied.",
+    "chunk_index": 4,
+    "char_start": 1456,
+    "char_end": 1792,
+    "metadata": {
+      "file_name": "srs_specifications.docx",
+      "file_type": "docx",
+      "word_count": 47,
+      "heading_count": 4,
+      "paragraph_count": 16,
+      "table_count": 1
+    }
+  },
+  {
+    "chunk_id": "sample_srs_specific_chk_5_176af5",
+    "document_id": "sample_srs_specific",
+    "source_name": "srs_specifications.docx",
+    "file_type": "docx",
+    "content": "[Table 1]:\nMilestone | Deliverables | Target Timeline\nMilestone 1 | RAG Pipeline & Multi-Format Ingestion | Week 1 - 2\nMilestone 2 | Multi-Agent Risk & Scope Extraction | Week 3\nMilestone 3 | Interactive Dashboard & Health Scoring | Week 4",
+    "chunk_index": 5,
+    "char_start": 1794,
+    "char_end": 2033,
+    "metadata": {
+      "file_name": "srs_specifications.docx",
+      "file_type": "docx",
+      "word_count": 43,
+      "heading_count": 4,
+      "paragraph_count": 16,
+      "table_count": 1
+    }
+  },
+  {
+    "chunk_id": "sample_tasks_backlo_chk_0_4ed4ba",
+    "document_id": "sample_tasks_backlo",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "# Tabular Project Artifact: tasks_backlog.csv\nTotal Records: 10\nColumns: Task_ID, Module, Title, Assignee, Status, Priority, Est_Days, Due_Date",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 143,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 17,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "sample_tasks_backlo_chk_1_284a08",
+    "document_id": "sample_tasks_backlo",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "--- Row Records ---\nRow 1 -> Task_ID: TSK-101 | Module: Ingestion | Title: Develop PDF, DOCX, CSV parsers | Assignee: Priya | Status: Completed | Priority: High | Est_Days: 3 | Due_Date: 2026-11-05\nRow 2 -> Task_ID: TSK-102 | Module: RAG Pipeline | Title: Implement Document Chunker with Overlap | Assignee: Alex | Status: Completed | Priority: High | Est_Days: 2 | Due_Date: 2026-11-07",
+    "chunk_index": 1,
+    "char_start": 145,
+    "char_end": 531,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 65,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "sample_tasks_backlo_chk_2_463309",
+    "document_id": "sample_tasks_backlo",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "Row 3 -> Task_ID: TSK-103 | Module: RAG Pipeline | Title: Embeddings generation & Vector Store indexing | Assignee: Alex | Status: Blocked | Priority: Critical | Est_Days: 4 | Due_Date: 2026-11-10\nRow 4 -> Task_ID: TSK-104 | Module: Multi-Agent | Title: Scope & Deliverable Extraction Agent | Assignee: Sarah | Status: In Progress | Priority: High | Est_Days: 3 | Due_Date: 2026-11-12",
+    "chunk_index": 2,
+    "char_start": 532,
+    "char_end": 916,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 63,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "sample_tasks_backlo_chk_3_033767",
+    "document_id": "sample_tasks_backlo",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "Row 5 -> Task_ID: TSK-105 | Module: Multi-Agent | Title: Risk Detection & Delivery Forecasting Agent | Assignee: Sarah | Status: In Progress | Priority: High | Est_Days: 3 | Due_Date: 2026-11-13\nRow 6 -> Task_ID: TSK-106 | Module: Multi-Agent | Title: Blocker & Action Item Identification Agent | Assignee: Sarah | Status: Todo | Priority: Medium | Est_Days: 2 | Due_Date: 2026-11-14",
+    "chunk_index": 3,
+    "char_start": 917,
+    "char_end": 1300,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 63,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "sample_tasks_backlo_chk_4_c51f45",
+    "document_id": "sample_tasks_backlo",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "Row 7 -> Task_ID: TSK-107 | Module: Documentation | Title: User Stories and Risk Register Generator | Assignee: Elena | Status: Todo | Priority: Medium | Est_Days: 3 | Due_Date: 2026-11-16\nRow 8 -> Task_ID: TSK-108 | Module: Health Scoring | Title: Holistic 100-point Project Health Scorer | Assignee: Sarah | Status: Todo | Priority: High | Est_Days: 2 | Due_Date: 2026-11-17",
+    "chunk_index": 4,
+    "char_start": 1301,
+    "char_end": 1677,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 62,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  },
+  {
+    "chunk_id": "sample_tasks_backlo_chk_5_d36a2a",
+    "document_id": "sample_tasks_backlo",
+    "source_name": "tasks_backlog.csv",
+    "file_type": "csv",
+    "content": "Row 9 -> Task_ID: TSK-109 | Module: Assistant | Title: Grounded Conversational RAG Assistant | Assignee: Priya | Status: Todo | Priority: Critical | Est_Days: 4 | Due_Date: 2026-11-19\nRow 10 -> Task_ID: TSK-110 | Module: Frontend | Title: Interactive Web Dashboard & Health Radar | Assignee: David | Status: In Progress | Priority: High | Est_Days: 5 | Due_Date: 2026-11-20",
+    "chunk_index": 5,
+    "char_start": 1678,
+    "char_end": 2051,
+    "metadata": {
+      "file_name": "tasks_backlog.csv",
+      "file_type": "csv",
+      "word_count": 61,
+      "total_rows": 10,
+      "column_count": 8,
+      "columns": [
+        "Task_ID",
+        "Module",
+        "Title",
+        "Assignee",
+        "Status",
+        "Priority",
+        "Est_Days",
+        "Due_Date"
+      ]
+    }
+  }
+]
