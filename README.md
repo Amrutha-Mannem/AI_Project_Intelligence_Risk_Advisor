@@ -1,157 +1,268 @@
 # AI Project Intelligence & Risk Advisor
 
-An intelligent, multi-agent platform where software engineering teams and student project groups upload varied project artifacts — proposal PDFs, SRS specifications (.docx), task lists (.csv), sprint meeting notes (.txt), or progress updates (.md) — and receive automated intelligence, risk forecasts, blocker resolution, agile documentation, and a grounded conversational assistant.
-
-![Dashboard Preview](static/index.html)
+> **An intelligent platform that transforms scattered project documents into actionable insights, risk forecasts, and automated project management guidance.**
 
 ---
 
-## 🌟 Key Features
+## Project Details
 
-1. **Multi-Format Document Ingestion Engine:**
-   - Ingests **PDF**, **DOCX**, **CSV**, **TXT**, and **Markdown** documents.
-   - Extracts tabular data from PDFs and DOCX files.
-   - Converts CSV task backlogs into semantically enriched key-value records.
-
-2. **RAG Knowledge Base & Hybrid Retrieval:**
-   - Recursive character chunking preserving hierarchical section boundaries with configurable character overlap.
-   - 384-dimensional dense semantic embeddings with sub-word n-gram support and SentenceTransformers fallback.
-   - Persistent vector index with normalized cosine similarity search and lexical BM25-style keyword boosting.
-
-3. **Multi-Agent Analysis Pipeline:**
-   - **Scope & Deliverable Agent:** Maps in-scope capabilities, explicit out-of-scope boundaries, and deliverable milestones.
-   - **Risk Detection & Forecasting Agent:** Calculates quantitative 1–25 severity scores (Probability $\times$ Impact), early warning signs, mitigation strategies, and forecasts delivery delays.
-   - **Blocker & Action Item Agent:** Extracts active sprint impediments, unassigned tasks, and prioritized next steps.
-   - **Agile Documentation Generator:** Synthesizes structured Agile User Stories in canonical format (`As a... I want to... So that...`) with Gherkin acceptance criteria and highlights critical documentation gaps.
-
-4. **100-Point Holistic Project Health Scorer:**
-   - Objective quantitative algorithm scoring across 5 weighted dimensions: Planning (20%), Timeline (25%), Risk Exposure (25%), Documentation (15%), and Blocker Resolution (15%).
-   - Generates Grade ratings (A, B, C, D) and interactive 5-axis Radar Chart data.
-
-5. **Grounded Conversational Project Assistant:**
-   - Natural language Q&A interface strictly grounded in uploaded project artifacts.
-   - Returns interactive source document citations with exact excerpts and similarity scores.
-
-6. **Interactive Web Dashboard:**
-   - Responsive Single-Page Application (SPA) built with Tailwind CSS, Chart.js, Lucide icons, and glassmorphism design.
-   - One-click sample artifact loader for immediate demonstration.
-   - Export reports as Markdown and JSON.
+| Field | Details |
+|---|---|
+| **Author** | Amrutha Varshini |
+| **GitHub** | [Amrutha-Mannem](https://github.com/Amrutha-Mannem) |
+| **Repository** | [AI_Project_Intelligence_Risk_Advisor](https://github.com/Amrutha-Mannem/AI_Project_Intelligence_Risk_Advisor) |
+| **Version** | 1.0.0 |
+| **Tech Stack** | Python 3.13, FastAPI, RAG, Multi-Agent Pipeline, HTML/CSS/JS |
 
 ---
 
-## 🚀 Quickstart Guide
+## Project Statement
 
-### 1. Installation
+Software development teams and student project groups frequently struggle with incomplete planning, missed deadlines, undetected risks, and poor documentation. While teams do generate project-related documents — proposals, meeting notes, sprint updates, task lists, and progress reports — extracting actionable intelligence from these scattered artifacts manually is time-consuming and often overlooked. This results in reactive problem-solving instead of proactive project management.
 
-Ensure Python 3.10+ is installed:
+The objective of this project is to develop an **AI Project Intelligence & Risk Advisor** — an intelligent platform where teams upload their existing project documents and receive automated insights, risk forecasts, and actionable recommendations. The system accepts any combination of inputs — project proposal PDFs, SRS documents, meeting notes, progress update texts, or task list CSVs — and builds a unified project knowledge base using RAG. A multi-agent pipeline then analyses this knowledge base to surface scope, risks, blockers, and action items automatically.
 
+---
+
+## Features
+
+### Document Ingestion Module
+- Supports **PDF**, **DOCX**, **CSV**, **TXT**, and **XLSX** formats
+- Automatic text extraction with chunking (500-token chunks, 50-token overlap)
+- Embedding generation using `sentence-transformers`
+- In-memory vector store with cosine-similarity search
+
+### RAG Pipeline
+- Semantic document chunking and embedding
+- Top-K retrieval with cosine similarity scoring
+- Context-aware query expansion for short prompts
+- Multi-document knowledge base across all uploaded files
+
+### Multi-Agent Pipeline
+| Agent | Responsibility |
+|---|---|
+| **Scope & Deliverable Extraction Agent** | Identifies milestones, deliverables, and project scope from documents |
+| **Risk & Schedule Forecasting Agent** | Detects risks, severity levels, and predicts delivery timelines |
+| **Blocker & Impediment Detection Agent** | Surfaces blockers, dependencies, and impediments from meeting notes |
+| **Action Item Identification Agent** | Extracts pending tasks, owners, and deadlines from meeting notes |
+
+### Project Health Scoring
+- Composite health score (0–100) across four dimensions:
+  - **Timeline** — schedule adherence and milestone completion
+  - **Scope** — scope creep and deliverable clarity
+  - **Risk** — count and severity of open risks
+  - **Documentation** — completeness of project artifacts
+- Real-time status: `healthy`, `at_risk`, or `critical`
+
+### Conversational Assistant
+- RAG-powered chatbot for natural-language Q&A over project documents
+- Context-aware responses grounded in uploaded document content
+- Session-based conversation history
+
+### Web Dashboard
+- Interactive single-page dashboard with real-time analysis
+- Document upload with drag-and-drop support
+- Risk visualization, health score gauges, and agent output cards
+- Export full project intelligence report (JSON/PDF)
+
+---
+
+## Project Documents
+
+The `docs/` folder contains all project management artifacts:
+
+| Document | Description |
+|---|---|
+| [`Agile_Template_v0.1.xlsx`](docs/Agile_Template_v0.1.xlsx) | Sprint backlog with 10 user stories across 5 sprints |
+| [`Defect_Tracker_Template_v0.1.xlsx`](docs/Defect_Tracker_Template_v0.1.xlsx) | 5 defects tracked and resolved during development |
+| [`Unit_Test_Plan_v0.1.xlsx`](docs/Unit_Test_Plan_v0.1.xlsx) | 10 unit test cases with Pass/Fail results |
+
+---
+
+## Project Milestones
+
+### Milestone 1 — Architecture, Ingestion & RAG Pipeline ✅
+1. Studied RAG architecture, multi-agent design patterns, and project management fundamentals
+2. Designed system architecture, agent roles, RAG pipeline, and document data models
+3. Developed document ingestion module — PDF, DOCX, CSV, TXT, XLSX support
+4. Implemented RAG pipeline — document chunking, embedding generation, and vector store indexing
+
+### Milestone 2 — Multi-Agent Pipeline & Dashboard ✅
+1. Developed **Scope & Deliverable Extraction Agent** using keyword + semantic analysis
+2. Built **Risk & Schedule Forecasting Agent** with severity classification (HIGH/MEDIUM/LOW)
+3. Implemented **Blocker & Impediment Detection Agent** scanning meeting notes
+4. Created **Action Item Identification Agent** extracting tasks with owners and deadlines
+5. Validated all agent outputs using sample project documents across PDF, DOCX, CSV, and TXT formats
+6. Built interactive web dashboard with health scoring, risk charts, and conversational assistant
+7. Added export functionality for full project intelligence reports
+
+---
+
+## Architecture
+
+```
+┌─────────────────────────────────────────────────────┐
+│                   Web Dashboard                      │
+│           (HTML / CSS / JavaScript)                  │
+└───────────────────┬─────────────────────────────────┘
+                    │ HTTP REST
+┌───────────────────▼─────────────────────────────────┐
+│              FastAPI Backend (main.py)               │
+├─────────┬──────────┬──────────┬──────────┬──────────┤
+│ /ingest │  /agents │  /health │  /chat   │  /export │
+└────┬────┴────┬─────┴────┬─────┴────┬─────┴──────────┘
+     │         │          │          │
+┌────▼───┐  ┌──▼─────────▼──┐  ┌────▼──────┐
+│Document│  │ Multi-Agent    │  │   RAG     │
+│Ingestion│  │ Orchestrator  │  │ Pipeline  │
+│Module  │  │               │  │           │
+└────┬───┘  │ ■ Scope Agent │  │ ■ Chunk   │
+     │      │ ■ Risk Agent  │  │ ■ Embed   │
+     │      │ ■ Blocker Agt │  │ ■ Index   │
+     │      │ ■ Action Item │  │ ■ Retrieve│
+     │      └───────────────┘  └───────────┘
+     │
+┌────▼────────────────────────────────────────────────┐
+│          Vector Store (In-Memory, Cosine Similarity) │
+│          Sentence-Transformers Embeddings            │
+└─────────────────────────────────────────────────────┘
+```
+
+---
+
+## Project Structure
+
+```
+AI_Project_Intelligence_Risk_Advisor/
+├── main.py                     # FastAPI application entry point
+├── requirements.txt            # Python dependencies
+├── architecture_design.md      # System architecture documentation
+├── README.md                   # This file
+│
+├── app/
+│   ├── config.py               # Application configuration
+│   ├── deps.py                 # Dependency injection
+│   ├── models/
+│   │   ├── document.py         # Document & Chunk models
+│   │   ├── project.py          # Project, Risk, Blocker, ActionItem models
+│   │   └── health.py           # Health scoring models
+│   ├── ingestion/
+│   │   └── parser.py           # Multi-format document parser
+│   ├── rag/
+│   │   └── pipeline.py         # RAG chunking, embedding & retrieval
+│   ├── agents/
+│   │   └── orchestrator.py     # Multi-agent orchestration pipeline
+│   ├── analytics/
+│   │   └── health_scorer.py    # Project health scoring module
+│   ├── assistant/
+│   │   └── chat.py             # Conversational RAG assistant
+│   └── api/
+│       ├── routes_ingest.py    # Document upload endpoints
+│       ├── routes_agents.py    # Agent analysis endpoints
+│       ├── routes_health.py    # Health score endpoints
+│       ├── routes_chat.py      # Chat assistant endpoints
+│       ├── routes_rag.py       # RAG query endpoints
+│       └── routes_export.py    # Report export endpoints
+│
+├── static/
+│   ├── index.html              # Web dashboard
+│   ├── app.js                  # Dashboard JavaScript
+│   └── styles.css              # Dashboard styles
+│
+├── docs/
+│   ├── Agile_Template_v0.1.xlsx          # Sprint backlog (10 user stories)
+│   ├── Defect_Tracker_Template_v0.1.xlsx # Defect tracking (5 defects)
+│   └── Unit_Test_Plan_v0.1.xlsx          # Unit test plan (10 test cases)
+│
+├── samples/                    # Sample project documents for testing
+└── tests/                      # Automated test suite
+```
+
+---
+
+## Setup & Installation
+
+### Prerequisites
+- Python 3.10 or higher
+- pip
+
+### 1. Clone the Repository
 ```bash
-git clone <repo-url>
-cd ai_project_intelligence_risk_advisor
+git clone https://github.com/Amrutha-Mannem/AI_Project_Intelligence_Risk_Advisor.git
+cd AI_Project_Intelligence_Risk_Advisor
+```
+
+### 2. Install Dependencies
+```bash
 pip install -r requirements.txt
 ```
 
-### 2. Run the Application Server
+### 3. Configure API Key (Optional)
+Create a `.env` file in the project root for enhanced AI responses:
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+# or
+OPENAI_API_KEY=your_openai_api_key_here
+```
+> **Note:** The system works fully without an API key using the built-in local intelligence engine.
 
-Start the FastAPI application:
-
+### 4. Run the Application
 ```bash
 python main.py
 ```
 
-The server will launch at:
-👉 **`http://127.0.0.1:8000`**
-
-Open this URL in your web browser to access the interactive dashboard!
-
-### 3. Immediate 1-Click Demo Testing
-
-1. In the top navigation bar, click **"Load Samples"**.
-2. The system will automatically index 5 realistic project artifacts pre-packaged in `samples/`:
-   - `proposal_project.pdf` (Project Proposal)
-   - `srs_specifications.docx` (Requirements Specification)
-   - `sprint_meeting_notes.txt` (Sprint standup & blockers)
-   - `tasks_backlog.csv` (10-task sprint backlog)
-   - `progress_update.md` (Bi-weekly progress report)
-3. Click **"Run Multi-Agent Analysis"** to execute all 4 agents and view the health dashboard, risk heatmap matrix, user stories, and radar chart!
-4. Navigate to the **"Grounded Assistant"** tab to test conversational queries with citations.
+Open your browser and navigate to: **http://127.0.0.1:8000**
 
 ---
 
-## 🧪 Running Automated Tests
+## API Endpoints
 
-Run the full test suite with Pytest:
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/api/ingest` | Upload project documents |
+| `POST` | `/api/agents/analyze` | Run multi-agent analysis |
+| `GET` | `/api/health` | Get project health score |
+| `POST` | `/api/chat` | Chat with RAG assistant |
+| `POST` | `/api/rag/query` | Semantic search over documents |
+| `GET` | `/api/export/report` | Export full intelligence report |
+| `GET` | `/docs` | Swagger API documentation |
 
+---
+
+## Testing
+
+Run the test suite:
 ```bash
 python -m pytest tests/ -v
 ```
 
-All 18 unit and integration tests verify:
-- Parsing of PDF, DOCX, CSV, TXT, and MD files.
-- Chunking, vector indexing, similarity search, and hybrid retriever.
-- Scope, Risk, Blocker, Documentation agents, and Health scoring.
-- FastAPI REST endpoints.
+All 10 unit test cases are documented in [`docs/Unit_Test_Plan_v0.1.xlsx`](docs/Unit_Test_Plan_v0.1.xlsx).
 
 ---
 
-## 📂 Repository Structure
+## Technologies Used
 
-```
-ai_project_intelligence_risk_advisor/
-├── app/
-│   ├── api/                   # FastAPI route controllers
-│   ├── agents/                # Scope, Risk, Blocker, DocGen agents & Orchestrator
-│   ├── analytics/             # 100-point Health Scoring algorithm
-│   ├── assistant/             # RAG-grounded Conversational Assistant
-│   ├── ingestion/             # PDF, DOCX, CSV, TXT, MD document parsers
-│   ├── models/                # Pydantic schemas (Document, Project, Health, Chat)
-│   ├── rag/                   # Chunker, Embedder, Vector Store, Hybrid Retriever
-│   ├── config.py              # Application settings and environment variables
-│   └── deps.py                # Singleton service dependencies
-├── samples/                   # Pre-generated realistic project artifacts
-│   ├── proposal_project.pdf
-│   ├── srs_specifications.docx
-│   ├── tasks_backlog.csv
-│   ├── sprint_meeting_notes.txt
-│   ├── progress_update.md
-│   └── generate_samples.py
-├── static/                    # Responsive SPA Web Dashboard
-│   ├── index.html             # UI with Tailwind, Chart.js, Lucide
-│   ├── app.js                 # Frontend application logic
-│   └── styles.css             # Glassmorphism styling
-├── tests/                     # Automated unit and integration tests
-│   ├── test_ingestion.py
-│   ├── test_rag.py
-│   ├── test_agents.py
-│   └── test_api.py
-├── architecture_design.md     # Milestone 1 Architectural Study & Design Document
-├── main.py                    # Server entrypoint
-├── requirements.txt           # Dependencies
-└── README.md                  # Project documentation
-```
+| Technology | Purpose |
+|---|---|
+| **Python 3.13** | Core language |
+| **FastAPI** | REST API backend |
+| **Uvicorn** | ASGI server |
+| **sentence-transformers** | Document embeddings |
+| **pdfplumber / PyPDF2** | PDF parsing |
+| **python-docx** | DOCX parsing |
+| **pandas / openpyxl** | CSV / XLSX parsing |
+| **scikit-learn** | Cosine similarity search |
+| **Pydantic v2** | Data validation & modelling |
+| **HTML / CSS / JS** | Web dashboard frontend |
 
 ---
 
-## ⚙️ Configuration & LLM Providers
+## Author
 
-The application runs **100% locally out of the box** using the built-in deterministic Project Intelligence Engine.
-
-To enable advanced generative LLM reasoning, configure an API key either:
-1. In the web dashboard by clicking the **Settings (gear icon)** button in the top right.
-2. In a `.env` file:
-   ```env
-   GEMINI_API_KEY="your-gemini-key"
-   # or
-   OPENAI_API_KEY="your-openai-key"
-   ```
+**Amrutha Varshini**
+- GitHub: [@Amrutha-Mannem](https://github.com/Amrutha-Mannem)
+- Repository: [AI_Project_Intelligence_Risk_Advisor](https://github.com/Amrutha-Mannem/AI_Project_Intelligence_Risk_Advisor)
 
 ---
 
-## 📜 Milestone 1 Deliverables Summary
-
-- **Study & Architecture Document:** [`architecture_design.md`](architecture_design.md)
-- **Multi-Format Ingestion Module:** [`app/ingestion/`](app/ingestion/)
-- **Unified RAG Pipeline:** [`app/rag/`](app/rag/)
-- **Multi-Agent Pipeline & Scoring:** [`app/agents/`](app/agents/) and [`app/analytics/`](app/analytics/)
-- **Test Suite:** 18 passing tests in [`tests/`](tests/)
-- **Dashboard:** [`static/index.html`](static/index.html)
+*Built as part of the AI Project Intelligence & Risk Advisor project — an intelligent platform for automated project insights, risk forecasting, and multi-agent document analysis.*
