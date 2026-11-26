@@ -1051,5 +1051,2039 @@
         "Due_Date"
       ]
     }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_0_cca252",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "SHORT TERM INTERNSHIP REPORT\n\nON\n\nGOOGLE CLOUD GENERATIVE AI\n\nSubmitted in accordance with the requirement for the degree of\n\nB. TECH in CSE - AI & ML\n\nUnder the Faculty Guidance of\n\nMrs. M. SARADA\n\nAssistant Professor\n\nSubmitted by:\n\nAMRUTHA VARSHINI MANNEM\n\nReg. No: 23F01A4232\n\nDepartment of CSE - Artificial Intelligence & Machine Learning\n\nST.ANN'S COLLEGE OF ENGINEERING & TECHNOLOGY\n\n(An Autonomous Institution)\n\n[Accredited by NAAC with \u2018A\u2019 Grade]\n\n[Accredited by NBA 5 times]\n\n[Approved by AICTE]",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 505,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 77,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_1_5a6647",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "[Accredited by NBA 5 times]\n\n[Approved by AICTE]\n\n[Permanently Affiliated to JNTUK]\n\n[Recognized by UGC u/s 2(f) & 2(B)]\n\n[Approved with \u2018A\u2019 Grade by Andra Pradesh State Government]\n\n[Permanently Accredited by IE(I)]\n\nwww.sacet.ac.in\n\nPROGRAM BOOK FOR INTERNSHIP\n\nName of the Student: Amrutha Varshini Mannem\n\nName of the College: St. Ann\u2019s College of Engineering & Technology, Chirala\n\nRegistration Number: 23F01A4232\n\nPeriod of Internship: 8 Weeks (2 Months, 120 Hours)   From: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0   To:",
+    "chunk_index": 1,
+    "char_start": 457,
+    "char_end": 961,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 70,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_2_d7b4c8",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Name & Address of the Intern Organization: SmartBridge Educational Services Private Limited &\n\nSy. No. 91, 6th Floor, Technical Block, Sundarayya Vignana Kendram,\n\nGachibowli-Seri Lingampally, Hyderabad, Telangana, 500032, India\n\nJawaharlal Nehru Technological University,\n\nKakinada.\n\nYear: 2026\n\nStudent\u2019s Declaration",
+    "chunk_index": 2,
+    "char_start": 963,
+    "char_end": 1281,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 38,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_3_d058be",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Kakinada.\n\nYear: 2026\n\nStudent\u2019s Declaration\n\nI, AMRUTHA VARSHINI MANNEM a student of B. TECH Program, Reg. No. 23F01A4232 of the Department of CSE - Artificial Intelligence & Machine Learning, in St. Ann\u2019s college of Engineering & Technology Chirala. do hereby declare that I have completed the mandatory internship From \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 to \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 in SmartBridge Educational Services Pvt. Ltd. under the Faculty Guideship of Mrs. M. Sarada, Assistant Professor Department of CSE - Artificial Intelligence & Machine Learning, St",
+    "chunk_index": 3,
+    "char_start": 1237,
+    "char_end": 1779,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 76,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_4_4a16ac",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Ann\u2019s College of Engineering & Technology, Chirala.\n\n(Signature and Date)\n\nSt. Ann's College of Engineering & Technology\n\n(AUTONOMOUS)\n\n[Approved by A.I.C.T.E. & Permanently Affiliated to JNTUK- Kakinada]\n\n[Accredited by NBA (Five Times) and Permanently accredited by IE[I]]\n\n[Accredited by NAAC with 'A' Grade (Thrice) & Awarded 'A' Grade by AP State Govt.]\n\n[Recognized by UGC u/s 2(f) & 12(B) of the UGC Act 1956]\n\nCERTIFICATE",
+    "chunk_index": 4,
+    "char_start": 1781,
+    "char_end": 2210,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 65,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_5_c82689",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "[Recognized by UGC u/s 2(f) & 12(B) of the UGC Act 1956]\n\nCERTIFICATE\n\nThis is to certify that Amrutha Varshini Mannem Reg. No. 23F01A4232 has completed her Internship in SmartBridge Educational Services Pvt. Ltd. on Google Cloud Generative AI under my supervision as a part of partial fulfilment of the requirement for the Degree of B. Tech in the department of CSE-Artificial Intelligence & Machine Learning in St. Ann\u2019s College of Engineering & Technology, Chirala.",
+    "chunk_index": 5,
+    "char_start": 2141,
+    "char_end": 2609,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 75,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_6_8e5f25",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Internal Examiner\tExternal Examiner\tHead of the Department\n\nPrincipal\n\nCERTIFICATE FROM INTERN ORGANIZATION\n\nAcknowledgement\n\nI wish to express my thanks to various personalities who are responsible for the completion of the internship. First of all, I, AMRUTHA VARSHINI MANNEM, the student of St. Ann\u2019s College of Engineering & Technology, Chirala.\n\nI would like to sincerely express my gratitude to all those who supported me throughout the completion of this internship and project.",
+    "chunk_index": 6,
+    "char_start": 2611,
+    "char_end": 3096,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 72,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_7_b7fb7b",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "I would like to express my gratitude to my project guide Mrs. M. Sarada, Assistant Professor who assisted me in completing the project.\n\nI would also be thankful to our Head of Department, Dr. Ch. Hari Kishan of St. Ann\u2019s College of Engineering & Technology, for providing valuable suggestions in the completion of this project.",
+    "chunk_index": 7,
+    "char_start": 3098,
+    "char_end": 3426,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 55,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_8_575b40",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "I would also be thankful to the principal, Dr. K. Jagadeesh Babu, and the management of St. Ann\u2019s College of Engineering & Technology for providing all the required facilities for the completion of this project.",
+    "chunk_index": 8,
+    "char_start": 3428,
+    "char_end": 3639,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 35,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_9_f9fb6f",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "I would like to thank AMARENDAR KATKAM for SmartBridge Educational Services Pvt. Ltd. giving me the opportunity to do the \u201cGoogle Cloud Generative AI\u201d internship within the organization, in collaboration with the Andhra Pradesh State Council of Higher Education (APSCHE) and Google for Developers.\n\nI would like to extend my deep appreciation to all officials of the college, without whose support and coordination I would not have been able to complete this project.\n\nAmrutha Varshini Mannem",
+    "chunk_index": 9,
+    "char_start": 3641,
+    "char_end": 4133,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 76,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_10_48d6da",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Amrutha Varshini Mannem\n\nTABLE OF CONTENTS\n\nABSTRACT\n\nThe Short-Term Virtual Internship on Google Cloud Generative AI was organized by SmartBridge Educational Services Pvt. Ltd. in collaboration with the Andhra Pradesh State Council of Higher Education (APSCHE) and Google for Developers.",
+    "chunk_index": 10,
+    "char_start": 4110,
+    "char_end": 4398,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 40,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_11_d42050",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Amrutha Varshini Mannem, bearing Hall Ticket No. 23F01A4232, a student of CSE \u2013 Artificial Intelligence & Machine Learning at St. Ann\u2019s College of Engineering and Technology (Affiliated to JNTUK), has successfully completed this internship programme with dedication and enthusiasm.",
+    "chunk_index": 11,
+    "char_start": 4400,
+    "char_end": 4681,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 39,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_12_c3dc07",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "The internship spanned a duration of two months (120 hours), focusing on Generative AI and Google Cloud AI technologies. During this period, the student worked on a real-time project titled \u201cAI-Powered Debt Relief & Financial Recovery Platform\u201d, which aimed to help borrowers manage loans, analyse their debt stress through a transparent scoring model, and generate AI-drafted negotiation and settlement letters using the Google Gemini API.",
+    "chunk_index": 12,
+    "char_start": 4683,
+    "char_end": 5123,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 65,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_13_d2a986",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "The internship provided in-depth exposure to the fundamentals of Generative AI, Large Language Models, prompt engineering and Google Cloud AI services. It enhanced the student\u2019s ability to design and build an end-to-end AI-powered web application using React, FastAPI and SQLite, deploy it on the cloud, and present the results effectively.\n\nABOUT THE ORGANIZATION\n\nSmartBridge Educational Services Pvt. Ltd.",
+    "chunk_index": 13,
+    "char_start": 5125,
+    "char_end": 5533,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 58,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_14_a80ab5",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "ABOUT THE ORGANIZATION\n\nSmartBridge Educational Services Pvt. Ltd.\n\nSmartBridge Educational Services Pvt. Ltd. is a leading EdTech and innovation-driven learning company that focuses on bridging the gap between academia and industry. Established with the vision of empowering students and professionals with real-world technical skills, SmartBridge provides hands-on learning experiences through industrial internships, training programs, and project-based mentorship.",
+    "chunk_index": 14,
+    "char_start": 5467,
+    "char_end": 5935,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 57,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_15_0a8f76",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "The organization has collaborated with various government bodies, global technology companies, and universities to implement industry-oriented learning programs",
+    "chunk_index": 15,
+    "char_start": 5937,
+    "char_end": 6097,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 18,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_16_2a2b8e",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "One of its significant collaborations includes working with the Andhra Pradesh State Council of Higher Education (APSCHE) to provide large-scale skill development internships in areas such as Artificial Intelligence, Machine Learning, Generative AI, Cloud Computing, Cybersecurity, Data Analytics with Tableau and Full Stack Development (MERN).",
+    "chunk_index": 16,
+    "char_start": 6099,
+    "char_end": 6443,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 45,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_17_e5c628",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "SmartBridge follows an experiential learning approach, where learners gain exposure to real-time projects under expert mentors. Through this model, students are encouraged to learn by doing \u2014 developing web applications, building machine learning models, and implementing cloud solutions while applying theoretical knowledge to solve practical problems.",
+    "chunk_index": 17,
+    "char_start": 6445,
+    "char_end": 6798,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 46,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_18_e14385",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "The company\u2019s mission is to make technical education more practical, accessible, and impactful. It aims to nurture innovation, enhance employability, and create a workforce ready for the digital future. SmartBridge achieves this by integrating modern technologies and mentoring support into its academic collaborations.\n\nSome of the major initiatives and features of SmartBridge include:\n\n- Partnership programs with IBM SkillsBuild, AWS Educate, and APSSDC for skill-building.",
+    "chunk_index": 18,
+    "char_start": 6800,
+    "char_end": 7277,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 65,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_19_dc7802",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "- Providing virtual internship platforms for students across India.\n\n- Organizing capstone projects, hackathons, and innovation challenges for students to showcase their skills.\n\n- Mentoring over 1 lakh learners in emerging technologies since its inception.\n\nThe organization operates from its headquarters in Hyderabad, Telangana, with a dedicated team of professionals, mentors, and engineers who work towards transforming the way students learn and apply technology.",
+    "chunk_index": 19,
+    "char_start": 7279,
+    "char_end": 7748,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 64,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_20_58b2ee",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "By focusing on continuous learning and innovation, SmartBridge Educational Services Pvt. Ltd. has established itself as a trusted and impactful platform for experiential education in India.\n\nABOUT THE PROJECT\n\nAI-POWERED DEBT RELIEF & FINANCIAL RECOVERY PLATFORM",
+    "chunk_index": 20,
+    "char_start": 7750,
+    "char_end": 8012,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 36,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_21_3aa98b",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "ABOUT THE PROJECT\n\nAI-POWERED DEBT RELIEF & FINANCIAL RECOVERY PLATFORM\n\nThe project titled \u201cAI-Powered Debt Relief & Financial Recovery Platform\u201d is a real-time project developed as part of the Google Cloud Generative AI internship under SmartBridge. It is an AI-powered web application to manage loans, analyse debt stress, and generate AI-drafted negotiation and settlement letters using Google Gemini.",
+    "chunk_index": 21,
+    "char_start": 7941,
+    "char_end": 8346,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 58,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_22_8a07db",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "The main objective of the project is to help borrowers who are struggling with overdue loans to understand their financial position and to approach their lenders with a well-prepared, lender-specific settlement proposal. Early awareness of debt stress and a structured negotiation approach can help borrowers recover financially.",
+    "chunk_index": 22,
+    "char_start": 8348,
+    "char_end": 8677,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 47,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_23_4b2f8d",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "The user enters the loan details such as the outstanding amount, EMI, overdue months, income and expenses. The system then calculates a debt stress score, the EMI-to-income ratio, the monthly surplus and a recommended settlement percentage. The debt stress score is a transparent, rule-based score from 0 to 100, and the settlement recommendation is capped between 15% and 65%.",
+    "chunk_index": 23,
+    "char_start": 8679,
+    "char_end": 9056,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 59,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_24_5415de",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "For the negotiation letter, the user selects a strategy type and a tone, and the platform drafts a letter using the Google Gemini API. The prompt is built from the borrower\u2019s real financial data and never from fabricated figures, and a deterministic fallback template ensures that the feature works even without an API key. Every generated letter is saved against the loan account for future reference.",
+    "chunk_index": 24,
+    "char_start": 9058,
+    "char_end": 9460,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 66,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_25_1376f5",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "The application is built with React.js (Vite) on the frontend, FastAPI with SQLAlchemy and SQLite on the backend, and the Google Gemini API for AI. It is deployed on Render and demonstrates how Generative AI can be applied to a real-world financial problem.\n\nOBJECTIVES AND METHODOLOGY\n\nObjectives of the Project",
+    "chunk_index": 25,
+    "char_start": 9462,
+    "char_end": 9774,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 50,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_26_fd3541",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "OBJECTIVES AND METHODOLOGY\n\nObjectives of the Project\n\nThe main objective of the project \u201cAI-Powered Debt Relief & Financial Recovery Platform\u201d is to analyse a borrower\u2019s loan and income details and to generate AI-assisted negotiation letters using Generative AI.\n\nThe key objectives are:\n\n- To enable borrowers to record and manage their loan accounts in one place.\n\n- To analyse financial parameters such as the outstanding amount, EMI, overdue months, income and expenses.",
+    "chunk_index": 26,
+    "char_start": 9721,
+    "char_end": 10196,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 72,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_27_90eda0",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "- To compute a transparent debt stress score, the EMI-to-income ratio and the monthly surplus.\n\n- To recommend a realistic settlement percentage based on the stress score and the overdue duration.\n\n- To generate lender-specific negotiation and settlement letters using the Google Gemini API, grounded in the borrower\u2019s real data.\n\n- To provide a fallback template so that the feature works even without an API key.\n\n- To store the negotiation history of every loan account for future reference.",
+    "chunk_index": 27,
+    "char_start": 10198,
+    "char_end": 10692,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 79,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_28_ac7a62",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "- To store the negotiation history of every loan account for future reference.\n\n- To build and deploy a full-stack application and to gain skills in Generative AI, prompt engineering and Google Cloud AI services.\n\nThese objectives collectively aim to enhance technical expertise and analytical skills by applying Generative AI concepts to a real-world financial problem.\n\nMethodology",
+    "chunk_index": 28,
+    "char_start": 10614,
+    "char_end": 10997,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 57,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_29_9de487",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Methodology\n\nThe project \u201cAI-Powered Debt Relief & Financial Recovery Platform\u201d was developed through a systematic software development process combined with Generative AI integration. The following steps outline the methodology adopted for the project:\n\n- Problem Identification:\n\nUnderstanding the difficulties faced by borrowers with overdue loans and defining the objective of providing debt analysis and AI-assisted negotiation support.\n\n- Requirement Analysis and Design:",
+    "chunk_index": 29,
+    "char_start": 10986,
+    "char_end": 11463,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 62,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_30_ee05c9",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "- Requirement Analysis and Design:\n\nIdentifying the inputs, outputs and features, and designing the architecture with a React frontend, a FastAPI backend, a SQLite database and the Gemini API.\n\n- Backend Development:\n\nBuilding the FastAPI application, ORM models (Loan, NegotiationHistory), Pydantic schemas and REST endpoints.\n\n- Debt Stress Analysis:\n\nImplementing the rule-based debt stress score, the EMI-to-income ratio, the monthly surplus and the settlement recommendation.\n\n- Generative AI Integration:",
+    "chunk_index": 30,
+    "char_start": 11429,
+    "char_end": 11939,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 69,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_31_7148e8",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "- Generative AI Integration:\n\nDesigning prompts from the borrower\u2019s real financial data and integrating the Gemini API, with a deterministic fallback template.\n\n- Frontend Development:\n\nCreating the Dashboard, LoanForm, LoanDetail and RecoveryGauge components in React (Vite) and connecting them to the backend.\n\n- Testing, Deployment and Documentation:\n\nTesting the complete flow, deploying the application on Render, and preparing the README, documentation and demo.\n\nSummary of Methodology",
+    "chunk_index": 31,
+    "char_start": 11911,
+    "char_end": 12403,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 66,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_32_f1ec90",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Summary of Methodology\n\nThe methodology of the AI-Powered Debt Relief & Financial Recovery Platform involves a structured process of analysis, design, development, AI integration, testing and deployment, resulting in a working cloud-hosted application.\n\nACTIVITY LOG FOR THE FIRST WEEK\n\nWEEKLY REPORT\n\nWEEK \u2013 1 (From: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0   To: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 )\n\nObjective of the Activity Done: Introduction to Generative AI and Project Setup\n\nDetailed Report:",
+    "chunk_index": 32,
+    "char_start": 12381,
+    "char_end": 12839,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 61,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_33_dde476",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Detailed Report:\n\nDuring the first week of the internship, I was introduced to the structure of the Google Cloud Generative AI programme and the learning resources provided by SmartBridge, APSCHE and Google for Developers. I learned the fundamentals of Artificial Intelligence, Machine Learning and Generative AI, and how Generative AI differs from traditional approaches.",
+    "chunk_index": 33,
+    "char_start": 12823,
+    "char_end": 13195,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 54,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_34_ffdfef",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "I explored the Google Cloud platform and its developer resources, and studied real-world applications of Generative AI in areas such as customer support, content creation, healthcare and finance. This helped me understand where Generative AI adds practical value.",
+    "chunk_index": 34,
+    "char_start": 13197,
+    "char_end": 13460,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 38,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_35_13bc1d",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Using these learnings, I brainstormed project ideas and selected the \u201cAI-Powered Debt Relief & Financial Recovery Platform\u201d, which helps borrowers understand their debt stress and draft negotiation letters with AI. I prepared the scope, key features and the technology stack, consisting of React, FastAPI, SQLite and the Google Gemini API.\n\nOverall, this week provided a strong foundation in Generative AI concepts and prepared me for the technical stages that followed.\n\nACTIVITY LOG FOR THE SECOND WEEK",
+    "chunk_index": 35,
+    "char_start": 13462,
+    "char_end": 13966,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 76,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_36_ce2195",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "ACTIVITY LOG FOR THE SECOND WEEK\n\nWEEKLY REPORT\n\nWEEK \u2013 2 (From: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0   To: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 )\n\nObjective of the Activity Done: Large Language Models, Google Cloud AI Services and Requirement Analysis\n\nDetailed Report:\n\nIn the second week, I studied Large Language Models and how they generate text from prompts. I learned about tokens, context and the transformer idea at a conceptual level, and why LLMs are suited to drafting and summarising tasks.",
+    "chunk_index": 36,
+    "char_start": 13934,
+    "char_end": 14397,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 70,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_37_b8ee7d",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "I explored the Google Cloud AI services and the Gemini models, and used Google AI Studio to generate an API key and test sample prompts. This showed me how a model can be accessed from an application through an API.",
+    "chunk_index": 37,
+    "char_start": 14399,
+    "char_end": 14614,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 40,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_38_c8f2a5",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "I then analysed the problem the project would solve. Borrowers with overdue loans often do not know how stressed their finances are or how to approach lenders for settlement. I identified the inputs required (outstanding amount, EMI, overdue months, income and expenses) and the outputs expected (a debt stress score, financial health indicators, a settlement recommendation and an AI-drafted letter).",
+    "chunk_index": 38,
+    "char_start": 14616,
+    "char_end": 15017,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 60,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_39_389129",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Finally, I designed the overall architecture, with a React frontend, a FastAPI backend, a SQLite database and the Gemini API for letter generation. This week gave me clarity on both the AI concepts and the requirements of the project.\n\nACTIVITY LOG FOR THE THIRD WEEK\n\nWEEKLY REPORT\n\nWEEK \u2013 3 (From: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0   To: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 )\n\nObjective of the Activity Done: Prompt Engineering and Backend Foundation\n\nDetailed Report:",
+    "chunk_index": 39,
+    "char_start": 15019,
+    "char_end": 15453,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 65,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_40_bac76c",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Detailed Report:\n\nThis week I focused on prompt engineering, which is central to working with Large Language Models. I learned that clear instructions, relevant context, a defined role and explicit constraints lead to more reliable outputs, and I practised zero-shot, few-shot and tone-controlled prompts in Google AI Studio.",
+    "chunk_index": 40,
+    "char_start": 15437,
+    "char_end": 15762,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 48,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_41_bad364",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "I also began the backend of the project. I set up a FastAPI application with a Python virtual environment and installed the required dependencies. I configured the SQLite database with SQLAlchemy and created the ORM models for Loan and NegotiationHistory, so that each loan account can store its generated letters.\n\nI defined Pydantic schemas for the request and response data, which ensure that incoming loan details are validated before they are processed.",
+    "chunk_index": 41,
+    "char_start": 15764,
+    "char_end": 16222,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 72,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_42_4ba297",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "This week strengthened my understanding of prompt design and gave the project a solid backend foundation.\n\nACTIVITY LOG FOR THE FOURTH WEEK\n\nWEEKLY REPORT\n\nWEEK \u2013 4 (From: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0   To: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 )\n\nObjective of the Activity Done: Debt Stress Analysis Logic and API Development\n\nDetailed Report:",
+    "chunk_index": 42,
+    "char_start": 16224,
+    "char_end": 16535,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 44,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_43_9a5e10",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Detailed Report:\n\nIn the fourth week, I implemented the core analysis logic of the platform in the analyze_financial_health() function of ai_service.py. The debt stress score is a transparent, rule-based score from 0 to 100 that combines the EMI-to-income ratio, the overdue duration and the monthly surplus.",
+    "chunk_index": 43,
+    "char_start": 16519,
+    "char_end": 16827,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 46,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_44_4a78f5",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Based on the stress score and the overdue duration, I built the settlement recommendation, which scales the suggested discount percentage and is capped between 15% and 65% so that the suggestion stays realistic.\n\nI then exposed this logic through REST endpoints in main.py for creating loans, viewing them and retrieving the analysis. I tested the endpoints using the interactive documentation that FastAPI generates automatically.",
+    "chunk_index": 44,
+    "char_start": 16829,
+    "char_end": 17260,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 64,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_45_d8242e",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "This week helped me understand how to turn financial reasoning into clear, testable code.\n\nACTIVITY LOG FOR THE FIFTH WEEK\n\nWEEKLY REPORT\n\nWEEK \u2013 5 (From: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0   To: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 )\n\nObjective of the Activity Done: Gemini API Integration and Negotiation Letter Generation\n\nDetailed Report:",
+    "chunk_index": 45,
+    "char_start": 17262,
+    "char_end": 17566,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 42,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_46_3c08e1",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Detailed Report:\n\nThis week I integrated the Google Gemini API to generate negotiation and settlement letters. The API key and model name are read from environment variables (GEMINI_API_KEY and GEMINI_MODEL), so that no secret is stored in the code.",
+    "chunk_index": 46,
+    "char_start": 17550,
+    "char_end": 17799,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 39,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_47_4c8fbf",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Applying what I had learned about prompt engineering, I built the prompt from the borrower\u2019s real financial data, such as the outstanding amount, EMI, overdue months and recommended settlement, so that the letter never contains fabricated figures. I added options for the strategy type and the tone of the letter.",
+    "chunk_index": 47,
+    "char_start": 17801,
+    "char_end": 18114,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 50,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_48_5d0df7",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "To make the feature dependable, I implemented a deterministic fallback template, so that a well-formed letter is still produced when no API key is available. Every generated letter is saved in the negotiation history of the loan account.\n\nThis week showed me how to use a Large Language Model responsibly in a real application, with grounding in real data and a fallback when the service is unavailable.\n\nACTIVITY LOG FOR THE SIXTH WEEK\n\nWEEKLY REPORT",
+    "chunk_index": 48,
+    "char_start": 18116,
+    "char_end": 18567,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 75,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_49_a15cb1",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "ACTIVITY LOG FOR THE SIXTH WEEK\n\nWEEKLY REPORT\n\nWEEK \u2013 6 (From: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0   To: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 )\n\nObjective of the Activity Done: Frontend Development using React\n\nDetailed Report:\n\nIn the sixth week, I developed the frontend of the platform using React with Vite. I created a design system in index.css with common tokens, layout rules and components so that the interface looks consistent.",
+    "chunk_index": 49,
+    "char_start": 18521,
+    "char_end": 18921,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 60,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_50_17caf6",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "I built the main components: the Dashboard, which lists the loan accounts; the LoanForm, which collects the loan amount, EMI, overdue months, income and expenses; and the LoanDetail page, which shows the debt stress score, EMI-to-income ratio, monthly surplus and recommended settlement percentage. I also created the RecoveryGauge component to present the stress score visually.",
+    "chunk_index": 50,
+    "char_start": 18923,
+    "char_end": 19302,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 55,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_51_aba272",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "To connect the frontend with the backend, I wrote a fetch wrapper in api/client.js and configured the Vite development server to proxy /api requests to the FastAPI server.\n\nThis week improved my skills in building interactive user interfaces and in connecting them to an API.\n\nACTIVITY LOG FOR THE SEVENTH WEEK\n\nWEEKLY REPORT\n\nWEEK \u2013 7 (From: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0   To: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 )\n\nObjective of the Activity Done: Integration, Testing and Deployment\n\nDetailed Report:",
+    "chunk_index": 51,
+    "char_start": 19304,
+    "char_end": 19775,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 70,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_52_347e43",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Detailed Report:\n\nDuring this week, I integrated the frontend and the backend and tested the complete flow: adding a loan, viewing the financial health analysis, generating a negotiation letter and reviewing the letter history. I added CORS middleware to the backend so that the frontend can call it from a different origin, and I fixed the bugs found during testing.",
+    "chunk_index": 52,
+    "char_start": 19759,
+    "char_end": 20126,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 60,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_53_36b1c0",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "I then prepared the application for deployment. I configured FastAPI to serve the built frontend for a monorepo deployment, added a redirect from the root URL to the dashboard, and added the files required by Render, namely render.yaml, a root requirements.txt and a .python-version file that pins Python 3.12.9.\n\nThe application was deployed on Render, and I verified both the frontend and the backend URLs after deployment.",
+    "chunk_index": 53,
+    "char_start": 20128,
+    "char_end": 20553,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 67,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_54_0247a7",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "This week gave me practical experience in integration, testing and cloud deployment.\n\nACTIVITY LOG FOR THE EIGHTH WEEK\n\nWEEKLY REPORT\n\nWEEK \u2013 8 (From: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0   To: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 )\n\nObjective of the Activity Done: Documentation, Demonstration and Submission\n\nDetailed Report:",
+    "chunk_index": 54,
+    "char_start": 20555,
+    "char_end": 20842,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 37,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_55_ced780",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Detailed Report:\n\nIn the final week, I completed the documentation of the project. I wrote the README, which explains the project structure, the backend and frontend setup, the use of the application, the core logic and the environment variables, and I added the documentation for all phases of the project to the repository.\n\nI recorded a demo video, captured screenshots of the application, and carried out a final round of testing on the deployed version. I also prepared the project presentation.",
+    "chunk_index": 55,
+    "char_start": 20826,
+    "char_end": 21326,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 81,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_56_614189",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "I presented the project, demonstrated the application and answered questions about the methodology and the design. The feedback I received helped me understand how the project can be improved further, for example with user authentication and PDF export of letters.\n\nThe internship gave me valuable practical experience in Generative AI, Google Cloud AI services, prompt engineering and full-stack development, and it was completed with the award of the Certificate of Completion.",
+    "chunk_index": 56,
+    "char_start": 21328,
+    "char_end": 21807,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 71,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_57_29a7db",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "SYSTEM DESIGN AND IMPLEMENTATION\n\nThe system design of the \u201cAI-Powered Debt Relief & Financial Recovery Platform\u201d defines the overall structure, workflow and interaction between its components. It follows a layered architecture with a React frontend, a FastAPI backend, a SQLite database and the Google Gemini API.\n\n1. System Architecture",
+    "chunk_index": 57,
+    "char_start": 21809,
+    "char_end": 22147,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 49,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_58_45da1c",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "1. System Architecture\n\nThe frontend communicates with the backend through REST API calls. The backend performs the financial analysis, stores the data through SQLAlchemy, and calls the Gemini API to draft the negotiation letters.\n\n- Frontend (Client Side):",
+    "chunk_index": 58,
+    "char_start": 22125,
+    "char_end": 22382,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 38,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_59_f20d05",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "- Frontend (Client Side):\n\nThe frontend is developed using React.js (Vite), JavaScript and CSS. It contains the Dashboard, LoanForm, LoanDetail and RecoveryGauge components, a fetch wrapper (api/client.js) for the backend, and a design system in index.css. During development, Vite proxies /api requests to the backend on port 8000.\n\n- Application Layer (Backend):",
+    "chunk_index": 59,
+    "char_start": 22357,
+    "char_end": 22721,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 52,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_60_9f672e",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "- Application Layer (Backend):\n\nThe backend is built with FastAPI. main.py defines the routes, schemas.py defines the Pydantic request/response schemas, and ai_service.py contains the debt stress analysis (analyze_financial_health) and the Gemini letter generation. CORS middleware allows the frontend to call the API, and the backend also serves the built frontend for the monorepo deployment.\n\n- Data Layer:",
+    "chunk_index": 60,
+    "char_start": 22691,
+    "char_end": 23100,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 57,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_61_2d4277",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "- Data Layer:\n\nSQLite is used with SQLAlchemy. database.py sets up the engine and sessions, and models.py defines the Loan and NegotiationHistory models.\n\n- AI Layer:\n\nThe Google Gemini API (default model gemini-1.5-flash, configurable through GEMINI_MODEL) drafts the letters from a prompt built using the borrower\u2019s real financial data.\n\n- Deployment Layer:\n\nThe application is deployed on Render using render.yaml, a root requirements.txt and a .python-version file that pins Python 3.12.9.",
+    "chunk_index": 61,
+    "char_start": 23087,
+    "char_end": 23580,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 71,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_62_a9a5d9",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "2. Database Design\n\nThe application uses SQLite through SQLAlchemy. The data is divided into the following logical components:\n\n- Loan: Stores the loan account details entered by the user: the outstanding amount, EMI, overdue months, income and expenses.\n\n- NegotiationHistory: Stores every negotiation letter generated for a loan account, so that the history can be reviewed later.",
+    "chunk_index": 62,
+    "char_start": 23582,
+    "char_end": 23964,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 57,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_63_a03dcd",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "- Derived Analysis: The debt stress score, EMI-to-income ratio, monthly surplus and recommended settlement percentage are calculated from the loan data by the analysis logic.\n\n3. Application Flow\n\n- Add a Loan: The user enters the outstanding amount, EMI, overdue months, income and expenses in the LoanForm.",
+    "chunk_index": 63,
+    "char_start": 23966,
+    "char_end": 24274,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 47,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_64_3474e1",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "- Financial Health Analysis: The backend computes the debt stress score, the EMI-to-income ratio, the monthly surplus and the recommended settlement percentage, which the LoanDetail page displays with the RecoveryGauge.\n\n- Letter Generation: The user chooses a strategy type and a tone. The backend builds a prompt from the real financial data and calls the Gemini API; if no API key is configured, a template letter is returned.",
+    "chunk_index": 64,
+    "char_start": 24276,
+    "char_end": 24705,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 68,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_65_a5aca9",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "- History: The generated letter is saved in the negotiation history of the loan account.\n\n4. Core Logic\n\n- The debt stress score is a transparent, rule-based score from 0 to 100 that combines the EMI-to-income ratio, the overdue duration and the monthly surplus.\n\n- The settlement recommendation scales with the stress score and the overdue duration and is capped between 15% and 65%.",
+    "chunk_index": 65,
+    "char_start": 24707,
+    "char_end": 25091,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 64,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_66_a0bbe2",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "- Letters are generated using only the borrower\u2019s real data, with a deterministic fallback so that the feature never fails.\n\n5. Implementation Tools\n\n- Frontend:\n\nReact.js (Vite), JavaScript, CSS\n\n- Backend:\n\nPython 3.12.9, FastAPI, Uvicorn, Pydantic\n\n- Database:\n\nSQLite with SQLAlchemy ORM\n\n- Generative AI:\n\nGoogle Gemini API (gemini-1.5-flash by default), Google AI Studio\n\n- Deployment:\n\nRender (render.yaml configuration)\n\n- Version Control:\n\nGit and GitHub\n\nProject Links",
+    "chunk_index": 66,
+    "char_start": 25093,
+    "char_end": 25571,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 67,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_67_49116e",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Render (render.yaml configuration)\n\n- Version Control:\n\nGit and GitHub\n\nProject Links\n\nGitHub Repository: https://github.com/Amrutha-Mannem/Financial-debt-relief-platform\n\nDeployed Application: https://financial-debt-relief-platform-1.onrender.com\n\nBackend: https://financial-debt-relief-platform.onrender.com\n\nDemo Video: https://drive.google.com/file/d/121qyqLAamxsH2x-gY9pvh4Luvj1Ccxfu/view?usp=sharing\n\nRESULTS AND DISCUSSION",
+    "chunk_index": 67,
+    "char_start": 25486,
+    "char_end": 25915,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 25,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_68_076d07",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "RESULTS AND DISCUSSION\n\nThe AI-Powered Debt Relief & Financial Recovery Platform was successfully developed, tested and deployed. The application turns a borrower\u2019s loan and income details into clear financial insights and an AI-drafted negotiation letter. Key results obtained include:\n\n\u2022 Loan Management\n\nUsers can add loan accounts with the outstanding amount, EMI, overdue months, income and expenses, and view all accounts on the dashboard.\n\n\u2022 Debt Stress Score",
+    "chunk_index": 68,
+    "char_start": 25893,
+    "char_end": 26359,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 68,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_69_57b3c7",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "\u2022 Debt Stress Score\n\nA transparent, rule-based score from 0 to 100 is calculated from the EMI-to-income ratio, the overdue duration and the monthly surplus, and is shown visually through the RecoveryGauge.\n\n\u2022 Financial Health Indicators\n\nThe LoanDetail page shows the EMI-to-income ratio and the monthly surplus, which help the borrower see how much of the income is committed to repayment.\n\n\u2022 Settlement Recommendation",
+    "chunk_index": 69,
+    "char_start": 26340,
+    "char_end": 26759,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 64,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_70_6081a8",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "\u2022 Settlement Recommendation\n\nA recommended settlement percentage, scaled with the stress score and the overdue duration and capped between 15% and 65%, gives the borrower a realistic starting point for negotiation.\n\n\u2022 AI-Drafted Negotiation Letters\n\nUsing the Gemini API, the platform drafts lender-specific letters for the chosen strategy and tone, built from the borrower\u2019s real data only.\n\n\u2022 Fallback and History",
+    "chunk_index": 70,
+    "char_start": 26732,
+    "char_end": 27147,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 61,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_71_60dac3",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "\u2022 Fallback and History\n\nA deterministic template letter is produced when no API key is available, so the application remains fully usable. Every letter is saved per loan account for later review.\n\n\u2022 Deployment\n\nThe application is deployed on Render and is accessible through a web browser.\n\nScreenshots of the working application (the outputs obtained) are given in the following pages.\n\nOUTPUT SCREENSHOTS",
+    "chunk_index": 71,
+    "char_start": 27125,
+    "char_end": 27531,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 63,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_72_058f70",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "OUTPUT SCREENSHOTS\n\nFigure 1: Dashboard showing total outstanding, total monthly EMI, average debt stress score and the loan accounts\n\nFigure 2: Add a loan account form (loan details, income and expenses)\n\nOUTPUT SCREENSHOTS (Contd.)\n\nFigure 3: Loan detail page with the debt stress score gauge, financial health insight and the negotiation strategy options\n\nFigure 4: AI-drafted settlement letter saved in the negotiation history of the loan account\n\nDISCUSSION",
+    "chunk_index": 72,
+    "char_start": 27513,
+    "char_end": 27975,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 68,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_73_55b812",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "DISCUSSION\n\nThe results show that Generative AI can add real value to a financial-assistance application when it is combined with transparent calculations. The rule-based stress score is easy to explain to the user, while the Gemini model is used only where it is strongest, in drafting well-structured, polite and professional letters.",
+    "chunk_index": 73,
+    "char_start": 27965,
+    "char_end": 28301,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 51,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_74_f7d3a2",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "One of the major strengths of the project is that the prompt is built from the borrower\u2019s real financial data and never from fabricated figures. The fallback template further ensures that the feature does not break when the AI service or the API key is unavailable.",
+    "chunk_index": 74,
+    "char_start": 28303,
+    "char_end": 28568,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 46,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_75_483b43",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "The platform has some limitations. The stress score and settlement recommendation are rule-based and not learned from historical data; the application currently has no user authentication; and letters cannot yet be exported as PDF. The generated letters are drafts that the borrower should review, and the output is not a substitute for professional financial or legal advice.\n\nPossible extensions include:\n\n- Adding authentication (JWT) for multi-user support.\n\n- Exporting negotiation letters as PDF.",
+    "chunk_index": 75,
+    "char_start": 28570,
+    "char_end": 29072,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 73,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_76_250697",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "- Exporting negotiation letters as PDF.\n\n- Adding charts for stress score trends over time.\n\nDespite these limitations, the platform proves to be an effective tool for:\n\n- Understanding debt stress\n\n- Preparing negotiation and settlement letters\n\n- Applying Generative AI to a real-world financial problem\n\nCONCLUSION AND REFERENCES",
+    "chunk_index": 76,
+    "char_start": 29033,
+    "char_end": 29365,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 49,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_77_723a39",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "CONCLUSION AND REFERENCES\n\nThe AI-Powered Debt Relief & Financial Recovery Platform demonstrates how Generative AI can be applied to a real-world financial problem. By combining a transparent debt stress analysis with Gemini-drafted negotiation letters, the application helps borrowers understand their financial position and prepare for settlement discussions. The project was built as a full-stack application with React, FastAPI and SQLite and was deployed on Render.",
+    "chunk_index": 77,
+    "char_start": 29340,
+    "char_end": 29810,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 65,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_78_6dc14a",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Through the Google Cloud Generative AI internship, I gained knowledge of the fundamentals of Generative AI, Google Cloud AI services, Large Language Models, prompt engineering and real-world applications of AI. The internship strengthened my skills in building and deploying AI-powered applications and inspired me to continue exploring solutions in Artificial Intelligence and Cloud Computing.\n\nREFERENCES",
+    "chunk_index": 78,
+    "char_start": 29812,
+    "char_end": 30218,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 55,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_79_ceb072",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "REFERENCES\n\n1. Google Cloud, \u201cGenerative AI on Google Cloud,\u201d [Online]. Available: https://cloud.google.com/ai/generative-ai\n\n2. Google, \u201cGemini API Documentation,\u201d [Online]. Available: https://ai.google.dev/gemini-api/docs\n\n3. S. Ram\u00edrez, \u201cFastAPI Documentation,\u201d [Online]. Available: https://fastapi.tiangolo.com\n\n4. Meta Open Source, \u201cReact Documentation,\u201d [Online]. Available: https://react.dev\n\n5. SQLAlchemy, \u201cSQLAlchemy Documentation,\u201d [Online]. Available: https://docs.sqlalchemy.org",
+    "chunk_index": 79,
+    "char_start": 30208,
+    "char_end": 30699,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 44,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_80_4fb3bd",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "6. Render, \u201cRender Documentation,\u201d [Online]. Available: https://render.com/docs\n\n7. A. V. Mannem, \u201cFinancial-debt-relief-platform,\u201d GitHub repository. Available: https://github.com/Amrutha-Mannem/Financial-debt-relief-platform\n\nStudent Self Evaluation of the Short-Term Internship\n\nPlease rate your performance in the following areas:\n\nRating Scale:        Letter grade of CGPA calculation to be provided\n\nDate:\tSignature of the Student\n\nEvaluation by the Supervisor of the Intern Organization",
+    "chunk_index": 80,
+    "char_start": 30701,
+    "char_end": 31194,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 54,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_81_ee9fda",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Evaluation by the Supervisor of the Intern Organization\n\nPlease rate the student\u2019s performance in the following areas:\n\nPlease note that your evaluation shall be done independent of the Student\u2019s self evaluation\n\nRating Scale: 1 is lowest and 5 is highest rank\n\nDate:\tSignature of the Supervisor\n\nEVALUATION\n\nInternal Evaluation for Long Term Internship\n\n(On-site/Virtual)\n\nObjectives:\n\n- To integrate theory and practice.\n\n- To learn to appreciate work and its function towards the future.",
+    "chunk_index": 81,
+    "char_start": 31139,
+    "char_end": 31629,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 73,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_82_fafc3e",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "- To learn to appreciate work and its function towards the future.\n\n- To develop work habits and attitudes necessary for job success.\n\n- To develop communication, interpersonal and other critical skills in the future job.\n\n- To acquire additional skills required for the world of work.\n\nAssessment Model:\n\n- There shall only be internal evaluation.\n\n- The Faculty Guide assigned is in-charge of the learning activities of the students and for the comprehensive and continuous assessment of the students.",
+    "chunk_index": 82,
+    "char_start": 31563,
+    "char_end": 32066,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 80,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_83_909634",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "- The assessment is to be conducted for 100 marks.\n\n- The number of credits assigned is 4. Later the marks shall be converted into grades and grade points to include finally in the SGPA and CGPA.\n\n- The weightings shall be:\n\no Activity Log\t\t\t25 marks\n\no Internship Evaluation\t\t50 marks\n\no Oral Presentation\t\t25 marks",
+    "chunk_index": 83,
+    "char_start": 32068,
+    "char_end": 32384,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 57,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_84_f008a2",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "o Internship Evaluation\t\t50 marks\n\no Oral Presentation\t\t25 marks\n\n- Activity Log is the record of the -to- activities. The Activity Log is assessed on an individual basis, thus allowing for individual members within groups to be assessed this way. The assessment will take into consideration the individual student\u2019s involvement in the assigned work.\n\n- While evaluating the student\u2019s Activity Log, the following shall be considered \u2013\n\na. The individual student\u2019s effort and commitment.",
+    "chunk_index": 84,
+    "char_start": 32320,
+    "char_end": 32806,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 75,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_85_4833e5",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "a. The individual student\u2019s effort and commitment.\n\nb. The originality and quality of the work produced by the individual student.\n\nc. The student\u2019s integration and co-operation with the work assigned.\n\nd. The completeness of the Activity Log.\n\n- The Internship Evaluation shall include the following components and based on Weekly Reports and Outcomes Description a. Description of the Work Environment.\n\nb. Real Time Technical Skills acquired.\n\nc. Managerial Skills acquired.",
+    "chunk_index": 85,
+    "char_start": 32756,
+    "char_end": 33233,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 70,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_86_6296ca",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "b. Real Time Technical Skills acquired.\n\nc. Managerial Skills acquired.\n\nd. Improvement of Communication Skills.\n\ne. Team Dynamics\n\nf. Technological Developments recorded.\n\nMARKS STATEMENT\n\n(To be used by the Examiners)\n\nINTERNAL ASSESSMENT STATEMENT\n\nName of the Student: Amrutha Varshini Mannem\n\nProgramme of Study: B.Tech - CSE (Artificial Intelligence & Machine Learning)\n\nYear of Study:\n\nGroup:\n\nRegister No/H.TNo: 23F01A4232\n\nName of the College: St. Ann\u2019s College of Engineering & Technology, Chirala",
+    "chunk_index": 86,
+    "char_start": 33162,
+    "char_end": 33669,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 70,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_87_e594ac",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Name of the College: St. Ann\u2019s College of Engineering & Technology, Chirala\n\nUniversity: JNTU Kakinada\n\nDate:\tSignature of the Faculty Guide\n\nEXTERNAL ASSESSMENT STATEMENT\n\nName Of the Student: Amrutha Varshini Mannem\n\nProgram of Study: B.Tech - CSE (Artificial Intelligence & Machine Learning)\n\nYear of Study:\n\nGroup:\n\nRegister No: 23F01A4232\n\nName of the College: St. Ann\u2019s College of Engineering & Technology, Chirala\n\nUniversity: JNTU Kakinada\n\nSignature of the Faculty Guide\tSignature of the Internal Expert",
+    "chunk_index": 87,
+    "char_start": 33594,
+    "char_end": 34106,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 74,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_88_c85ee3",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "Signature of the Faculty Guide\tSignature of the Internal Expert\n\nSignature of the External Expert\tSignature of the Principal with Seal\n\n[Table 1]:\nREG. NO.: 23F01A4232",
+    "chunk_index": 88,
+    "char_start": 34043,
+    "char_end": 34210,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 26,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_89_9da7a1",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "[Table 1]:\nREG. NO.: 23F01A4232\n\n[Table 3]:\nS.No | Chapter Title | Page No.\n1 | ABSTRACT | 8\n2 | ABOUT THE ORGANIZATION | 9\n3 | ABOUT THE PROJECT (AI-Powered Debt Relief & Financial Recovery Platform) | 11\n4 | OBJECTIVES AND METHODOLOGY | 12\n5 | ACTIVITY LOG & WEEKLY REPORT | 14\n6 | SYSTEM DESIGN AND IMPLEMENTATION | 30\n7 | RESULTS AND DISCUSSION | 33\n8 | CONCLUSION AND REFERENCES | 37",
+    "chunk_index": 89,
+    "char_start": 34179,
+    "char_end": 34567,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 78,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_90_26bc38",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "[Table 4]:\nDate | Brief description of the Daily activity | Learning Outcome | Person In-Charge Signature\n | Orientation to the internship programme, schedule and learning platform. | Understood programme structure and expectations. | \n | Introduction to Artificial Intelligence, Machine Learning and Generative AI. | Understood Generative AI fundamentals. | \n | Overview of the Google Cloud platform and Google for Developers resources. | Learned cloud basics and navigation. |",
+    "chunk_index": 90,
+    "char_start": 34569,
+    "char_end": 35047,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 69,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_91_290336",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "| Studied real-world applications of Generative AI. | Identified practical use cases. | \n | Brainstormed ideas and selected the \u201cAI-Powered Debt Relief & Financial Recovery Platform\u201d. | Defined the project problem statement. | \n | Planned project scope, features and technology stack. | Learned how to plan a project workflow. |",
+    "chunk_index": 91,
+    "char_start": 35050,
+    "char_end": 35378,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 50,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_92_e93516",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "[Table 5]:\nDate | Brief description of the Daily activity | Learning Outcome | Person In-Charge Signature\n | Introduction to Large Language Models (LLMs), tokens and the transformer idea. | Understood how LLMs generate text. | \n | Explored Google Cloud AI services and the Gemini family of models. | Learned the available AI services. | \n | Used Google AI Studio to create an API key and test prompts. | Learned API-based model access. |",
+    "chunk_index": 92,
+    "char_start": 35381,
+    "char_end": 35818,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 74,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_93_1ea0c6",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "| Analysed the debt problem: loans, EMI, overdue months and settlement. | Understood the domain requirements. | \n | Identified inputs and outputs: loan amount, EMI, overdue months, income and expenses. | Defined the data requirements. | \n | Designed the architecture: React frontend, FastAPI backend, SQLite and Gemini. | Learned system architecture design. |",
+    "chunk_index": 93,
+    "char_start": 35821,
+    "char_end": 36180,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 53,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_94_c50ef2",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "[Table 6]:\nDate | Brief description of the Daily activity | Learning Outcome | Person In-Charge Signature\n | Studied prompt engineering basics: clarity, context, role and constraints. | Learned how to structure prompts. | \n | Practised zero-shot, few-shot and tone-controlled prompts in AI Studio. | Improved output quality through prompting. | \n | Set up the FastAPI project, virtual environment and dependencies. | Learned backend environment setup. |",
+    "chunk_index": 94,
+    "char_start": 36183,
+    "char_end": 36636,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 67,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_95_19b669",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "| Configured SQLite with SQLAlchemy (database.py). | Learned database connectivity. | \n | Created the Loan and NegotiationHistory ORM models (models.py). | Learned data modelling. | \n | Defined Pydantic request and response schemas (schemas.py). | Learned input validation. |",
+    "chunk_index": 95,
+    "char_start": 36639,
+    "char_end": 36914,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 38,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_96_8dc00b",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "[Table 7]:\nDate | Brief description of the Daily activity | Learning Outcome | Person In-Charge Signature\n | Designed a transparent, rule-based debt stress score on a 0\u2013100 scale. | Learned rule-based scoring design. | \n | Implemented the EMI-to-income ratio and monthly surplus calculations. | Applied financial formulas in code. | \n | Added the overdue duration factor to the scoring logic. | Understood weighting of factors. |",
+    "chunk_index": 96,
+    "char_start": 36917,
+    "char_end": 37346,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 67,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_97_2c8ae6",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "| Built the settlement recommendation, capped between 15% and 65%. | Learned bounded recommendation logic. | \n | Created REST endpoints for loans and analysis in main.py. | Learned REST API development. | \n | Tested the endpoints using the auto-generated FastAPI docs. | Learned API testing. |",
+    "chunk_index": 97,
+    "char_start": 37349,
+    "char_end": 37642,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 46,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_98_e265d4",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "[Table 8]:\nDate | Brief description of the Daily activity | Learning Outcome | Person In-Charge Signature\n | Integrated the Gemini API in ai_service.py using environment variables. | Learned secure API key handling. | \n | Designed a prompt built from the borrower\u2019s real financial data. | Learned grounded prompt design. | \n | Added strategy type and tone options for the letters. | Learned prompt parameterisation. |",
+    "chunk_index": 98,
+    "char_start": 37645,
+    "char_end": 38062,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 66,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_99_5d8b88",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "| Implemented a deterministic fallback template letter. | Learned fault-tolerant design. | \n | Saved every generated letter in the negotiation history. | Learned data persistence. | \n | Tested letter generation with and without the API key. | Verified reliability of the feature. |",
+    "chunk_index": 99,
+    "char_start": 38065,
+    "char_end": 38346,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 43,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_100_decb05",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "[Table 9]:\nDate | Brief description of the Daily activity | Learning Outcome | Person In-Charge Signature\n | Set up the React (Vite) project and the design system in index.css. | Learned frontend project setup. | \n | Built the Dashboard component to list loan accounts. | Learned component-based design. | \n | Built the LoanForm component to add loan details. | Learned forms and state handling. |",
+    "chunk_index": 100,
+    "char_start": 38349,
+    "char_end": 38746,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 66,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_101_96c590",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "| Built the LoanDetail page showing stress score, EMI ratio, surplus and settlement %. | Learned dynamic data display. | \n | Built the RecoveryGauge component for the stress score. | Learned visual indicators. | \n | Created the api/client.js fetch wrapper and configured the Vite proxy. | Learned frontend\u2013backend communication. |",
+    "chunk_index": 101,
+    "char_start": 38749,
+    "char_end": 39079,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 50,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_102_07d715",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "[Table 10]:\nDate | Brief description of the Daily activity | Learning Outcome | Person In-Charge Signature\n | Integrated the frontend with the backend, including letter generation and history views. | Learned end-to-end integration. | \n | Added CORS middleware to the FastAPI backend. | Learned cross-origin request handling. | \n | Tested all user flows and fixed the bugs found. | Improved reliability and accuracy. |",
+    "chunk_index": 102,
+    "char_start": 39082,
+    "char_end": 39500,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 65,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_103_ac03c4",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "| Configured FastAPI to serve the frontend and added a redirect from the root to the dashboard. | Learned monorepo deployment. | \n | Added render.yaml, requirements.txt and .python-version for Render. | Learned deployment configuration. | \n | Deployed the application on Render and verified the live URLs. | Learned cloud deployment. |",
+    "chunk_index": 103,
+    "char_start": 39503,
+    "char_end": 39838,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 51,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_104_f77d40",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "[Table 11]:\nDate | Brief description of the Daily activity | Learning Outcome | Person In-Charge Signature\n | Wrote the README and the project documentation for all phases. | Learned technical documentation. | \n | Recorded the demo video and captured screenshots of the application. | Learned how to present a demo. | \n | Carried out final testing of the live deployment. | Ensured quality and stability. | \n | Prepared the project presentation. | Improved presentation skills. |",
+    "chunk_index": 104,
+    "char_start": 39841,
+    "char_end": 40320,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 77,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_105_33dd7d",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "| Prepared the project presentation. | Improved presentation skills. | \n | Final presentation, demonstration and Q & A. | Improved communication and explanation skills. | \n | Compiled the report, collected feedback and completed the internship. | Overall growth and completion. |",
+    "chunk_index": 105,
+    "char_start": 40250,
+    "char_end": 40529,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 41,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_106_4a6e7a",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "[Table 12]:\nStudent Name: Amrutha Varshini Mannem\tRegistration No: 23F01A4232 Term of Internship: From: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0   To: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 Date of Evaluation: Organization Name & Address: SmartBridge Educational Services Pvt. Ltd., Hyderabad, Telangana",
+    "chunk_index": 106,
+    "char_start": 40532,
+    "char_end": 40793,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 29,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_107_7ae40e",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "[Table 13]:\n1 | Oral communication | 1 | 2 | 3 | 4 | 5\n2 | Written communication | 1 | 2 | 3 | 4 | 5\n3 | Proactiveness | 1 | 2 | 3 | 4 | 5\n4 | Interaction ability with community | 1 | 2 | 3 | 4 | 5\n5 | Positive Attitude | 1 | 2 | 3 | 4 | 5\n6 | Self-confidence | 1 | 2 | 3 | 4 | 5\n7 | Ability to learn | 1 | 2 | 3 | 4 | 5\n8 | Work Plan and organization | 1 | 2 | 3 | 4 | 5\n9 | Professionalism | 1 | 2 | 3 | 4 | 5\n10 | Creativity | 1 | 2 | 3 | 4 | 5\n11 | Quality of work done | 1 | 2 | 3 | 4 | 5",
+    "chunk_index": 107,
+    "char_start": 40795,
+    "char_end": 41288,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 159,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_108_b2e1b3",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "10 | Creativity | 1 | 2 | 3 | 4 | 5\n11 | Quality of work done | 1 | 2 | 3 | 4 | 5\n12 | Time Management | 1 | 2 | 3 | 4 | 5\n13 | Understanding the Community | 1 | 2 | 3 | 4 | 5\n14 | Achievement of Desired Outcomes | 1 | 2 | 3 | 4 | 5\n15 | OVERALL PERFORMANCE | 1 | 2 | 3 | 4 | 5",
+    "chunk_index": 108,
+    "char_start": 41207,
+    "char_end": 41484,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 88,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_109_83207d",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "[Table 14]:\nStudent Name: Amrutha Varshini Mannem\tRegistration No: 23F01A4232 Term of Internship: From: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0   To: \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 Date of Evaluation: Organization Name & Address: SmartBridge Educational Services Pvt. Ltd., Hyderabad, Telangana Name & Address of the Supervisor with Mobile Number:",
+    "chunk_index": 109,
+    "char_start": 41486,
+    "char_end": 41800,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 38,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_110_b12e6f",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "[Table 15]:\n1 | Oral communication | 1 | 2 | 3 | 4 | 5\n2 | Written communication | 1 | 2 | 3 | 4 | 5\n3 | Proactiveness | 1 | 2 | 3 | 4 | 5\n4 | Interaction ability with community | 1 | 2 | 3 | 4 | 5\n5 | Positive Attitude | 1 | 2 | 3 | 4 | 5\n6 | Self-confidence | 1 | 2 | 3 | 4 | 5\n7 | Ability to learn | 1 | 2 | 3 | 4 | 5\n8 | Work Plan and organization | 1 | 2 | 3 | 4 | 5\n9 | Professionalism | 1 | 2 | 3 | 4 | 5\n10 | Creativity | 1 | 2 | 3 | 4 | 5\n11 | Quality of work done | 1 | 2 | 3 | 4 | 5",
+    "chunk_index": 110,
+    "char_start": 41802,
+    "char_end": 42295,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 159,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_111_5612de",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "10 | Creativity | 1 | 2 | 3 | 4 | 5\n11 | Quality of work done | 1 | 2 | 3 | 4 | 5\n12 | Time Management | 1 | 2 | 3 | 4 | 5\n13 | Understanding the Community | 1 | 2 | 3 | 4 | 5\n14 | Achievement of Desired Outcomes | 1 | 2 | 3 | 4 | 5\n15 | OVERALL PERFORMANCE | 1 | 2 | 3 | 4 | 5\n\n[Table 16]:\nSl.No | Evaluation Criterion | Maximum Marks | Marks Awarded\n1. | Activity Log | 25 | \n2. | Internship Evaluation | 50 | \n3. | Oral Presentation | 25 | \n | GRAND TOTAL | 100 |",
+    "chunk_index": 111,
+    "char_start": 42214,
+    "char_end": 42680,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 127,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
+  },
+  {
+    "chunk_id": "doc_967caf30_chk_112_b836b3",
+    "document_id": "doc_967caf30",
+    "source_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+    "file_type": "docx",
+    "content": "[Table 17]:\nSl. No | Evaluation Criterion | Maximum Marks | Marks Awarded\n1. | Internship Evaluation | 80 | \n2. | For the grading giving by the Supervisor of the Intern Organization | 20 | \n3. | Viva-Voce | 50 | \n | TOTAL | 150 | \n | GRAND TOTAL (EXT. 50 M + INT. 100M) | 200 |",
+    "chunk_index": 112,
+    "char_start": 42683,
+    "char_end": 42960,
+    "metadata": {
+      "file_name": "doc_967caf30_Internship_Report_Amrutha_Varshini_23F01A4232.docx",
+      "file_type": "docx",
+      "word_count": 59,
+      "heading_count": 0,
+      "paragraph_count": 278,
+      "table_count": 17
+    }
   }
 ]

@@ -11,40 +11,29 @@ class SearchRequest(BaseModel):
     top_k: int = 5
 
 
-@router.post("/search")
-async def semantic_search(req: SearchRequest):
+@router.post("/query")
+async def rag_query(req: SearchRequest):
+    if len(vector_store.chunks) == 0:
+        return {"results": [], "total": 0, "query": req.query}
+
     results = retriever.retrieve(req.query, top_k=req.top_k)
     return {
         "query": req.query,
-        "count": len(results),
+        "total": len(results),
         "results": [
             {
-                "chunk_id": chunk.chunk_id,
-                "document_id": chunk.document_id,
+                "chunk_id":    chunk.chunk_id,
                 "source_name": chunk.source_name,
-                "file_type": chunk.file_type,
-                "score": round(score, 4),
-                "excerpt": citation.excerpt,
-                "full_content": chunk.content,
-                "metadata": chunk.metadata,
+                "file_type":   chunk.file_type,
+                "chunk_index": chunk.chunk_index,
+                "excerpt":     chunk.content[:350] + ("..." if len(chunk.content) > 350 else ""),
+                "score":       round(float(score), 4),
             }
-            for chunk, score, citation in results
+            for chunk, score, _citation in results
         ],
     }
 
 
 @router.get("/stats")
-async def get_rag_stats() -> Dict[str, Any]:
+async def rag_stats():
     return vector_store.get_stats()
-
-
-@router.get("/chunks")
-async def get_all_chunks(limit: int = 100, offset: int = 0):
-    chunks = vector_store.get_all_chunks()
-    paginated = chunks[offset : offset + limit]
-    return {
-        "total": len(chunks),
-        "limit": limit,
-        "offset": offset,
-        "chunks": [c.model_dump() for c in paginated],
-    }
