@@ -23,8 +23,6 @@ async def run_full_pipeline() -> Dict[str, Any]:
 async def get_latest_analysis():
     latest = orchestrator.get_latest_analysis()
     if not latest:
-        if len(vector_store.chunks) > 0:
-            return orchestrator.run_full_pipeline()
         return {"status": "empty", "message": "No analysis yet. Ingest documents and trigger pipeline."}
     return latest
 

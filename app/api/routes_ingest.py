@@ -81,6 +81,10 @@ async def upload_documents(files: List[UploadFile] = File(...)):
                 )
             )
 
+    # Invalidate cached analysis so next run is strictly on the new documents
+    if any(r.status == "success" for r in results):
+        orchestrator.last_analysis = None
+
     return results
 
 
@@ -183,9 +187,11 @@ async def delete_document(document_id: str):
     removed = vector_store.delete_document(document_id)
     if removed == 0:
         raise HTTPException(status_code=404, detail="Document not found in vector index.")
+    orchestrator.last_analysis = None
     return {"status": "success", "message": f"Deleted {removed} chunks for document {document_id}"}
 
 
+@router.post("/clear")
 @router.delete("/clear")
 async def clear_all_documents():
     vector_store.clear()

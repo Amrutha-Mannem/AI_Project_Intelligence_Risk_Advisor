@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>AI Project Intelligence &amp; Risk Advisor</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<link rel="stylesheet" href="/static/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Project Intelligence &amp; Risk Advisor</title>
+  <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
 
@@ -13,310 +12,458 @@
      HEADER
 ══════════════════════════════════════════════════════ -->
 <header class="app-header">
-  <div class="logo">
-    <div class="logo-icon">🛡️</div>
+  <div class="header-brand">
+    <div class="header-logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+        <path d="M2 17l10 5 10-5"></path>
+        <path d="M2 12l10 5 10-5"></path>
+      </svg>
+    </div>
     <div>
-      <div class="logo-title">AI Project Intelligence &amp; Risk Advisor</div>
-      <div class="logo-sub">
-        <span class="pulse" style="margin-right:5px"></span>
-        <span id="hdr-llm-label" style="color:var(--text-muted)">Initializing...</span>
+      <div class="header-title">AI Project Intelligence &amp; Risk Advisor</div>
+      <div class="header-sub">
+        <span class="status-dot"></span>
+        <span id="hdr-llm-label">System Initializing...</span>
       </div>
     </div>
   </div>
-  <div style="display:flex;gap:8px;align-items:center">
-    <button class="btn btn-secondary btn-sm" id="btn-load-samples">📂 Load Samples</button>
-    <button class="btn btn-primary btn-sm" id="btn-run-pipeline">▶ Run Analysis</button>
-    <button class="btn btn-secondary btn-sm" id="btn-open-settings">⚙ Settings</button>
+  <div class="header-actions">
+    <button class="btn btn-outline btn-sm" id="btn-load-samples">Load Sample Data</button>
+    <button class="btn btn-primary btn-sm" id="btn-run-pipeline">Run Analysis</button>
+    <button class="btn btn-outline btn-sm" id="btn-open-settings">Settings</button>
   </div>
 </header>
 
 <!-- ══════════════════════════════════════════════════════
-     LAYOUT
+     MAIN LAYOUT
 ══════════════════════════════════════════════════════ -->
 <div class="app-layout">
 
-  <!-- SIDEBAR -->
+  <!-- SIDEBAR NAVIGATION -->
   <nav class="sidebar">
-    <div class="nav-section-label">Navigation</div>
+    <div class="nav-group-label">Intelligence</div>
     <button class="nav-item active" data-page="page-overview">
-      <span class="nav-icon">📊</span> Dashboard
+      <span class="ni">[D]</span> Dashboard
     </button>
     <button class="nav-item" data-page="page-upload">
-      <span class="nav-icon">📤</span> Upload Docs
+      <span class="ni">[U]</span> Documents
     </button>
     <button class="nav-item" data-page="page-rag">
-      <span class="nav-icon">🔍</span> RAG Search
+      <span class="ni">[S]</span> RAG Search
     </button>
     <button class="nav-item" data-page="page-agents">
-      <span class="nav-icon">🤖</span> Agents
-    </button>
-    <button class="nav-item" data-page="page-risks">
-      <span class="nav-icon">⚠️</span> Risks
-    </button>
-    <button class="nav-item" data-page="page-blockers">
-      <span class="nav-icon">🚧</span> Blockers
-    </button>
-    <button class="nav-item" data-page="page-chat">
-      <span class="nav-icon">💬</span> Chat
-    </button>
-    <button class="nav-item" data-page="page-export">
-      <span class="nav-icon">📥</span> Export
+      <span class="ni">[A]</span> Multi-Agent
     </button>
 
-    <div style="flex:1"></div>
-    <div class="card card-sm" style="margin-top:12px">
-      <div class="stat-label">Knowledge Base</div>
-      <div style="font-size:22px;font-weight:700;margin:4px 0" id="sb-chunks">0</div>
-      <div class="stat-sub" id="sb-docs">0 documents indexed</div>
+    <div class="nav-group-label" style="margin-top:10px">Analysis</div>
+    <button class="nav-item" data-page="page-risks">
+      <span class="ni">[R]</span> Risk &amp; Forecasting
+    </button>
+    <button class="nav-item" data-page="page-scope">
+      <span class="ni">[O]</span> Scope &amp; Objectives
+    </button>
+    <button class="nav-item" data-page="page-blockers">
+      <span class="ni">[B]</span> Blockers
+    </button>
+
+    <div class="nav-group-label" style="margin-top:10px">Assistance</div>
+    <button class="nav-item" data-page="page-chat">
+      <span class="ni">[C]</span> Chat Assistant
+    </button>
+    <button class="nav-item" data-page="page-export">
+      <span class="ni">[E]</span> Export &amp; Status
+    </button>
+
+    <div class="sidebar-footer">
+      <div class="kb-stat">
+        <strong id="sb-chunks">0</strong>
+        <span id="sb-docs">0 documents indexed</span>
+      </div>
     </div>
   </nav>
 
-  <!-- MAIN -->
-  <main class="main-content">
+  <!-- MAIN CONTENT AREA -->
+  <main class="main">
 
-    <!-- ───────────── OVERVIEW ───────────── -->
+    <!-- ───────────── 1. DASHBOARD OVERVIEW ───────────── -->
     <div id="page-overview" class="page active">
-      <div class="section-header">
+      <div class="page-hdr-row page-hdr">
         <div>
-          <div class="section-title">Project Dashboard</div>
-          <div class="section-sub">Multi-dimensional project intelligence overview</div>
+          <div class="page-title">Executive Health Dashboard</div>
+          <div class="page-sub">Multidimensional quantitative project health evaluation</div>
         </div>
-        <button class="btn btn-secondary btn-sm" onclick="loadLatestAnalysis()">↻ Refresh</button>
-      </div>
-
-      <!-- KPI Row -->
-      <div class="grid-4" style="margin-bottom:16px">
-        <div class="stat-card">
-          <div class="stat-label">Health Score</div>
-          <div class="stat-value" id="kpi-health" style="color:var(--accent2)">—</div>
-          <div class="stat-sub" id="kpi-grade">Not analysed</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-label">Risks Identified</div>
-          <div class="stat-value" id="kpi-risks" style="color:var(--danger)">—</div>
-          <div class="stat-sub" id="kpi-high-risks">0 high severity</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-label">Blockers</div>
-          <div class="stat-value" id="kpi-blockers" style="color:var(--warning)">—</div>
-          <div class="stat-sub" id="kpi-crit-blockers">0 critical</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-label">Action Items</div>
-          <div class="stat-value" id="kpi-actions" style="color:var(--success)">—</div>
-          <div class="stat-sub">Extracted from docs</div>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-outline btn-sm" id="btn-refresh-dashboard">Refresh</button>
+          <button class="btn btn-primary btn-sm" onclick="runPipeline()">Run Full Analysis</button>
         </div>
       </div>
 
-      <div class="grid-2">
-        <!-- Health Radar -->
+      <!-- KPI Summary Cards -->
+      <div class="g4" style="margin-bottom:18px">
+        <div class="stat blue">
+          <div class="stat-lbl">Overall Health Score</div>
+          <div class="stat-val" id="kpi-health" style="color:#4da6ff">—</div>
+          <div class="stat-note" id="kpi-grade">Analysis pending</div>
+        </div>
+        <div class="stat red">
+          <div class="stat-lbl">Identified Risks</div>
+          <div class="stat-val" id="kpi-risks" style="color:var(--danger)">—</div>
+          <div class="stat-note" id="kpi-high-risks">0 high severity</div>
+        </div>
+        <div class="stat amber">
+          <div class="stat-lbl">Active Blockers</div>
+          <div class="stat-val" id="kpi-blockers" style="color:var(--warning)">—</div>
+          <div class="stat-note" id="kpi-crit-blockers">0 critical</div>
+        </div>
+        <div class="stat green">
+          <div class="stat-lbl">Extracted Action Items</div>
+          <div class="stat-val" id="kpi-actions" style="color:var(--success)">—</div>
+          <div class="stat-note">Extracted from artifacts</div>
+        </div>
+      </div>
+
+      <div class="g2">
+        <!-- Health Dimension Breakdown -->
         <div class="card">
-          <div class="card-title">Health Dimensions</div>
+          <div class="card-label">Health Dimensions (0–100%)</div>
           <div id="dim-bars">
-            <div class="empty-state"><div class="empty-icon">📊</div><p>Run analysis to view health scores</p></div>
+            <div class="empty">
+              <p>No health metrics computed. Upload documents and run analysis.</p>
+              <div class="empty-action">
+                <button class="btn btn-outline btn-sm" onclick="runPipeline()">Run Analysis</button>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Forecast & Summary -->
+        <!-- Schedule & Delivery Forecast -->
         <div class="card">
-          <div class="card-title">Delivery Forecast</div>
+          <div class="card-label">Delivery Schedule Forecast</div>
           <div id="forecast-panel">
-            <div class="empty-state"><div class="empty-icon">📅</div><p>Run analysis to view forecast</p></div>
+            <div class="empty">
+              <p>No delivery forecast available. Run analysis to compute milestone predictions.</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div style="margin-top:16px" class="card">
-        <div class="card-title">Executive Summary</div>
-        <div id="exec-summary" style="color:var(--text-muted);font-size:13px">
-          Upload project documents and run the multi-agent analysis to generate an executive summary.
+      <!-- Executive Narrative Summary -->
+      <div class="card" style="margin-top:16px">
+        <div class="card-label">Executive Intelligence Summary</div>
+        <div id="exec-summary" style="color:var(--text-muted);font-size:13px;line-height:1.6">
+          Upload project artifacts (proposals, SRS, sprint notes, task backlog) and execute the multi-agent pipeline to generate an executive intelligence summary.
         </div>
       </div>
     </div>
 
-    <!-- ───────────── UPLOAD ───────────── -->
+    <!-- ───────────── 2. DOCUMENT MANAGEMENT ───────────── -->
     <div id="page-upload" class="page">
-      <div class="section-header">
+      <div class="page-hdr-row page-hdr">
         <div>
-          <div class="section-title">Document Upload</div>
-          <div class="section-sub">Upload PDF, DOCX, CSV or TXT project artifacts</div>
+          <div class="page-title">Project Document Ingestion</div>
+          <div class="page-sub">Ingest PDF, DOCX, CSV, TXT, or Markdown project artifacts into the vector knowledge base</div>
+        </div>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-outline btn-sm" id="btn-load-samples-page">Load Sample Data</button>
+          <button class="btn btn-danger btn-sm" id="btn-clear-all-docs">Clear Knowledge Base</button>
         </div>
       </div>
 
-      <div class="grid-2" style="align-items:start">
+      <div class="g2" style="align-items:start">
         <div>
           <div class="upload-zone" id="upload-zone">
-            <div class="upload-icon">☁️</div>
-            <p><strong>Drag &amp; drop files here</strong></p>
-            <p style="margin-top:4px">or click to browse</p>
-            <p style="margin-top:8px;font-size:11px;color:var(--text-muted)">Supported: PDF · DOCX · CSV · TXT · MD</p>
+            <div class="upload-title">Select or Drag Project Files Here</div>
+            <div class="upload-sub">Click to browse your local computer</div>
+            <div class="upload-types">Supported Formats: PDF, DOCX, CSV, TXT, MD</div>
           </div>
           <input type="file" id="file-input" multiple accept=".pdf,.docx,.csv,.txt,.md" style="display:none">
           <div id="upload-results" style="margin-top:14px"></div>
         </div>
 
         <div class="card">
-          <div class="card-title">Indexed Documents</div>
+          <div class="card-label">Indexed Knowledge Base Documents</div>
           <div id="doc-list">
-            <div class="empty-state"><div class="empty-icon">📄</div><p>No documents indexed yet</p></div>
+            <div class="empty"><p>No documents indexed yet.</p></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ───────────── RAG SEARCH ───────────── -->
+    <!-- ───────────── 3. RAG SEMANTIC SEARCH ───────────── -->
     <div id="page-rag" class="page">
-      <div class="section-header">
-        <div>
-          <div class="section-title">Semantic Search</div>
-          <div class="section-sub">RAG-powered retrieval from your document knowledge base</div>
-        </div>
+      <div class="page-hdr">
+        <div class="page-title">RAG Semantic Search</div>
+        <div class="page-sub">Hybrid dense vector and BM25 keyword retrieval across all indexed project artifacts</div>
       </div>
       <div class="card">
         <div style="display:flex;gap:10px;margin-bottom:16px">
-          <input id="rag-query-input" placeholder="e.g. What are the main project risks?" style="flex:1">
-          <select id="rag-topk" style="width:90px">
-            <option value="3">Top 3</option>
-            <option value="5" selected>Top 5</option>
-            <option value="8">Top 8</option>
+          <input id="rag-query-input" placeholder="Search technical requirements, blockers, budget, or architectural constraints..." style="flex:1">
+          <select id="rag-topk" style="width:105px">
+            <option value="3">Top 3 Chunks</option>
+            <option value="5" selected>Top 5 Chunks</option>
+            <option value="8">Top 8 Chunks</option>
           </select>
           <button class="btn btn-primary" id="btn-rag-search">Search</button>
         </div>
         <div id="rag-results">
-          <div class="empty-state"><div class="empty-icon">🔍</div><p>Enter a query to search your knowledge base</p></div>
+          <div class="empty"><p>Enter a query to inspect grounded chunks and similarity scores.</p></div>
         </div>
       </div>
     </div>
 
-    <!-- ───────────── AGENTS ───────────── -->
+    <!-- ───────────── 4. MULTI-AGENT PIPELINE ───────────── -->
     <div id="page-agents" class="page">
-      <div class="section-header">
+      <div class="page-hdr-row page-hdr">
         <div>
-          <div class="section-title">Multi-Agent Pipeline</div>
-          <div class="section-sub">Scope · Risk · Blockers · Documentation agents</div>
+          <div class="page-title">Multi-Agent Orchestration Pipeline</div>
+          <div class="page-sub">Collaborative agents: Scope Agent, Risk Agent, Blocker Agent, Documentation Agent</div>
         </div>
-        <button class="btn btn-primary" id="btn-agents-run">▶ Run Full Pipeline</button>
+        <button class="btn btn-primary btn-sm" id="btn-agents-run">Run Full Pipeline</button>
       </div>
 
-      <div class="grid-2">
-        <!-- Scope -->
+      <div class="g2" style="margin-bottom:16px">
         <div class="card">
-          <div class="card-title">📋 Scope &amp; Deliverables</div>
-          <div id="scope-panel">
-            <div class="empty-state"><p>Run analysis to view scope</p></div>
+          <div class="card-label">Agent 1: Scope &amp; Deliverables Specialist</div>
+          <div style="font-size:12.5px;color:var(--text-muted);line-height:1.5;margin-bottom:12px">
+            Extracts clear project objectives, target audience, in-scope requirements, and milestone deliverables.
           </div>
+          <button class="btn btn-outline btn-sm" onclick="runSingleAgent('scope')">Execute Scope Agent</button>
         </div>
-        <!-- Action Items -->
         <div class="card">
-          <div class="card-title">✅ Action Items</div>
-          <div id="actions-panel">
-            <div class="empty-state"><p>Run analysis to view action items</p></div>
+          <div class="card-label">Agent 2: Risk Assessment &amp; Forecasting</div>
+          <div style="font-size:12.5px;color:var(--text-muted);line-height:1.5;margin-bottom:12px">
+            Evaluates 5x5 severity matrix, computes schedule delivery variance, and flags critical path bottlenecks.
           </div>
+          <button class="btn btn-outline btn-sm" onclick="runSingleAgent('risks')">Execute Risk Agent</button>
         </div>
       </div>
 
-      <div style="margin-top:16px" class="card">
-        <div class="card-title">📄 Generated User Stories</div>
+      <div class="g2" style="margin-bottom:16px">
+        <div class="card">
+          <div class="card-label">Agent 3: Blocker &amp; Impediment Detector</div>
+          <div style="font-size:12.5px;color:var(--text-muted);line-height:1.5;margin-bottom:12px">
+            Identifies blockers from meeting notes and sprint updates, mapping them to owners and resolutions.
+          </div>
+          <button class="btn btn-outline btn-sm" onclick="runSingleAgent('blockers')">Execute Blocker Agent</button>
+        </div>
+        <div class="card">
+          <div class="card-label">Agent 4: Documentation Generator</div>
+          <div style="font-size:12.5px;color:var(--text-muted);line-height:1.5;margin-bottom:12px">
+            Synthesizes structured agile user stories with acceptance criteria, risk registers, and test requirements.
+          </div>
+          <button class="btn btn-outline btn-sm" onclick="runSingleAgent('documentation')">Execute Documentation Agent</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Generated Agile User Stories</div>
         <div id="stories-panel">
-          <div class="empty-state"><p>Run analysis to view user stories</p></div>
+          <div class="empty"><p>Run analysis to generate user stories.</p></div>
         </div>
       </div>
     </div>
 
-    <!-- ───────────── RISKS ───────────── -->
+    <!-- ───────────── 5. RISK & FORECASTING ───────────── -->
     <div id="page-risks" class="page">
-      <div class="section-header">
+      <div class="page-hdr-row page-hdr">
         <div>
-          <div class="section-title">Risk Matrix</div>
-          <div class="section-sub">Identified project risks with severity classification</div>
+          <div class="page-title">Risk Assessment &amp; Delivery Forecast</div>
+          <div class="page-sub">Quantitative 5x5 severity matrix mapping with source document traceability</div>
         </div>
-      </div>
-      <div class="card">
-        <div id="risks-panel">
-          <div class="empty-state"><div class="empty-icon">⚠️</div><p>Run analysis to view the risk matrix</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ───────────── BLOCKERS ───────────── -->
-    <div id="page-blockers" class="page">
-      <div class="section-header">
-        <div>
-          <div class="section-title">Blockers &amp; Impediments</div>
-          <div class="section-sub">Detected blockers from meeting notes and progress updates</div>
-        </div>
-      </div>
-      <div class="card">
-        <div id="blockers-panel">
-          <div class="empty-state"><div class="empty-icon">🚧</div><p>Run analysis to view blockers</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ───────────── CHAT ───────────── -->
-    <div id="page-chat" class="page">
-      <div class="section-header">
-        <div>
-          <div class="section-title">Conversational Assistant</div>
-          <div class="section-sub">Ask anything about your uploaded project documents</div>
-        </div>
-        <button class="btn btn-secondary btn-sm" id="btn-clear-chat">🗑 Clear Chat</button>
+        <button class="btn btn-primary btn-sm" onclick="runPipeline()">Re-Evaluate Risks</button>
       </div>
 
-      <div class="chat-wrap">
-        <div class="chat-messages" id="chat-messages">
-          <div class="chat-bubble bot">
-            👋 Hello! I'm your AI Project Intelligence Assistant.<br><br>
-            Upload your project documents first, then ask me anything — I'll answer strictly from your documents with citations.<br><br>
-            <strong>Try asking:</strong><br>
-            • "What are the main risks in this project?"<br>
-            • "Who are the assigned owners for action items?"<br>
-            • "What is the project scope and deliverables?"
+      <!-- Risk Matrix Explanation Box -->
+      <div class="matrix-explainer">
+        <div class="matrix-explainer-title">How to Interpret the 5x5 Risk Severity Matrix</div>
+        <div style="font-size:12px;color:var(--text);line-height:1.6">
+          Each identified risk is evaluated across <strong>Probability (1 to 5)</strong> and <strong>Impact (1 to 5)</strong>.
+          The <strong>Severity Score = Probability &times; Impact (range: 1 to 25)</strong>.
+          This standardizes enterprise risk management across technical, schedule, dependency, and resource categories.
+        </div>
+        <div class="matrix-explainer-grid">
+          <div class="matrix-explainer-item" style="border-left:3px solid var(--danger)">
+            <strong style="color:var(--danger)">High Severity (Score 15–25)</strong>
+            Critical risks with severe timeline or architectural impact. Immediate mitigation plan and executive escalation required.
+          </div>
+          <div class="matrix-explainer-item" style="border-left:3px solid var(--warning)">
+            <strong style="color:var(--warning)">Medium Severity (Score 8–14)</strong>
+            Moderate risks requiring active management, sprint allocation, and assigned engineering owners.
+          </div>
+          <div class="matrix-explainer-item" style="border-left:3px solid var(--success)">
+            <strong style="color:var(--success)">Low Severity (Score 1–7)</strong>
+            Minor operational risks tracked in standard backlog reviews without immediate schedule threat.
           </div>
         </div>
-        <div id="chat-typing" style="display:none" class="chat-typing">
-          <div class="typing-dot"></div>
-          <div class="typing-dot"></div>
-          <div class="typing-dot"></div>
-          <span style="margin-left:4px">Searching documents...</span>
+      </div>
+
+      <!-- Delivery Forecast Card -->
+      <div class="card" style="margin-bottom:18px">
+        <div class="card-label">Delivery Schedule Forecast &amp; Critical Path</div>
+        <div id="risk-forecast-panel">
+          <div class="empty"><p>Upload project documents and run analysis to view delivery forecast.</p></div>
         </div>
-        <div class="chat-input-row">
-          <input id="chat-input" placeholder="Ask about your project..." autocomplete="off">
-          <button class="btn btn-primary" id="btn-send-chat">Send</button>
+      </div>
+
+      <!-- Risk Matrix Table -->
+      <div class="card">
+        <div class="card-label">Identified Project Risk Register</div>
+        <div id="risks-panel">
+          <div class="empty"><p>No risks analyzed yet. Run analysis to populate the risk register.</p></div>
         </div>
       </div>
     </div>
 
-    <!-- ───────────── EXPORT ───────────── -->
-    <div id="page-export" class="page">
-      <div class="section-header">
+    <!-- ───────────── 6. SCOPE & OBJECTIVES ───────────── -->
+    <div id="page-scope" class="page">
+      <div class="page-hdr-row page-hdr">
         <div>
-          <div class="section-title">Export &amp; Reports</div>
-          <div class="section-sub">Download project intelligence reports</div>
+          <div class="page-title">Project Scope &amp; Deliverables</div>
+          <div class="page-sub">Clear statement of project objectives, in-scope requirements, milestones, and boundaries</div>
         </div>
+        <button class="btn btn-primary btn-sm" onclick="runPipeline()">Re-Extract Scope</button>
       </div>
-      <div class="grid-2">
-        <div class="card">
-          <div class="card-title">📄 Markdown Report</div>
-          <p style="color:var(--text-muted);font-size:13px;margin-bottom:14px">
-            Full project intelligence report including risks, blockers, action items, health scores and user stories.
-          </p>
-          <button class="btn btn-primary" id="btn-export-md">⬇ Download Markdown</button>
-        </div>
-        <div class="card">
-          <div class="card-title">📦 JSON Report</div>
-          <p style="color:var(--text-muted);font-size:13px;margin-bottom:14px">
-            Raw structured JSON of the full analysis — useful for integrations or further processing.
-          </p>
-          <button class="btn btn-secondary" id="btn-export-json">⬇ Download JSON</button>
+
+      <!-- 1. Primary Objective Block (Displayed First & Prominently) -->
+      <div id="scope-objective-container">
+        <div class="objective-block">
+          <div class="obj-label">Primary Project Objective</div>
+          <div class="obj-text" id="scope-objective-text">
+            Upload project specifications or proposals and run analysis to extract the core project objective and target audience.
+          </div>
         </div>
       </div>
 
-      <div class="card" style="margin-top:16px">
-        <div class="card-title">⚙ System Status</div>
-        <div id="sys-status-panel" style="color:var(--text-muted);font-size:13px">Loading...</div>
+      <!-- 2. In-Scope Items Table -->
+      <div class="card" style="margin-bottom:18px">
+        <div class="card-label">In-Scope System Requirements &amp; Features</div>
+        <div id="scope-in-panel">
+          <div class="empty"><p>Run analysis to view in-scope items.</p></div>
+        </div>
+      </div>
+
+      <!-- 3. Key Deliverables & Milestones Table -->
+      <div class="card" style="margin-bottom:18px">
+        <div class="card-label">Key Deliverables &amp; Milestone Schedule</div>
+        <div id="scope-deliv-panel">
+          <div class="empty"><p>Run analysis to view deliverables and milestones.</p></div>
+        </div>
+      </div>
+
+      <!-- 4. Out-of-Scope Constraints Table -->
+      <div class="card">
+        <div class="card-label">Out-of-Scope Boundaries (Scope Creep Guardrails)</div>
+        <div id="scope-out-panel">
+          <div class="empty"><p>Run analysis to view out-of-scope boundaries.</p></div>
+        </div>
       </div>
     </div>
+
+    <!-- ───────────── 7. BLOCKERS & ACTIONS ───────────── -->
+    <div id="page-blockers" class="page">
+      <div class="page-hdr-row page-hdr">
+        <div>
+          <div class="page-title">Blockers, Impediments &amp; Action Items</div>
+          <div class="page-sub">Real-time impediment tracking extracted from sprint notes and progress reports</div>
+        </div>
+        <button class="btn btn-primary btn-sm" onclick="runPipeline()">Re-Scan Blockers</button>
+      </div>
+
+      <div class="card" style="margin-bottom:18px">
+        <div class="card-label">Detected Project Blockers</div>
+        <div id="blockers-panel">
+          <div class="empty"><p>Run analysis to view detected blockers.</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Extracted Action Items &amp; Ownership</div>
+        <div id="actions-panel">
+          <div class="empty"><p>Run analysis to view assigned action items.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ───────────── 8. CONVERSATIONAL ASSISTANT ───────────── -->
+    <div id="page-chat" class="page">
+      <div class="page-hdr-row page-hdr">
+        <div>
+          <div class="page-title">Grounded Conversational Assistant</div>
+          <div class="page-sub">Natural language queries answered strictly from uploaded project artifacts with verifiable citations</div>
+        </div>
+        <button class="btn btn-outline btn-sm" id="btn-clear-chat">Clear History</button>
+      </div>
+
+      <div class="chat-shell">
+        <div class="chat-msgs" id="chat-messages">
+          <div class="msg-row bot">
+            <div class="msg-bubble">
+              Hello. I am your AI Project Intelligence Assistant.
+              <br><br>
+              I answer questions strictly grounded in your uploaded project documents. Every response includes document citations and confidence metrics.
+              <br><br>
+              <strong>Sample queries:</strong>
+              <ul style="margin:6px 0 0 16px">
+                <li>What are the top technical and schedule risks identified in the project?</li>
+                <li>What are the core deliverables and milestone deadlines?</li>
+                <li>Who are the assigned owners for critical blockers?</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="chat-typing" style="display:none" class="msg-typing">
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+          <span style="margin-left:6px">Retrieving grounded chunks from knowledge base...</span>
+        </div>
+
+        <div id="chat-followups" class="followup"></div>
+
+        <div class="chat-toolbar">
+          <input id="chat-input" placeholder="Type your project question..." autocomplete="off">
+          <button class="btn btn-primary" id="btn-send-chat">Send Query</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ───────────── 9. EXPORT & SYSTEM STATUS ───────────── -->
+    <div id="page-export" class="page">
+      <div class="page-hdr">
+        <div class="page-title">Reports &amp; System Configuration</div>
+        <div class="page-sub">Export intelligence deliverables and inspect backend components</div>
+      </div>
+
+      <div class="g2" style="margin-bottom:18px">
+        <div class="card">
+          <div class="card-label">Executive Intelligence Report (Markdown)</div>
+          <p style="color:var(--text-muted);font-size:12.5px;margin-bottom:14px;line-height:1.5">
+            Complete project intelligence document containing health scores, risk register, blocker matrix, scope breakdown, and user stories.
+          </p>
+          <button class="btn btn-primary" id="btn-export-md">Download Markdown Report</button>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Raw Structured Intelligence (JSON)</div>
+          <p style="color:var(--text-muted);font-size:12.5px;margin-bottom:14px;line-height:1.5">
+            Machine-readable JSON schema containing the full output of all four intelligence agents and scoring dimensions.
+          </p>
+          <button class="btn btn-outline" id="btn-export-json">Download JSON Data</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">System Architecture &amp; Component Status</div>
+        <div id="sys-status-panel" style="color:var(--text-muted);font-size:12.5px">Loading system status...</div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="app-footer">
+      AI Project Intelligence &amp; Risk Advisor &mdash; Enterprise RAG Multi-Agent Architecture &mdash; Amrutha Varshini
+    </footer>
 
   </main>
 </div>
@@ -324,37 +471,36 @@
 <!-- ══════════════════════════════════════════════════════
      SETTINGS MODAL
 ══════════════════════════════════════════════════════ -->
-<div class="modal-overlay" id="settings-modal">
+<div class="modal-bg" id="settings-modal">
   <div class="modal">
-    <div class="modal-header">
-      <span class="modal-title">⚙ Settings &amp; API Keys</span>
-      <button class="modal-close" id="btn-close-settings">✕</button>
+    <div class="modal-hdr">
+      <span class="modal-title">API Configuration &amp; Providers</span>
+      <button class="modal-close" id="btn-close-settings">&times;</button>
     </div>
 
-    <div class="form-group">
-      <label class="form-label">🔑 Gemini API Key</label>
-      <input type="password" id="input-gemini-key" placeholder="AIza...">
-      <div style="font-size:11px;color:var(--text-muted);margin-top:4px">
-        Get a free key at <a href="https://aistudio.google.com" target="_blank" style="color:var(--accent2)">aistudio.google.com</a>
-      </div>
+    <div class="form-row">
+      <label>Google Gemini API Key</label>
+      <input type="password" id="input-gemini-key" placeholder="AIzaSy...">
+      <div class="form-hint">Provides high-performance reasoning for agents and grounded RAG synthesis.</div>
     </div>
 
-    <div class="form-group">
-      <label class="form-label">🔑 OpenAI API Key (optional)</label>
+    <div class="form-row">
+      <label>OpenAI API Key (Optional)</label>
       <input type="password" id="input-openai-key" placeholder="sk-...">
+      <div class="form-hint">Used as secondary LLM fallback provider if configured.</div>
     </div>
 
-    <div style="display:flex;gap:10px;margin-top:4px">
+    <div style="display:flex;gap:10px;margin-top:18px">
       <button class="btn btn-primary" id="btn-save-keys" style="flex:1">Save &amp; Apply</button>
-      <button class="btn btn-secondary" id="btn-close-settings2">Cancel</button>
+      <button class="btn btn-outline" id="btn-close-settings2">Cancel</button>
     </div>
 
     <div id="key-status" style="margin-top:12px;font-size:12px;text-align:center"></div>
   </div>
 </div>
 
-<!-- TOAST -->
-<div id="toast-wrap"></div>
+<!-- TOAST CONTAINER -->
+<div id="toasts"></div>
 
 <script src="/static/app.js"></script>
 </body>

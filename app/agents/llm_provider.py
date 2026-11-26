@@ -51,7 +51,7 @@ class LLMProvider:
         if self.gemini_client:
             try:
                 full_prompt = f"{system_instruction}\n\n{prompt}" if system_instruction else prompt
-                response = self.gemini_client.generate_content(full_prompt)
+                response = self.gemini_client.generate_content(full_prompt, request_options={"timeout": 12})
                 return response.text.strip()
             except Exception as e:
                 print(f"[LLMProvider] Gemini error: {e}")

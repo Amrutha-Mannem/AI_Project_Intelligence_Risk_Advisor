@@ -8,7 +8,8 @@ class RiskForecastAgent(BaseAgent):
     """
     Risk Detection and Delivery Forecasting Agent.
     Specializes in identifying technical, schedule, dependency, and resource vulnerabilities,
-    computing quantitative risk severity matrix scores, and forecasting delivery challenges.
+    computing quantitative risk severity matrix scores (P x I: 1-25),
+    and forecasting delivery variance strictly grounded in uploaded project documents.
     """
 
     def __init__(self, vector_store, retriever, llm):
@@ -41,11 +42,12 @@ Analyze the following project document excerpts and:
    - category (technical | schedule | resource | scope_creep | dependency | external)
    - probability (High | Medium | Low)
    - impact (High | Medium | Low)
-   - severity_score (integer from 1 to 25)
+   - severity_score (integer from 1 to 25, calculated as probability 1-5 multiplied by impact 1-5)
    - early_warning_signs (list of strings)
    - mitigation_strategy
    - contingency_plan
    - status (identified | mitigating | resolved)
+   - source_reference (MUST be the exact file name from '--- Source: <filename> ---' where this risk was detected)
 
 2. Provide a Delivery Forecast:
    - forecast_status (On Track | At Risk | Critical Delay)
@@ -72,12 +74,13 @@ Respond in strictly valid JSON:
       "early_warning_signs": ["..."],
       "mitigation_strategy": "...",
       "contingency_plan": "...",
-      "status": "identified"
+      "status": "identified",
+      "source_reference": "..."
     }}
   ],
   "delivery_forecast": {{
     "forecast_status": "At Risk",
-    "predicted_delay_days": 10,
+    "predicted_delay_days": 7,
     "confidence_level": 0.85,
     "critical_path_factors": ["..."],
     "forecast_narrative": "...",
@@ -85,46 +88,66 @@ Respond in strictly valid JSON:
   }}
 }}
 """
-        json_data = self.llm.generate_json(prompt, system_instruction="You are a strict risk assessment agent.")
+        json_data = self.llm.generate_json(prompt, system_instruction="You are a strict risk assessment agent. Ground all risks directly in the uploaded text excerpts.")
         if json_data and "risks" in json_data and "delivery_forecast" in json_data:
             try:
-                risks = [RiskItem(**item) for item in json_data["risks"]]
+                default_doc = self.vector_store.chunks[0].source_name if self.vector_store.chunks else "Uploaded Document"
+                risks = []
+                for item in json_data["risks"]:
+                    if not item.get("source_reference"):
+                        item["source_reference"] = default_doc
+                    risks.append(RiskItem(**item))
+
                 forecast = DeliveryForecast(**json_data["delivery_forecast"])
                 return risks, forecast
             except Exception as e:
-                print(f"[RiskAgent] JSON parse error: {e}. Falling back to heuristic engine.")
+                print(f"[RiskAgent] JSON parse error: {e}. Falling back to dynamic heuristic engine.")
 
         return self._heuristic_analysis(context)
 
     def _heuristic_analysis(self, context: str) -> Tuple[List[RiskItem], DeliveryForecast]:
         context_lower = context.lower()
+        lines = [l.strip() for l in context.splitlines() if l.strip()]
+        doc_names = list(dict.fromkeys(c.source_name for c in self.vector_store.chunks))
+        primary_doc = doc_names[0] if doc_names else "Uploaded Document"
+
         risks: List[RiskItem] = []
         critical_factors: List[str] = []
         delay_days = 0
 
-        # Heuristic Pattern 1: API / Third Party Integration
-        if any(w in context_lower for w in ["api rate limit", "third-party", "vendor", "external api", "integration failure"]):
+        # Helper to find which uploaded file contains keywords
+        def _find_source(keywords: List[str]) -> str:
+            for chunk in self.vector_store.chunks:
+                txt = chunk.content.lower()
+                if any(k in txt for k in keywords):
+                    return chunk.source_name
+            return primary_doc
+
+        # Pattern 1: API / Third Party Integration
+        if any(w in context_lower for w in ["api rate limit", "third-party", "vendor", "external api", "integration failure", "quota", "timeout"]):
+            src = _find_source(["api", "rate limit", "third-party", "vendor", "endpoint"])
             risks.append(
                 RiskItem(
                     id="RSK-01",
                     risk_title="Third-Party API Dependency & Quota Bottlenecks",
-                    description="Heavy reliance on external services, LLM providers, or third-party APIs without fallback caching.",
+                    description="Heavy reliance on external services or third-party APIs without caching and fallback mechanisms.",
                     category="dependency",
                     probability="High",
                     impact="High",
                     severity_score=20,
                     early_warning_signs=["HTTP 429 rate limit errors", "Provider status incidents", "Latency spikes"],
-                    mitigation_strategy="Implement local embeddings fallback, aggressive response caching, and client retry backoff.",
-                    contingency_plan="Switch automatically to local heuristic parser or secondary LLM provider endpoint.",
+                    mitigation_strategy="Implement local fallback, caching layers, and client retry backoff.",
+                    contingency_plan="Switch automatically to secondary endpoint or cached response repository.",
                     status="identified",
-                    source_reference="Uploaded Technical Specifications",
+                    source_reference=src,
                 )
             )
-            critical_factors.append("API service latency and rate limits")
+            critical_factors.append("API service latency and dependency rate limits")
             delay_days += 5
 
-        # Heuristic Pattern 2: Schedule / Missed Deadlines / Scope Creep
-        if any(w in context_lower for w in ["deadline", "delay", "behind schedule", "milestone slip", "overdue", "late"]):
+        # Pattern 2: Schedule / Missed Deadlines / Scope Creep
+        if any(w in context_lower for w in ["deadline", "delay", "behind schedule", "milestone slip", "overdue", "late", "timeline"]):
+            src = _find_source(["deadline", "delay", "behind schedule", "sprint", "meeting", "slip"])
             risks.append(
                 RiskItem(
                     id="RSK-02",
@@ -138,40 +161,42 @@ Respond in strictly valid JSON:
                     mitigation_strategy="Scope triage: convert nice-to-have features into post-release backlog items.",
                     contingency_plan="Reallocate team engineering pairs to unblock critical path modules.",
                     status="mitigating",
-                    source_reference="Sprint Meeting Notes & Backlog",
+                    source_reference=src,
                 )
             )
             critical_factors.append("Sprint velocity variance and task spillover")
             delay_days += 7
 
-        # Heuristic Pattern 3: Resource / Team Skill Constraints
-        if any(w in context_lower for w in ["unassigned", "single point of failure", "skill gap", "turnover", "workload"]):
+        # Pattern 3: Resource / Team Skill Constraints
+        if any(w in context_lower for w in ["unassigned", "single point of failure", "skill gap", "turnover", "workload", "bottleneck"]):
+            src = _find_source(["unassigned", "assignee", "task", "backlog", "resource", "bottleneck"])
             risks.append(
                 RiskItem(
                     id="RSK-03",
                     risk_title="Key-Person Dependency & Resource Constraints",
-                    description="Certain architectural modules have single assignees without peer knowledge cross-training.",
+                    description="Critical modules have single assignees without peer knowledge cross-training.",
                     category="resource",
                     probability="Medium",
                     impact="High",
                     severity_score=16,
                     early_warning_signs=["Task bottlenecking around one developer", "PR reviews stalling"],
                     mitigation_strategy="Mandate architecture documentation, peer code pairing, and shared ownership.",
-                    contingency_plan="Cross-train adjacent engineers on core RAG and ingestion pipelines.",
+                    contingency_plan="Cross-train adjacent engineers on critical path modules.",
                     status="identified",
-                    source_reference="Task Allocation Board",
+                    source_reference=src,
                 )
             )
             critical_factors.append("Developer bandwidth saturation")
             delay_days += 4
 
-        # Heuristic Pattern 4: Incomplete Documentation & Spec Ambiguity
-        if any(w in context_lower for w in ["tbd", "unclear", "missing requirement", "incomplete", "vague"]):
+        # Pattern 4: Incomplete Documentation & Spec Ambiguity
+        if any(w in context_lower for w in ["tbd", "unclear", "missing requirement", "incomplete", "vague", "assumption"]):
+            src = _find_source(["tbd", "unclear", "specification", "proposal", "srs", "incomplete"])
             risks.append(
                 RiskItem(
                     id="RSK-04",
                     risk_title="Ambiguous Requirements & Scope Creep",
-                    description="SRS and notes contain TBD items or unspecified acceptance criteria, risking rework.",
+                    description="Document excerpts contain TBD items or unspecified acceptance criteria, risking rework.",
                     category="scope_creep",
                     probability="Medium",
                     impact="Medium",
@@ -180,51 +205,65 @@ Respond in strictly valid JSON:
                     mitigation_strategy="Hold backlog grooming sessions with strict Definition of Ready (DoR).",
                     contingency_plan="Lock Milestone 1 scope and defer dynamic revisions to Milestone 2.",
                     status="identified",
-                    source_reference="Project Proposal & SRS",
+                    source_reference=src,
                 )
             )
             critical_factors.append("Requirement ambiguity requiring rework")
             delay_days += 3
 
-        # Default risks if clean document
+        # Dynamic fallback: scan lines for any project risk statements
+        if not risks and lines:
+            for line in lines:
+                clean = re.sub(r"^[-*#\d\.\s]+", "", line).strip()
+                if len(clean) > 20 and not clean.startswith("--- Source:"):
+                    line_l = clean.lower()
+                    if any(w in line_l for w in ["risk", "concern", "challenge", "threat", "vulnerability", "limitation", "fail", "security", "cost"]):
+                        risks.append(
+                            RiskItem(
+                                id=f"RSK-{len(risks)+1:02d}",
+                                risk_title=clean[:60],
+                                description=clean,
+                                category="technical",
+                                probability="Medium",
+                                impact="Medium",
+                                severity_score=12,
+                                early_warning_signs=["Identified in project documentation review"],
+                                mitigation_strategy="Active monitoring and peer review during sprint cycles.",
+                                contingency_plan="Define fallback mitigation procedures.",
+                                status="identified",
+                                source_reference=primary_doc,
+                            )
+                        )
+                        critical_factors.append(clean[:50])
+                        delay_days += 3
+                        if len(risks) >= 3:
+                            break
+
+        # Standard operational baseline if documents are clean
         if not risks:
             risks = [
                 RiskItem(
                     id="RSK-01",
-                    risk_title="Vector Store Scaling & High Query Latency",
-                    description="Document corpus growth may elevate query embedding computation and search latency.",
-                    category="technical",
-                    probability="Medium",
-                    impact="Medium",
-                    severity_score=12,
-                    early_warning_signs=["Query times exceeding 800ms", "Index load spikes"],
-                    mitigation_strategy="Implement in-memory numpy normalization, indexing caches, and batch vector search.",
-                    contingency_plan="Pre-compute document embeddings during ingestion background workers.",
-                    status="identified",
-                ),
-                RiskItem(
-                    id="RSK-02",
-                    risk_title="Cross-Document Schedule Sync Latency",
-                    description="Asynchronous document updates between meeting notes and task boards lead to stale intelligence.",
+                    risk_title="Cross-Document Synchronization Variance",
+                    description="Asynchronous updates between project artifacts may lead to conflicting timeline assumptions.",
                     category="schedule",
                     probability="Low",
                     impact="Medium",
-                    severity_score=8,
-                    early_warning_signs=["Inconsistent task statuses across artifacts"],
-                    mitigation_strategy="Automated periodic RAG re-indexing upon new artifact uploads.",
-                    contingency_plan="Alert team members when contradictory dates are detected.",
+                    severity_score=6,
+                    early_warning_signs=["Inconsistent dates between SRS and sprint notes"],
+                    mitigation_strategy="Execute automated vector re-indexing upon new document ingestion.",
                     status="identified",
-                ),
+                    source_reference=primary_doc,
+                )
             ]
-            critical_factors = ["Vector index query throughput", "Asynchronous team artifact synchronization"]
 
         # Determine overall forecast
         if delay_days >= 10:
-            status = "At Risk"
-            narrative = f"Project exhibits significant schedule pressure with estimated {delay_days} days of potential deliverable delay across critical path modules."
+            status = "Critical Delay"
+            narrative = f"Project exhibits significant schedule pressure with estimated {delay_days} days of deliverable delay across critical path bottlenecks."
         elif delay_days > 0:
             status = "At Risk"
-            narrative = f"Moderate schedule risks detected; estimated delay buffer is ~{delay_days} days. Proactive mitigation recommended."
+            narrative = f"Moderate schedule risks detected; estimated delay buffer is {delay_days} days. Proactive mitigation is recommended."
         else:
             status = "On Track"
             narrative = "Project milestones and deliverables are within acceptable variance thresholds. No critical schedule delays identified."
@@ -233,12 +272,12 @@ Respond in strictly valid JSON:
             forecast_status=status,
             predicted_delay_days=delay_days,
             confidence_level=0.88,
-            critical_path_factors=critical_factors if critical_factors else ["Document ingestion stability", "Multi-agent orchestration"],
+            critical_path_factors=critical_factors or ["Standard delivery schedule execution"],
             forecast_narrative=narrative,
             recommendations=[
-                "Prioritize closing unassigned critical path tasks in the current sprint.",
-                "Enforce Definition of Ready (DoR) on all user stories prior to implementation.",
-                "Utilize local embedding fallbacks to prevent external API quota bottlenecks.",
+                "Prioritize high-severity risk mitigation items during sprint planning.",
+                "Verify third-party API dependencies and resource allocations.",
+                "Review critical path bottlenecks in weekly progress reviews.",
             ],
         )
 
