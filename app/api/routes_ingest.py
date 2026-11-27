@@ -38,6 +38,9 @@ async def upload_documents(files: List[UploadFile] = File(...)):
         doc_id = f"doc_{uuid.uuid4().hex[:8]}"
         saved_path = settings.upload_dir / f"{doc_id}_{file.filename}"
 
+        # Clean user-facing file name
+        clean_name = file.filename
+
         try:
             # Save uploaded file
             with open(saved_path, "wb") as buffer:
@@ -45,9 +48,17 @@ async def upload_documents(files: List[UploadFile] = File(...)):
 
             # Parse document
             raw_text, metadata = DocumentParser.parse(saved_path)
+            metadata.file_name = clean_name
 
-            # Chunk document
+            # Chunk document and assign clean source name
             chunks = chunker.chunk_document(raw_text, document_id=doc_id, metadata=metadata)
+            for c in chunks:
+                c.source_name = clean_name
+
+            # Automatically clear any demo sample files so they don't contaminate the real project
+            sample_ids = [c.document_id for c in vector_store.chunks if c.document_id.startswith("sample_")]
+            for s_id in set(sample_ids):
+                vector_store.delete_document(s_id)
 
             if chunks:
                 chunk_texts = [c.content for c in chunks]
@@ -57,7 +68,7 @@ async def upload_documents(files: List[UploadFile] = File(...)):
             results.append(
                 IngestionResult(
                     document_id=doc_id,
-                    file_name=file.filename,
+                    file_name=clean_name,
                     file_type=metadata.file_type,
                     chunks_created=len(chunks),
                     total_characters=metadata.char_count,
@@ -162,18 +173,24 @@ async def load_sample_documents():
 async def list_documents() -> List[Dict[str, Any]]:
     """
     Returns summarized list of distinct documents indexed in the vector store.
+    If user has uploaded documents, sample demo files are excluded from the web interface.
     """
+    user_chunks = [c for c in vector_store.chunks if not c.document_id.startswith("sample_")]
+    target_chunks = user_chunks if len(user_chunks) > 0 else vector_store.chunks
+
     doc_map: Dict[str, Dict[str, Any]] = {}
-    for chunk in vector_store.chunks:
+    for chunk in target_chunks:
         d_id = chunk.document_id
         if d_id not in doc_map:
+            clean_name = re.sub(r"^doc_[a-f0-9]{8}_", "", chunk.source_name)
             doc_map[d_id] = {
                 "document_id": d_id,
-                "file_name": chunk.source_name,
+                "file_name": clean_name,
                 "file_type": chunk.file_type,
                 "chunks_count": 0,
                 "total_chars": 0,
                 "total_words": 0,
+                "is_sample": d_id.startswith("sample_"),
             }
         doc_map[d_id]["chunks_count"] += 1
         doc_map[d_id]["total_chars"] += len(chunk.content)

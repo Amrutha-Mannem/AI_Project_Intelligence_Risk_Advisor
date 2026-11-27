@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initButtons();
   loadStatus();
   loadDocuments();
+  loadAnalysisHistory();
   // Clean dynamic start: only load cached analysis if explicitly requested or present
   checkExistingAnalysis();
 });
@@ -330,6 +331,7 @@ async function runPipeline() {
     const data = await r.json();
     currentAnalysis = data;
     renderAnalysis(data);
+    loadAnalysisHistory();
     toast("Full multi-agent analysis complete!", "success");
   } catch (e) {
     toast("Analysis failed: " + e.message, "error");
@@ -368,6 +370,46 @@ async function loadLatestAnalysis() {
     }
   } catch (e) {
     toast("Refresh failed: " + e.message, "error");
+  }
+}
+
+async function loadAnalysisHistory() {
+  try {
+    const r = await fetch("/api/agents/history");
+    if (!r.ok) return;
+    const history = await r.json();
+    const select = document.getElementById("analysis-history-select");
+    if (!select) return;
+
+    if (!history || !history.length) {
+      select.style.display = "none";
+      return;
+    }
+
+    select.style.display = "inline-block";
+    select.innerHTML = `<option value="">Analysis History (${history.length})</option>` +
+      history.slice().reverse().map(h => `
+        <option value="${escHtml(h.id)}">${escHtml(h.timestamp.slice(11, 16))}: ${escHtml(h.project_title.slice(0, 24))} (${h.overall_score}/100)</option>
+      `).join("");
+
+    select.onchange = async () => {
+      const val = select.value;
+      if (!val) return;
+      toast("Loading past analysis from history...", "info");
+      try {
+        const resp = await fetch(`/api/agents/history/${val}`);
+        if (resp.ok) {
+          const item = await resp.json();
+          currentAnalysis = item;
+          renderAnalysis(item);
+          toast("Loaded past analysis: " + val, "success");
+        }
+      } catch (err) {
+        toast("Could not load historical run", "error");
+      }
+    };
+  } catch (e) {
+    console.error("loadAnalysisHistory error:", e);
   }
 }
 

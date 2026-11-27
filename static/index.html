@@ -93,7 +93,10 @@
           <div class="page-title">Executive Health Dashboard</div>
           <div class="page-sub">Multidimensional quantitative project health evaluation</div>
         </div>
-        <div style="display:flex;gap:8px">
+        <div style="display:flex;gap:8px;align-items:center">
+          <select id="analysis-history-select" style="display:none;font-size:11.5px;max-width:250px;background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:var(--radius-sm);padding:4px 8px">
+            <option value="">Analysis History</option>
+          </select>
           <button class="btn btn-outline btn-sm" id="btn-refresh-dashboard">Refresh</button>
           <button class="btn btn-primary btn-sm" onclick="runPipeline()">Run Full Analysis</button>
         </div>

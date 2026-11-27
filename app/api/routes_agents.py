@@ -27,6 +27,19 @@ async def get_latest_analysis():
     return latest
 
 
+@router.get("/history")
+async def get_analysis_history():
+    return orchestrator.get_analysis_history()
+
+
+@router.get("/history/{run_id}")
+async def get_history_item(run_id: str):
+    data = orchestrator.get_history_item(run_id)
+    if not data:
+        raise HTTPException(status_code=404, detail=f"Analysis run {run_id} not found in history.")
+    return data
+
+
 @router.post("/scope")
 async def run_scope_agent():
     _require_docs()

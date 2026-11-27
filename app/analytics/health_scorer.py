@@ -139,9 +139,10 @@ class HealthScorer:
 
         # Executive Summary
         executive_summary = (
-            f"The project currently maintains an overall health score of {overall_score}/100 [{health_grade}]. "
-            f"Delivery forecast is rated '{forecast.forecast_status}' with an estimated schedule variance of {forecast.predicted_delay_days} days. "
-            f"There are {len(high_risks)} high-severity risks and {len(crit_blockers)} critical blockers requiring team intervention."
+            f"Active Initiative: {scope_report.project_title}. "
+            f"The project maintains an overall health score of {overall_score}/100 [{health_grade}]. "
+            f"Delivery forecast is evaluated as '{forecast.forecast_status}' with an estimated variance buffer of {forecast.predicted_delay_days} days. "
+            f"There are {len(high_risks)} elevated risks and {len(crit_blockers)} active blockers identified for mitigation."
         )
 
         # Positives

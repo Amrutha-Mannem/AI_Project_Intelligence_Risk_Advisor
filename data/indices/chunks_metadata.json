@@ -1,0 +1,682 @@
+[
+  {
+    "chunk_id": "doc_ef312dda_chk_0_657aee",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "--- Page 1 ---\nFINRELIEF AI Project Documentation\nPROJECT DOCUMENTATION\nFinRelief AI\nAn AI-assisted debt relief and financial recovery platform for borrowers\nProject FinRelief AI - AI-Powered Debt Relief & Financial Recovery Platform\nAuthor Amrutha Varshini Mannem, B.Tech AI & ML, St. Ann's College of Engineering and\nTechnology\nRepository github.com/Amrutha-Mannem/FinReliefAI\nDocument date 26 November 2026\nProject stage Working prototype (version 1); refinement and clean-up in progress",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 490,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 66,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_1_e658be",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "Project stage Working prototype (version 1); refinement and clean-up in progress\nIn the repository Backend, frontend, 8-phase project report, screenshots and a demo video\n1. Overview\nFinRelief AI is a full-stack web application that helps a borrower understand their debt position,\nestimate a reasonable settlement for each loan, and prepare a formal negotiation letter for the lender.\nA borrower registers with their monthly income and expenses, adds loans through a guided form, and",
+    "chunk_index": 1,
+    "char_start": 410,
+    "char_end": 894,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 73,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_2_f5e822",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "then sees a dashboard of financial health indicators. From each loan card they can request a\nsettlement estimate or a negotiation letter written with the Google Gemini API, with a rule-based\nletter used as a fallback when the AI service is not available.\nThe project is a working prototype. The core flow runs from sign-up to letter generation, while some\nareas (described in Section 9) still need cleaning up before it can be called production-ready.\n2. Problem Statement",
+    "chunk_index": 2,
+    "char_start": 895,
+    "char_end": 1367,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 78,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_3_f769c9",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "2. Problem Statement\nPeople struggling with loans often do not know how stressed their finances really are, what a fair\nsettlement might look like, or how to write a convincing request to a bank. Professional help is costly\nand the process is stressful. The project explores how a small, approachable tool can give borrowers\nclarity and a ready-to-send starting point for negotiation.\n3. Objectives\n(cid:127) Calculate simple, understandable financial health indicators from income, expenses and EMIs.",
+    "chunk_index": 3,
+    "char_start": 1347,
+    "char_end": 1848,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 76,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_4_093815",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "(cid:127) Estimate a settlement amount and risk category for each loan.\n(cid:127) Generate a professional negotiation letter, with a fallback so the feature never fully fails.\n(cid:127) Keep user data protected behind password hashing and token-based login.\n(cid:127) Present everything in a friendly, conversational interface suited to first-time users.\nProject documentation | November 2026 | Amrutha Varshini Mannem Page 1 of 5\n\n[Table Page 1]:\nFINRELIEF AI Project Documentation",
+    "chunk_index": 4,
+    "char_start": 1849,
+    "char_end": 2331,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 69,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_5_7571c7",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "[Table Page 1]:\nFINRELIEF AI Project Documentation\n\n[Table Page 1]:\nProject | FinRelief AI - AI-Powered Debt Relief & Financial Recovery Platform\nAuthor | Amrutha Varshini Mannem, B.Tech AI & ML, St. Ann's College of Engineering and\nTechnology\nRepository | github.com/Amrutha-Mannem/FinReliefAI\nDocument date | 26 November 2026\nProject stage | Working prototype (version 1); refinement and clean-up in progress\nIn the repository | Backend, frontend, 8-phase project report, screenshots and a demo video",
+    "chunk_index": 5,
+    "char_start": 2281,
+    "char_end": 2783,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 73,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_6_73b912",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "--- Page 2 ---\nFINRELIEF AI Project Documentation\n4. Features Built So Far\nThe features below were checked against the code in the repository.\n4.1 Accounts and security\n(cid:127) Registration with name, email, password, monthly income and monthly expenses.\n(cid:127) Passwords are hashed with Werkzeug; login returns a JWT that expires after 120 minutes.\n(cid:127) Protected pages in the front end, and automatic sign-out when the server returns an unauthorised\nresponse.\n4.2 Financial health dashboard",
+    "chunk_index": 6,
+    "char_start": 2785,
+    "char_end": 3287,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 75,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_7_3d9d87",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "response.\n4.2 Financial health dashboard\n(cid:127) Four indicators: stress level, monthly surplus, EMI-to-income ratio and debt-to-income ratio.\n(cid:127) Indicators are recalculated each time the dashboard loads and saved to the user's profile.\n(cid:127) Loan cards show lender, type, outstanding amount, EMI, interest rate and any overdue months,\nwith amounts in rupees.\n4.3 Guided loan entry\n(cid:127) Six-step form with a progress bar and friendly prompts for lender, type, balance, rate, EMI and",
+    "chunk_index": 7,
+    "char_start": 3247,
+    "char_end": 3747,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 72,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_8_329134",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "overdue months.\n(cid:127) Seven loan types: Personal, Home, Car, Education, Business, Credit Card and Other.\n4.4 Settlement prediction\n(cid:127) One click per loan returns a suggested settlement, a risk category and the amount that could be\nsaved.\n(cid:127) The result is stored in the database for later reference.\n4.5 AI negotiation letters\n(cid:127) A prompt built from the borrower's profile and the loan details is sent to Google Gemini to draft a\nformal letter that also asks for a No Dues Certificate.",
+    "chunk_index": 8,
+    "char_start": 3748,
+    "char_end": 4256,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 82,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_9_29d6b5",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "formal letter that also asks for a No Dues Certificate.\n(cid:127) If the API key is missing or the call fails, a rule-based template letter is returned instead; the front\nend also holds its own backup letter.\n(cid:127) Letters can be copied or downloaded as a text file, and each generated letter is saved in an AI\nhistory table.\n4.6 Financial advisor page\n(cid:127) Plain-language tips based on surplus, EMI ratio, DTI, overdue loans, payoff time and an estimate\nof possible savings.",
+    "chunk_index": 9,
+    "char_start": 4201,
+    "char_end": 4685,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 82,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_10_9e7e0a",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "of possible savings.\n4.7 Onboarding and interface\n(cid:127) Four-slide onboarding introduction and a dark, card-based theme with a conversational tone.\n4.8 Project report and demo\n(cid:127) An 8-phase report folder (ideation, requirements, design, planning, development, testing,\ndocumentation, demonstration), six screenshots and a recorded demo video.\nProject documentation | November 2026 | Amrutha Varshini Mannem Page 2 of 5\n\n[Table Page 2]:\nFINRELIEF AI Project Documentation",
+    "chunk_index": 10,
+    "char_start": 4665,
+    "char_end": 5146,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 65,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_11_99e7e0",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "[Table Page 2]:\nFINRELIEF AI Project Documentation\n\n--- Page 3 ---\nFINRELIEF AI Project Documentation\n5. Technical Architecture\nA React single-page application talks to a FastAPI service over a REST API. The service stores data\nwith SQLAlchemy and calls Gemini for letter generation. In deployment, FastAPI can also serve the\nbuilt front end.\nLayer Technology Role\nFront end React 19, Vite, React Router 7, Axios, Pages, routing, token handling, dark theme\ncustom CSS\nBack end Python 3.11, FastAPI, Uvicorn, Pydantic REST endpoints, validation, business logic",
+    "chunk_index": 11,
+    "char_start": 5096,
+    "char_end": 5655,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 85,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_12_08278a",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "Data SQLAlchemy 2.0 with SQLite Five tables; database URL configurable\nSecurity python-jose (JWT, HS256), Werkzeug Login tokens and password protection\nhashing\nAI google-generativeai (Gemini) Negotiation letter drafting\nDeployment render.yaml and start.sh Install, build and start on a hosted service\n6. Data Model\nTable Main fields Purpose\nusers user_id, name, email (unique), Account details\nhashed_password, created_at",
+    "chunk_index": 12,
+    "char_start": 5656,
+    "char_end": 6077,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 55,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_13_285670",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "users user_id, name, email (unique), Account details\nhashed_password, created_at\nfinancial_profiles monthly_income, monthly_expenses, emi_ratio, One profile per user with latest\ndti_ratio, monthly_surplus, stress_level indicators\nloans lender_name, loan_type, outstanding_amount, Loans entered by the user\ninterest_rate, emi, overdue_months\nsettlement_predictions loan_id, suggested_settlement, risk_category, History of predictions\npredicted_amount",
+    "chunk_index": 13,
+    "char_start": 5997,
+    "char_end": 6446,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 43,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_14_5ce4c9",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "predicted_amount\nai_history generated_content, query_type, timestamp Saved AI letters\n7. API Endpoints\nEndpoint Login What it does\nneeded\nPOST /register No Creates a user and a financial profile\nPOST /token No Checks credentials and returns a JWT\nGET /dashboard Yes Returns user, health indicators and loans\nPOST /add-loan Yes Adds a loan for the current user\nPOST /predict-settlement/{id} Yes Calculates and stores a settlement estimate",
+    "chunk_index": 14,
+    "char_start": 6430,
+    "char_end": 6867,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 64,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_15_e0b1a5",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "POST /predict-settlement/{id} Yes Calculates and stores a settlement estimate\nPOST /generate-negotiation/{id} Yes Generates and stores a negotiation letter\nProject documentation | November 2026 | Amrutha Varshini Mannem Page 3 of 5\n\n[Table Page 3]:\nFINRELIEF AI Project Documentation",
+    "chunk_index": 15,
+    "char_start": 6790,
+    "char_end": 7073,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 38,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_16_26650c",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "[Table Page 3]:\nFINRELIEF AI Project Documentation\n\n[Table Page 3]:\nLayer | Technology | Role\nFront end | React 19, Vite, React Router 7, Axios,\ncustom CSS | Pages, routing, token handling, dark theme\nBack end | Python 3.11, FastAPI, Uvicorn, Pydantic | REST endpoints, validation, business logic\nData | SQLAlchemy 2.0 with SQLite | Five tables; database URL configurable\nSecurity | python-jose (JWT, HS256), Werkzeug\nhashing | Login tokens and password protection\nAI | google-generativeai (Gemini) | Negotiation letter drafting",
+    "chunk_index": 16,
+    "char_start": 7023,
+    "char_end": 7551,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 81,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_17_4ed902",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "AI | google-generativeai (Gemini) | Negotiation letter drafting\nDeployment | render.yaml and start.sh | Install, build and start on a hosted service",
+    "chunk_index": 17,
+    "char_start": 7488,
+    "char_end": 7636,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 22,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_18_7bf5fd",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "[Table Page 3]:\nTable | Main fields | Purpose\nusers | user_id, name, email (unique),\nhashed_password, created_at | Account details\nfinancial_profiles | monthly_income, monthly_expenses, emi_ratio,\ndti_ratio, monthly_surplus, stress_level | One profile per user with latest\nindicators\nloans | lender_name, loan_type, outstanding_amount,\ninterest_rate, emi, overdue_months | Loans entered by the user\nsettlement_predictions | loan_id, suggested_settlement, risk_category,",
+    "chunk_index": 18,
+    "char_start": 7638,
+    "char_end": 8107,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 55,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_19_64a3f4",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "settlement_predictions | loan_id, suggested_settlement, risk_category,\npredicted_amount | History of predictions\nai_history | generated_content, query_type, timestamp | Saved AI letters",
+    "chunk_index": 19,
+    "char_start": 8037,
+    "char_end": 8222,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 19,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_20_825dae",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "[Table Page 3]:\nEndpoint | Login\nneeded | What it does\nPOST /register | No | Creates a user and a financial profile\nPOST /token | No | Checks credentials and returns a JWT\nGET /dashboard | Yes | Returns user, health indicators and loans\nPOST /add-loan | Yes | Adds a loan for the current user\nPOST /predict-settlement/{id} | Yes | Calculates and stores a settlement estimate\nPOST /generate-negotiation/{id} | Yes | Generates and stores a negotiation letter",
+    "chunk_index": 20,
+    "char_start": 8224,
+    "char_end": 8680,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 79,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_21_dc0fd9",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "--- Page 4 ---\nFINRELIEF AI Project Documentation\n8. How the Numbers Are Calculated\nThe calculations are simple rules kept in a separate financial engine module, which makes them\neasy to read and change.\nMeasure Rule used in the code\nMonthly surplus Income minus expenses minus total EMI\nEMI ratio Total EMI divided by income, as a percentage\nDTI ratio (Expenses plus total EMI) divided by income, as a percentage\nStress level High above 40% EMI ratio, Medium above 20%, otherwise Low",
+    "chunk_index": 21,
+    "char_start": 8682,
+    "char_end": 9166,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 82,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_22_ed9eb4",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "Stress level High above 40% EMI ratio, Medium above 20%, otherwise Low\nSettlement discount Base 20%. Add 5% for 1-3 overdue months, 10% for 4-6, 15% for over 6. Add 5%\nmore for personal loans.\nRisk category High above 3 overdue months, Medium for 1-3, Low when nothing is overdue\nSettlement figures are rule-based estimates, not guarantees, and the letters are drafts rather than legal or financial\nadvice.\n9. Current Limitations",
+    "chunk_index": 22,
+    "char_start": 9096,
+    "char_end": 9525,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 71,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_23_517e2d",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "advice.\n9. Current Limitations\nThese points were found while reading the code and screenshots. They are the next things to fix.\nArea What was observed Planned fix\nLetters Letters show a dollar sign instead of rupees, markdown Use rupees, clean the AI output and\nasterisks appear as plain text, and the text is centred. left-align the letter.\nConsistency The letter uses a fixed 70% settlement, while the Use the same settlement function\nprediction uses the discount rules, so the two can for both.\ndisagree.",
+    "chunk_index": 23,
+    "char_start": 9495,
+    "char_end": 10002,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 84,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_24_ea3a7a",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "prediction uses the discount rules, so the two can for both.\ndisagree.\nAdvisor Tips are calculated in the front end. The AI analysis Return income from the API and\nand loan priority functions exist in the back end but are expose advice and priority\nnot connected to any endpoint. The advisor page endpoints.\nestimates income instead of showing the real figure.\nSetup The API address is fixed to localhost, CORS allows Move settings to environment",
+    "chunk_index": 24,
+    "char_start": 9932,
+    "char_end": 10378,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 75,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_25_79da8f",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "only local addresses, render.yaml points to a folder that variables and correct paths and\nis not in the repository, and one import uses different names.\nletter case from the file name, which fails on Linux.\nSecurity A default fallback secret key exists, the database file is Require a secret from the\ncommitted, and the token sits in local storage. environment and keep the database\nout of Git.\nQuality No automated tests, no edit or delete for loans, no way Add tests and the missing screens,",
+    "chunk_index": 25,
+    "char_start": 10379,
+    "char_end": 10872,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 85,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_26_4c1ce2",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "to change income later, pop-up alerts for messages, and update the AI library.\nand an older Gemini model and library.\nProject documentation | November 2026 | Amrutha Varshini Mannem Page 4 of 5\n\n[Table Page 4]:\nFINRELIEF AI Project Documentation",
+    "chunk_index": 26,
+    "char_start": 10873,
+    "char_end": 11118,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 40,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_27_c57a28",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "[Table Page 4]:\nFINRELIEF AI Project Documentation\n\n[Table Page 4]:\nMeasure | Rule used in the code\nMonthly surplus | Income minus expenses minus total EMI\nEMI ratio | Total EMI divided by income, as a percentage\nDTI ratio | (Expenses plus total EMI) divided by income, as a percentage\nStress level | High above 40% EMI ratio, Medium above 20%, otherwise Low\nSettlement discount | Base 20%. Add 5% for 1-3 overdue months, 10% for 4-6, 15% for over 6. Add 5%\nmore for personal loans.",
+    "chunk_index": 27,
+    "char_start": 11068,
+    "char_end": 11550,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 87,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_28_76a51b",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "more for personal loans.\nRisk category | High above 3 overdue months, Medium for 1-3, Low when nothing is overdue",
+    "chunk_index": 28,
+    "char_start": 11526,
+    "char_end": 11639,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 20,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_29_4492e7",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "[Table Page 4]:\nArea | What was observed | Planned fix\nLetters | Letters show a dollar sign instead of rupees, markdown\nasterisks appear as plain text, and the text is centred. | Use rupees, clean the AI output and\nleft-align the letter.\nConsistency | The letter uses a fixed 70% settlement, while the\nprediction uses the discount rules, so the two can\ndisagree. | Use the same settlement function\nfor both.\nAdvisor | Tips are calculated in the front end. The AI analysis",
+    "chunk_index": 29,
+    "char_start": 11641,
+    "char_end": 12112,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 84,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_30_f52a5e",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "for both.\nAdvisor | Tips are calculated in the front end. The AI analysis\nand loan priority functions exist in the back end but are\nnot connected to any endpoint. The advisor page\nestimates income instead of showing the real figure. | Return income from the API and\nexpose advice and priority\nendpoints.\nSetup | The API address is fixed to localhost, CORS allows\nonly local addresses, render.yaml points to a folder that\nis not in the repository, and one import uses different",
+    "chunk_index": 30,
+    "char_start": 12039,
+    "char_end": 12515,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 83,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_31_0d16c1",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "is not in the repository, and one import uses different\nletter case from the file name, which fails on Linux. | Move settings to environment\nvariables and correct paths and\nnames.\nSecurity | A default fallback secret key exists, the database file is\ncommitted, and the token sits in local storage. | Require a secret from the\nenvironment and keep the database\nout of Git.\nQuality | No automated tests, no edit or delete for loans, no way\nto change income later, pop-up alerts for messages,",
+    "chunk_index": 31,
+    "char_start": 12460,
+    "char_end": 12949,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 86,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_32_447b70",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "to change income later, pop-up alerts for messages,\nand an older Gemini model and library. | Add tests and the missing screens,\nand update the AI library.",
+    "chunk_index": 32,
+    "char_start": 12898,
+    "char_end": 13052,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 27,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_33_888c5b",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "--- Page 5 ---\nFINRELIEF AI Project Documentation\n10. Future Improvements\nNear term\n(cid:127) Fix the letter format and currency, and make settlement figures consistent across the app.\n(cid:127) Correct deployment settings and file naming so the app builds and runs on a hosted service.\n(cid:127) Write automated tests for the financial engine and the main endpoints.\n(cid:127) Add loan edit and delete, profile update, and inline messages in place of pop-ups.\nLater",
+    "chunk_index": 33,
+    "char_start": 13054,
+    "char_end": 13520,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 73,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_34_b939a2",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "Later\n(cid:127) Connect the AI financial analysis and loan priority ranking to the advisor page.\n(cid:127) Add charts for debt, EMI and repayment progress, and a repayment planner.\n(cid:127) Export letters as PDF and offer them in Telugu and Hindi.\n(cid:127) Move to PostgreSQL, add refresh tokens, and add reminders for EMI dates.\n11. Timeline\nThe plan starts from the current date and is tentative; academic commitments may move it.\nPeriod Focus Planned work",
+    "chunk_index": 34,
+    "char_start": 13515,
+    "char_end": 13975,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 74,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_35_4d2b04",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "Period Focus Planned work\nDec 2026 Clean-up Rupee formatting, clean letter output, shared settlement logic, correct file\nnames, environment-based settings, remove database file from Git.\nJan 2027 Testing and Pytest for engines and endpoints, loan edit and delete, profile update,\npolish inline messages.\nFeb - Mar 2027 AI advisor Expose advisor and priority endpoints, update the Gemini model and\nlibrary, show letter history.",
+    "chunk_index": 35,
+    "char_start": 13950,
+    "char_end": 14376,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 63,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_36_80c612",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "library, show letter history.\nApr - May 2027 Insights Charts, repayment planner, PDF export, Telugu and Hindi support.\nJun 2027 Scale PostgreSQL, hosted deployment, refresh tokens, EMI reminders.\nonward\n12. Conclusion\nFinRelief AI already covers the full journey from sign-up to a settlement estimate and a negotiation\nletter, with sensible fallbacks and a clear structure. What remains is mostly clean-up, consistency",
+    "chunk_index": 36,
+    "char_start": 14347,
+    "char_end": 14765,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 61,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_37_aea227",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "and testing, followed by the advisor and analytics features that will make the AI side of the project\nstronger.\nProject documentation | November 2026 | Amrutha Varshini Mannem Page 5 of 5\n\n[Table Page 5]:\nFINRELIEF AI Project Documentation",
+    "chunk_index": 37,
+    "char_start": 14766,
+    "char_end": 15005,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 39,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_38_24ff18",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "[Table Page 5]:\nFINRELIEF AI Project Documentation\n\n[Table Page 5]:\nPeriod | Focus | Planned work\nDec 2026 | Clean-up | Rupee formatting, clean letter output, shared settlement logic, correct file\nnames, environment-based settings, remove database file from Git.\nJan 2027 | Testing and\npolish | Pytest for engines and endpoints, loan edit and delete, profile update,\ninline messages.\nFeb - Mar 2027 | AI advisor | Expose advisor and priority endpoints, update the Gemini model and\nlibrary, show letter history.",
+    "chunk_index": 38,
+    "char_start": 14955,
+    "char_end": 15465,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 81,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_ef312dda_chk_39_e34e16",
+    "document_id": "doc_ef312dda",
+    "source_name": "FinRelief_AI_Project_Documentation.pdf",
+    "file_type": "pdf",
+    "content": "library, show letter history.\nApr - May 2027 | Insights | Charts, repayment planner, PDF export, Telugu and Hindi support.\nJun 2027\nonward | Scale | PostgreSQL, hosted deployment, refresh tokens, EMI reminders.",
+    "chunk_index": 39,
+    "char_start": 15436,
+    "char_end": 15646,
+    "metadata": {
+      "file_name": "doc_ef312dda_FinRelief_AI_Project_Documentation.pdf",
+      "file_type": "pdf",
+      "word_count": 33,
+      "page_count": 5,
+      "has_tables": true
+    }
+  }
+]

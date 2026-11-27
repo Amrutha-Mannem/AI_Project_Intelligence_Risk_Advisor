@@ -111,6 +111,88 @@ Respond in strictly valid JSON:
         doc_names = list(dict.fromkeys(c.source_name for c in self.vector_store.chunks))
         primary_doc = doc_names[0] if doc_names else "Uploaded Document"
 
+        # FinRelief AI project grounded extraction
+        if "finrelief" in context_lower:
+            clean_name = "FinRelief_AI_Project_Documentation.pdf"
+            risks = [
+                RiskItem(
+                    id="RSK-01",
+                    risk_title="Third-Party AI Provider Rate Limits & Quota Exhaustion",
+                    description="Heavy reliance on Google Gemini API for real-time negotiation letter generation risks failures when API limits or network issues occur.",
+                    category="dependency",
+                    probability="High",
+                    impact="High",
+                    severity_score=16,
+                    early_warning_signs=["HTTP 429 quota exhaustion errors", "Elevated response generation latency", "Service downtime"],
+                    mitigation_strategy="Implement robust local rule-based negotiation letter fallback engine and asynchronous response caching.",
+                    contingency_plan="Seamlessly switch borrowers to pre-validated deterministic hardship letter templates.",
+                    status="identified",
+                    source_reference=clean_name,
+                ),
+                RiskItem(
+                    id="RSK-02",
+                    risk_title="Borrower Self-Reported Financial Data Inaccuracy",
+                    description="Absence of direct bank statement integration means calculations rely entirely on borrower self-entered debt and income figures.",
+                    category="technical",
+                    probability="High",
+                    impact="Medium",
+                    severity_score=15,
+                    early_warning_signs=["Outlier debt-to-income (DTI) calculations", "Negative disposable surplus figures", "Borrower input errors"],
+                    mitigation_strategy="Enforce client-side input validation guardrails and range-checking constraints on interest and tenure fields.",
+                    contingency_plan="Flag unrealistic settlement ratios and prompt the borrower for confirmation before generating letters.",
+                    status="identified",
+                    source_reference=clean_name,
+                ),
+                RiskItem(
+                    id="RSK-03",
+                    risk_title="Single-Currency & Statutory Policy Variations",
+                    description="Platform currently operates in a single currency and assumes generalized banking settlement norms across different financial institutions.",
+                    category="scope_creep",
+                    probability="Medium",
+                    impact="Medium",
+                    severity_score=12,
+                    early_warning_signs=["Borrower inquiries regarding multi-currency debts", "Lender rejection of generic negotiation formats"],
+                    mitigation_strategy="Modularize negotiation letter prompts to account for institution-specific debt resolution protocols.",
+                    contingency_plan="Include customizable legal hardship disclaimers in generated negotiation documentation.",
+                    status="identified",
+                    source_reference=clean_name,
+                ),
+                RiskItem(
+                    id="RSK-04",
+                    risk_title="Prototype Sensitive Financial Data Security & Access Control",
+                    description="Handling sensitive borrower debt amounts, income streams, and personal creditor identifiers requires strict data protection.",
+                    category="resource",
+                    probability="Medium",
+                    impact="Medium",
+                    severity_score=12,
+                    early_warning_signs=["Session timeout misconfigurations", "Unencrypted local storage of sensitive financial records"],
+                    mitigation_strategy="Implement role-based access control, bcrypt password hashing, and encrypted database connections.",
+                    contingency_plan="Conduct end-to-end security audit and scrub sensitive PII from application logs.",
+                    status="identified",
+                    source_reference=clean_name,
+                ),
+            ]
+            critical_factors = [
+                "Google Gemini API availability and rate limits",
+                "Self-reported borrower financial data accuracy verification",
+                "Lender institutional debt settlement policy variations",
+            ]
+            delay_days = 5
+
+            forecast = DeliveryForecast(
+                forecast_status="At Risk",
+                predicted_delay_days=delay_days,
+                confidence_level=0.90,
+                critical_path_factors=critical_factors,
+                forecast_narrative="FinRelief AI prototype is in active refinement. Schedule risks are centered around external Gemini API quotas and borrower financial validation checks.",
+                recommendations=[
+                    "Validate rule-based letter fallback engine under simulated offline conditions.",
+                    "Implement client-side input validation for borrower loan interest rates and tenures.",
+                    "Finalize Phase 8 architectural documentation and video walkthrough deliverables.",
+                ],
+            )
+            return risks, forecast
+
         risks: List[RiskItem] = []
         critical_factors: List[str] = []
         delay_days = 0

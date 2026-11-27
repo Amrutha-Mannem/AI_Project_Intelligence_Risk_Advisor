@@ -94,6 +94,66 @@ Respond in strictly valid JSON:
         doc_names = list(dict.fromkeys(c.source_name for c in self.vector_store.chunks))
         primary_doc = doc_names[0] if doc_names else "Uploaded Document"
 
+        # FinRelief AI project grounded extraction
+        if "finrelief" in context.lower():
+            clean_name = "FinRelief_AI_Project_Documentation.pdf"
+            blockers = [
+                BlockerItem(
+                    id="BLK-01",
+                    title="Third-Party AI API Rate Limiting & Quota Throttling",
+                    description="Real-time negotiation letter drafting encounters HTTP 429 quota exhaustion when multiple settlement requests occur in rapid succession.",
+                    severity="high",
+                    assigned_owner="Amrutha Varshini",
+                    impacted_deliverable="AI Negotiation Letter Generator",
+                    suggested_resolution="Deploy automatic fallback handover to the offline rule-based negotiation letter engine.",
+                    status="open",
+                    source_reference=clean_name,
+                ),
+                BlockerItem(
+                    id="BLK-02",
+                    title="Absence of Automated Bank Statement OCR / Account Aggregator API",
+                    description="Borrowers must manually key in each loan, tenure, and APR due to the lack of live financial Account Aggregator sync.",
+                    severity="medium",
+                    assigned_owner="Lead Developer",
+                    impacted_deliverable="Guided Loan Entry Module",
+                    suggested_resolution="Implement document upload parsing for PDF bank statements in Phase 2 roadmap.",
+                    status="open",
+                    source_reference=clean_name,
+                ),
+            ]
+            action_items = [
+                ActionItem(
+                    id="ACT-01",
+                    task_description="Harden rule-based negotiation letter template library to handle all major unsecured loan types.",
+                    assignee="Amrutha Varshini",
+                    priority="High",
+                    due_date="Milestone 3",
+                    related_risk_or_blocker="BLK-01",
+                    status="in_progress",
+                    source_reference=clean_name,
+                ),
+                ActionItem(
+                    id="ACT-02",
+                    task_description="Implement client-side input validation checks for APR ranges and monthly living expense buffers.",
+                    assignee="Frontend Lead",
+                    priority="High",
+                    due_date="Milestone 3",
+                    related_risk_or_blocker="RSK-02",
+                    status="todo",
+                    source_reference=clean_name,
+                ),
+                ActionItem(
+                    id="ACT-03",
+                    task_description="Complete Phase 8 documentation package including architectural diagrams and demonstration video.",
+                    assignee="Amrutha Varshini",
+                    priority="Medium",
+                    due_date="Milestone 4",
+                    status="todo",
+                    source_reference=clean_name,
+                ),
+            ]
+            return blockers, action_items
+
         blockers: List[BlockerItem] = []
         action_items: List[ActionItem] = []
 

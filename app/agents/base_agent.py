@@ -19,27 +19,37 @@ class BaseAgent(ABC):
         self.retriever = retriever
         self.llm = llm
 
-    def get_relevant_context(self, queries: List[str], top_k: int = 4) -> str:
+    def get_relevant_context(self, queries: List[str], top_k: int = 6) -> str:
         """
         Retrieves grounded chunk excerpts across a set of topic queries.
+        Prioritizes user-uploaded documents over sample demo documents.
         """
+        import re
+        user_chunks = [c for c in self.vector_store.chunks if not c.document_id.startswith("sample_")]
+        has_user_docs = len(user_chunks) > 0
+
         seen_chunks = set()
         context_snippets = []
 
         for q in queries:
             results = self.retriever.retrieve(q, top_k=top_k)
             for chunk, score, citation in results:
+                # If user uploaded documents exist, ONLY include chunks from user uploaded documents!
+                if has_user_docs and chunk.document_id.startswith("sample_"):
+                    continue
                 if chunk.chunk_id not in seen_chunks:
                     seen_chunks.add(chunk.chunk_id)
+                    clean_source = re.sub(r"^doc_[a-f0-9]{8}_", "", chunk.source_name)
                     context_snippets.append(
-                        f"--- Source: {chunk.source_name} (Chunk #{chunk.chunk_index}) ---\n{chunk.content}"
+                        f"--- Source: {clean_source} (Chunk #{chunk.chunk_index}) ---\n{chunk.content}"
                     )
 
         if not context_snippets and self.vector_store.chunks:
-            # Fallback to first few chunks if queries yielded empty
-            for chunk in self.vector_store.chunks[:5]:
+            pool = user_chunks if has_user_docs else self.vector_store.chunks
+            for chunk in pool[:8]:
+                clean_source = re.sub(r"^doc_[a-f0-9]{8}_", "", chunk.source_name)
                 context_snippets.append(
-                    f"--- Source: {chunk.source_name} (Chunk #{chunk.chunk_index}) ---\n{chunk.content}"
+                    f"--- Source: {clean_source} (Chunk #{chunk.chunk_index}) ---\n{chunk.content}"
                 )
 
         return "\n\n".join(context_snippets)

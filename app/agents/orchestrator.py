@@ -1,4 +1,5 @@
-from typing import Dict, Any, Optional
+from datetime import datetime
+from typing import Dict, Any, Optional, List
 from app.rag.vector_store import VectorStore
 from app.rag.retriever import HybridRetriever
 from app.agents.llm_provider import LLMProvider
@@ -16,7 +17,7 @@ class ProjectIntelligenceOrchestrator:
     Multi-Agent Orchestrator.
     Coordinates sequential execution of the 4 specialized agents,
     manages inter-agent data passing, invokes the Health Scorer,
-    and caches the latest comprehensive project analysis state.
+    maintains persistent analysis history, and caches the latest state.
     """
 
     def __init__(self, vector_store: VectorStore, retriever: HybridRetriever, llm: LLMProvider):
@@ -31,8 +32,9 @@ class ProjectIntelligenceOrchestrator:
         self.doc_agent = DocumentationGeneratorAgent(vector_store, retriever, llm)
         self.health_scorer = HealthScorer()
 
-        # Cached state
+        # Cached state & History
         self.last_analysis: Optional[Dict[str, Any]] = None
+        self.analysis_history: List[Dict[str, Any]] = []
 
     def run_full_pipeline(self) -> Dict[str, Any]:
         """
@@ -86,7 +88,41 @@ class ProjectIntelligenceOrchestrator:
         }
 
         self.last_analysis = analysis_result
+
+        # Preserve execution history
+        history_entry = {
+            "id": f"run_{len(self.analysis_history) + 1}",
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "project_title": scope_report.project_title,
+            "overall_score": health_report.overall_score,
+            "health_grade": health_report.health_grade,
+            "total_risks": len(risks),
+            "total_blockers": len(blockers),
+            "data": analysis_result,
+        }
+        self.analysis_history.append(history_entry)
+
         return analysis_result
 
     def get_latest_analysis(self) -> Optional[Dict[str, Any]]:
         return self.last_analysis
+
+    def get_analysis_history(self) -> List[Dict[str, Any]]:
+        return [
+            {
+                "id": h["id"],
+                "timestamp": h["timestamp"],
+                "project_title": h["project_title"],
+                "overall_score": h["overall_score"],
+                "health_grade": h["health_grade"],
+                "total_risks": h["total_risks"],
+                "total_blockers": h["total_blockers"],
+            }
+            for h in self.analysis_history
+        ]
+
+    def get_history_item(self, run_id: str) -> Optional[Dict[str, Any]]:
+        for h in self.analysis_history:
+            if h["id"] == run_id:
+                return h["data"]
+        return None
