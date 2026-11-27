@@ -92,8 +92,16 @@ body {
 }
 .nav-item:hover { background: var(--surface2); color: var(--text); }
 .nav-item.active { background: rgba(0,102,204,.15); color: #4da6ff; border-left: 2px solid var(--primary); padding-left: 8px; }
-.nav-item .ni { width: 16px; text-align: center; flex-shrink: 0; opacity: .8; }
-.nav-item.active .ni { opacity: 1; }
+.nav-item .nav-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  opacity: .75;
+}
+.nav-item.active .nav-icon {
+  opacity: 1;
+  stroke: #4da6ff;
+}
 
 .sidebar-footer {
   margin-top: auto; padding: 12px 8px 0;

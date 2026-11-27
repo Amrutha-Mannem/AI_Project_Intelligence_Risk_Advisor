@@ -42,7 +42,7 @@ class Settings(BaseModel):
     openai_model: str = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 
     # Server settings
-    host: str = os.getenv("HOST", "127.0.0.1")
+    host: str = os.getenv("HOST", "0.0.0.0")
     port: int = int(os.getenv("PORT", "8000"))
 
 
