@@ -12,6 +12,7 @@ class SearchRequest(BaseModel):
 
 
 @router.post("/query")
+@router.post("/search")
 async def rag_query(req: SearchRequest):
     if len(vector_store.chunks) == 0:
         return {"results": [], "total": 0, "query": req.query}

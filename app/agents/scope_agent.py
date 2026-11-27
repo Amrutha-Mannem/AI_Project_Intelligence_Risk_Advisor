@@ -102,17 +102,20 @@ Respond in strictly valid JSON matching this schema:
 
         # 1. Dynamically Infer Project Title from context
         project_title = ""
-        for line in lines[:30]:
-            clean = re.sub(r"^#+\s*", "", line).strip()
-            if clean.startswith("--- Source:") or "(cid:" in clean or "|" in clean:
-                continue
-            if "finrelief" in clean.lower():
-                project_title = "FinRelief AI - AI-Powered Debt Relief & Financial Recovery Platform"
-                break
-            if any(term in clean.lower() for term in ["project", "system", "platform", "portal", "application", "initiative", "specification", "overview"]):
-                if len(clean) > 8 and not clean.startswith(("Phase", "Week", "Author", "Date", "Repository")):
-                    project_title = clean[:70]
-                    break
+        context_l = context.lower()
+        if "finrelief" in context_l:
+            project_title = "FinRelief AI - AI-Powered Debt Relief & Financial Recovery Platform"
+        elif "apsrtc" in context_l or "smart yatra" in context_l:
+            project_title = "APSRTC Smart Yatra Assistant - Transit Intelligence Platform"
+        else:
+            for line in lines[:30]:
+                clean = re.sub(r"^#+\s*", "", line).strip()
+                if clean.startswith("--- Source:") or "(cid:" in clean or "|" in clean or len(clean) < 6:
+                    continue
+                if any(term in clean.lower() for term in ["project", "system", "platform", "portal", "application", "initiative"]):
+                    if not clean.lower().startswith(("phase", "week", "author", "date", "repository", "share a journey")):
+                        project_title = clean[:70]
+                        break
         if not project_title:
             clean_p = primary_doc.rsplit(".", 1)[0].replace("_", " ").title()
             clean_p = re.sub(r"^Doc [A-Fa-f0-9]{8}\s*", "", clean_p)

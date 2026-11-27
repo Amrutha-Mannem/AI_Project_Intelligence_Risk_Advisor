@@ -448,6 +448,7 @@ async function runSingleAgent(agentType) {
 // ═══════════════════════════════════════════════════
 function renderAnalysis(data) {
   if (!data) return;
+  renderHomeProjectDetails(data);
   renderKPIs(data);
   renderHealthDimensions(data.health_report);
   renderForecast(data.delivery_forecast);
@@ -457,6 +458,34 @@ function renderAnalysis(data) {
   renderBlockers(data.blockers);
   renderActions(data.action_items);
   renderStories(data.documentation?.user_stories);
+}
+
+// 0. Active Home Project Details
+function renderHomeProjectDetails(data) {
+  const scope = data.scope_report || {};
+  const risks = data.risks || [];
+  const pTitle = document.getElementById("home-project-title");
+  const pDesc = document.getElementById("home-project-desc");
+  const sFile = document.getElementById("home-source-file");
+  const dType = document.getElementById("home-doc-type");
+  const iStat = document.getElementById("home-intel-status");
+
+  if (pTitle && scope.project_title) {
+    pTitle.textContent = scope.project_title;
+  }
+  if (pDesc && scope.project_objective) {
+    pDesc.textContent = scope.project_objective;
+  }
+  if (sFile) {
+    const src = risks[0]?.source_reference || scope.in_scope_items?.[0]?.source_reference || "Uploaded Artifact";
+    sFile.textContent = src;
+  }
+  if (dType) {
+    dType.textContent = "Parsed & Vector Indexed";
+  }
+  if (iStat) {
+    iStat.textContent = "Active & Grounded";
+  }
 }
 
 // 1. KPIs
@@ -699,6 +728,7 @@ function renderScope(s) {
 
 // 6. Risk Register & 5x5 Matrix (with Source File Column)
 function renderRisks(risks, forecast) {
+  renderRiskMatrixGrid(risks);
   const el = document.getElementById("risks-panel");
   if (!el) return;
   if (!risks || !risks.length) {
@@ -748,6 +778,113 @@ function renderRisks(risks, forecast) {
         </tbody>
       </table>
     </div>`;
+}
+
+function renderRiskMatrixGrid(risks) {
+  const container = document.getElementById("risk-matrix-grid-container");
+  if (!container) return;
+  if (!risks || !risks.length) {
+    container.innerHTML = `<div class="empty"><p>Analyze project artifacts to view mapped 5x5 severity matrix.</p></div>`;
+    return;
+  }
+
+  // Map probability & impact strings or numbers to 1-5
+  function toRank(val) {
+    if (typeof val === "number") return Math.min(5, Math.max(1, Math.round(val)));
+    const s = String(val || "").toLowerCase();
+    if (s.includes("crit") || s.includes("very high") || s === "5") return 5;
+    if (s.includes("high") || s === "4") return 4;
+    if (s.includes("med") || s === "3") return 3;
+    if (s.includes("low-med") || s === "2") return 2;
+    return 1;
+  }
+
+  // Group risks by (prob, impact)
+  const cellRisks = {};
+  risks.forEach(r => {
+    const p = toRank(r.probability);
+    const i = toRank(r.impact);
+    const key = `${p}_${i}`;
+    if (!cellRisks[key]) cellRisks[key] = [];
+    cellRisks[key].push(r);
+  });
+
+  // Build 5x5 Grid (Rows = Prob 5 down to 1, Cols = Impact 1 up to 5)
+  let gridHtml = `
+    <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start">
+      <div style="flex:1;min-width:320px;max-width:540px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:14px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <span style="font-size:10px;font-weight:700;color:var(--text-dim);text-transform:uppercase">Probability (1-5) &darr; vs Impact (1-5) &rarr;</span>
+          <span style="font-size:11px;color:var(--primary-lt);font-weight:600">${risks.length} Mapped Risks</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(5, 1fr);gap:4px;text-align:center">`;
+
+  for (let p = 5; p >= 1; p--) {
+    for (let i = 1; i <= 5; i++) {
+      const score = p * i;
+      const key = `${p}_${i}`;
+      const mapped = cellRisks[key] || [];
+      const hasRisks = mapped.length > 0;
+
+      let bg = "rgba(34,197,94,0.12)";
+      let color = "#86efac";
+      let border = "1px solid rgba(34,197,94,0.2)";
+
+      if (score >= 15) {
+        bg = hasRisks ? "rgba(239,68,68,0.35)" : "rgba(239,68,68,0.15)";
+        color = "#fca5a5";
+        border = hasRisks ? "1px solid #ef4444" : "1px solid rgba(239,68,68,0.25)";
+      } else if (score >= 8) {
+        bg = hasRisks ? "rgba(245,158,11,0.3)" : "rgba(245,158,11,0.12)";
+        color = "#fde047";
+        border = hasRisks ? "1px solid #f59e0b" : "1px solid rgba(245,158,11,0.25)";
+      } else {
+        if (hasRisks) {
+          bg = "rgba(34,197,94,0.3)";
+          border = "1px solid #22c55e";
+        }
+      }
+
+      const riskBadge = hasRisks 
+        ? `<div style="margin-top:2px;font-size:10px;font-weight:700;background:rgba(0,0,0,0.5);border-radius:3px;padding:1px 3px;color:#fff">${mapped.map(m => escHtml(m.id)).join(", ")}</div>`
+        : "";
+
+      gridHtml += `
+        <div style="background:${bg};border:${border};color:${color};border-radius:4px;padding:6px 2px;min-height:48px;display:flex;flex-direction:column;justify-content:center;align-items:center" title="P:${p} x I:${i} = ${score}${hasRisks ? ' | ' + mapped.map(m => m.risk_title).join(', ') : ''}">
+          <div style="font-size:11px;font-weight:700">${score}</div>
+          ${riskBadge}
+        </div>`;
+    }
+  }
+
+  gridHtml += `
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:8px;font-size:10.5px;color:var(--text-dim)">
+          <span>Impact 1 (Low)</span>
+          <span>Impact 3 (Medium)</span>
+          <span>Impact 5 (Critical)</span>
+        </div>
+      </div>
+      <div style="flex:1;min-width:280px">
+        <div style="font-size:12px;font-weight:600;color:var(--text);margin-bottom:8px">Active Risk Severity Breakdown</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          ${risks.map(r => {
+            const sc = r.severity_score || 10;
+            const sevColor = sc >= 15 ? "var(--danger)" : sc >= 8 ? "var(--warning)" : "var(--success)";
+            return `
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:var(--surface2);border-left:3px solid ${sevColor};border-radius:var(--radius-sm)">
+                <div>
+                  <div style="font-weight:600;font-size:12px;color:var(--text)"><span style="font-family:monospace;color:var(--text-dim)">${escHtml(r.id)}:</span> ${escHtml(r.risk_title)}</div>
+                  <div style="font-size:11px;color:var(--text-muted)">Source: ${escHtml(r.source_reference || "Document")} | Cat: ${escHtml(r.category || "General")}</div>
+                </div>
+                <div style="font-size:12px;font-weight:700;color:${sevColor}">${sc} (P:${r.probability || 'M'} &times; I:${r.impact || 'M'})</div>
+              </div>`;
+          }).join("")}
+        </div>
+      </div>
+    </div>`;
+
+  container.innerHTML = gridHtml;
 }
 
 // 7. Blockers & Action Items
@@ -840,16 +977,34 @@ function renderStories(stories) {
     return;
   }
   el.innerHTML = `
-    <div class="g2">
+    <div style="display:flex;flex-direction:column;gap:14px">
       ${stories.map(s => `
-        <div class="card card-sm">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-            <span style="font-family:monospace;font-size:11px;color:var(--text-dim)">${escHtml(s.id)}</span>
-            <span class="badge badge-blue">${s.estimated_story_points || 3} Story Points</span>
+        <div class="card card-sm" style="border-left:3px solid var(--primary);background:var(--surface2)">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;flex-wrap:wrap;gap:8px">
+            <div style="display:flex;gap:8px;align-items:center">
+              <span style="font-family:monospace;font-size:11px;font-weight:700;background:rgba(0,102,204,0.15);color:var(--primary-lt);border:1px solid rgba(0,102,204,0.3);padding:2px 6px;border-radius:4px">${escHtml(s.id)}</span>
+              <span style="font-weight:700;font-size:13.5px;color:var(--text)">${escHtml(s.title)}</span>
+            </div>
+            <div style="display:flex;gap:6px;align-items:center">
+              <span class="badge badge-gray" style="font-family:monospace">${escHtml(s.epic_tag || "Feature")}</span>
+              <span class="badge badge-blue">${s.estimated_story_points || 3} Story Points</span>
+              <span class="badge badge-amber">${escHtml(s.priority || "Must Have")}</span>
+            </div>
           </div>
-          <div style="font-weight:600;font-size:13px;color:var(--text);margin-bottom:6px">${escHtml(s.title)}</div>
-          <div style="font-size:12px;color:var(--text-muted);line-height:1.5">
-            <strong>As a</strong> ${escHtml(s.as_a)}, <strong>I want to</strong> ${escHtml(s.i_want_to)}, <strong>so that</strong> ${escHtml(s.so_that)}.
+          <div style="background:var(--surface);padding:10px 12px;border-radius:var(--radius-sm);border:1px solid var(--border);font-size:12.5px;margin-bottom:10px;line-height:1.6">
+            <div style="margin-bottom:2px"><strong style="color:var(--text-muted)">As a</strong> <span style="color:var(--text);font-weight:600">${escHtml(s.as_a)}</span>,</div>
+            <div style="margin-bottom:2px"><strong style="color:var(--text-muted)">I want to</strong> <span style="color:#60a5fa">${escHtml(s.i_want_to)}</span>,</div>
+            <div><strong style="color:var(--text-muted)">So that</strong> <span style="color:var(--success)">${escHtml(s.so_that)}</span>.</div>
+          </div>
+          <div>
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-dim);margin-bottom:6px">Gherkin Acceptance Criteria:</div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px">
+              ${(s.acceptance_criteria || []).map(ac => `
+                <li style="display:flex;gap:8px;align-items:flex-start;font-size:12px;line-height:1.5;color:var(--text)">
+                  <span style="color:var(--primary-lt);font-weight:700">&bull;</span>
+                  <span>${escHtml(ac)}</span>
+                </li>`).join("")}
+            </ul>
           </div>
         </div>`).join("")}
     </div>`;

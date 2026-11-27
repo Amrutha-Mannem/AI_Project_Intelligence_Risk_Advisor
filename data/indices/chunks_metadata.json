@@ -678,5 +678,566 @@
       "page_count": 5,
       "has_tables": true
     }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_0_291a7b",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "--- Page 1 ---\nAPSRTC SMART YATRA ASSISTANT Version A | Extended Feature Set\nVERSION A | EXTENDED FEATURE SET\nAPSRTC Smart Yatra Assistant\nAn accessibility-first transit companion for bus commuters in Andhra Pradesh\nProject APSRTC Smart Yatra Assistant (web application)\nAuthor Amrutha Varshini Mannem, B.Tech AI & ML, St. Ann's College of Engineering and\nTechnology\nRepository github.com/Amrutha-Mannem/APSRTC-Smart-Yatra-Assistant\nDocument date 26 November 2026",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 463,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 63,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_1_2cf302",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "Document date 26 November 2026\nProject stage Working prototype with a broad feature set; refinement in progress\nRecognition 1st prize at a college-level hackathon\n1. Overview\nThe APSRTC Smart Yatra Assistant brings schedules, a live bus map, passenger safety tools, an AI\nhelper and full voice control into one web application. It is designed first for accessibility: six languages,\na high-contrast mode, three text sizes and hands-free voice navigation for visually impaired commuters.",
+    "chunk_index": 1,
+    "char_start": 433,
+    "char_end": 919,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 73,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_2_183baa",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "The prototype already covers the main journey, from finding a stop and tracking a bus to recovering\nfrom a missed bus and reaching help in an emergency. It is not yet a finished product; the map, the AI\nagent and offline use need further work, as described in this document.\n2. Problem Statement\nBus travel remains the main mode of public transport for a very large number of people in Andhra\nPradesh, yet everyday commuters still face avoidable difficulties: little reliable information about where a",
+    "chunk_index": 2,
+    "char_start": 920,
+    "char_end": 1421,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 85,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_3_93915e",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "bus is, language barriers in apps, limited support for visually impaired passengers, no easy way to\nshare a journey with family for safety, and no guidance when a bus is missed. The project explores how\none lightweight app can address several of these gaps together.\n3. Objectives\n(cid:127) Make bus travel information easier to reach for all passengers, including those with low vision.\n(cid:127) Offer the interface in English, Telugu, Hindi, Tamil, Kannada and Malayalam.",
+    "chunk_index": 3,
+    "char_start": 1422,
+    "char_end": 1896,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 75,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_4_cdc202",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "(cid:127) Give commuters a simple safety net through an arrival check-in that escalates to an SOS message.\n(cid:127) Help passengers recover quickly when a bus is missed, with alternative transport and budget advice.\n(cid:127) Provide a clear path to official helplines and a formal grievance letter.\nProject documentation | November 2026 | Amrutha Varshini Mannem Page 1 of 5\n\n[Table Page 1]:\nAPSRTC SMART YATRA ASSISTANT Version A | Extended Feature Set",
+    "chunk_index": 4,
+    "char_start": 1897,
+    "char_end": 2352,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 72,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_5_3ae63a",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "[Table Page 1]:\nAPSRTC SMART YATRA ASSISTANT Version A | Extended Feature Set\n\n[Table Page 1]:\nProject | APSRTC Smart Yatra Assistant (web application)\nAuthor | Amrutha Varshini Mannem, B.Tech AI & ML, St. Ann's College of Engineering and\nTechnology\nRepository | github.com/Amrutha-Mannem/APSRTC-Smart-Yatra-Assistant\nDocument date | 26 November 2026\nProject stage | Working prototype with a broad feature set; refinement in progress\nRecognition | 1st prize at a college-level hackathon",
+    "chunk_index": 5,
+    "char_start": 2275,
+    "char_end": 2761,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 70,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_6_48d231",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "--- Page 2 ---\nAPSRTC SMART YATRA ASSISTANT Version A | Extended Feature Set\n4. Features Built So Far\nThe features below are present in the current build. Items that still behave imperfectly are listed in\nSection 8.\n4.1 Inclusive design and languages\n(cid:127) APSRTC-inspired emerald green and gold theme with a clear, consistent layout.\n(cid:127) Language switcher with six languages shown in native script.\n(cid:127) One-click high-contrast mode and three text sizes (A-, A, A+) across all screens.",
+    "chunk_index": 6,
+    "char_start": 2763,
+    "char_end": 3264,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 79,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_7_e4b26b",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "4.2 Live bus map and station data\n(cid:127) Simulated fleet of six or more buses moving along AP highways.\n(cid:127) Telemetry panel with speed, heading, seat occupancy and estimated time to the next stop.\n(cid:127) More than 24 major bus stations, including Vijayawada PNBS, Visakhapatnam, Tirupati, Guntur and\nKurnool, with platform and amenity details.\n(cid:127) Nearest-stop finder using device location with a walking-time estimate, and shortcuts to six regional\ncity hubs.",
+    "chunk_index": 7,
+    "char_start": 3265,
+    "char_end": 3743,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 71,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_8_eae7c5",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "city hubs.\n4.3 Emergency safety check-in\n(cid:127) Commuter arms a trip with an emergency contact and expected arrival time.\n(cid:127) On arrival time the app asks for confirmation; if there is no reply within the grace period it starts the\nemergency flow.\n(cid:127) SOS message carries location, a map link, the bus service number and the itinerary, sent through\nWhatsApp or SMS links.\n4.4 AI commuter assistant",
+    "chunk_index": 8,
+    "char_start": 3733,
+    "char_end": 4145,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 67,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_9_9625da",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "WhatsApp or SMS links.\n4.4 AI commuter assistant\n(cid:127) Gemini-based assistant with a built-in fallback so that basic answers remain available.\n(cid:127) Missed-bus recovery: estimates remaining distance and suggests bike taxi, cab, auto or train options\nwith the next bus times.\n(cid:127) Budget interview explaining student, senior citizen and Divyangjan concessions.\n(cid:127) Reminders and a simple expense tracker for transit spending.\n4.5 Voice assistance",
+    "chunk_index": 9,
+    "char_start": 4097,
+    "char_end": 4561,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 64,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_10_fe72af",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "4.5 Voice assistance\n(cid:127) Speech recognition and speech output for hands-free use.\n(cid:127) Read-screen command that narrates the open page, route options or alerts.\n(cid:127) Spoken commands to open the planner, map, assistant or emergency screen, change language and\nstop speaking.\n4.6 Grievance and helplines\n(cid:127) Directory of customer care, grievance email, women safety and depot contacts.\n(cid:127) Formal complaint letter generator with timestamp and reference number.",
+    "chunk_index": 10,
+    "char_start": 4541,
+    "char_end": 5027,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 67,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_11_eebb6d",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "(cid:127) Formal complaint letter generator with timestamp and reference number.\n4.7 Operations demo page\n(cid:127) Demo hub showing system health, a fleet controller (speed, congestion, breakdown), a five-second\nsafety test and a depot board.\nProject documentation | November 2026 | Amrutha Varshini Mannem Page 2 of 5\n\n[Table Page 2]:\nAPSRTC SMART YATRA ASSISTANT Version A | Extended Feature Set",
+    "chunk_index": 11,
+    "char_start": 4947,
+    "char_end": 5345,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 60,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_12_542d82",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "[Table Page 2]:\nAPSRTC SMART YATRA ASSISTANT Version A | Extended Feature Set\n\n--- Page 3 ---\nAPSRTC SMART YATRA ASSISTANT Version A | Extended Feature Set\n5. Technical Architecture\nThe application follows a conventional client and API split. The React front end handles the interface,\nlanguage, accessibility and speech, while a FastAPI service provides the assistant and safety\nendpoints.\nLayer Technology Role in the project\nFront end React 18, TypeScript, Vite, Single-page interface, theming, six-language switcher,\nTailwind CSS responsive layout",
+    "chunk_index": 12,
+    "char_start": 5268,
+    "char_end": 5819,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 81,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_13_827903",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "Tailwind CSS responsive layout\nMaps Leaflet, React-Leaflet Bus stations, bus markers, nearest-stop view, city hub\nshortcuts\nState Zustand with LocalStorage Keeps language, contrast and font settings between visits\npersistence\nBack end Python 3.12, FastAPI, Pydantic v2 REST endpoints for assistant, safety trip and helpline data\nReliability SlowAPI, Structlog, Pytest Rate limiting, structured logs, automated tests (13 passing)",
+    "chunk_index": 13,
+    "char_start": 5789,
+    "char_end": 6217,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 57,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_14_653fbd",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "AI Google Gemini API with a Commuter questions, missed-bus advice, budget guidance\nrule-based fallback\nVoice Web Speech API Speech recognition for commands and speech synthesis for\nnarration\n6. Application Flow\n(cid:127) The commuter opens the app, picks a language and, if needed, high contrast or voice control.\n(cid:127) The map shows stations and buses; the nearest-stop tool or a city hub shortcut narrows the view.",
+    "chunk_index": 14,
+    "char_start": 6218,
+    "char_end": 6638,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 65,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_15_82a47a",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "(cid:127) The assistant answers route, fare and concession questions and advises when a bus is missed.\n(cid:127) For safety, the commuter arms a trip; the check-in either closes safely or sends the SOS package.\n(cid:127) For complaints, the letter generator prepares a formal message ready to send.\n7. Quality and Testing\n(cid:127) The back end has 13 automated Pytest tests, all passing at the time of writing.\n(cid:127) Rate limiting and structured logging are in place on the API.",
+    "chunk_index": 15,
+    "char_start": 6639,
+    "char_end": 7122,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 79,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_16_c4509c",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "(cid:127) Rate limiting and structured logging are in place on the API.\n(cid:127) The safety check-in has a five-second demo mode so the full flow can be shown quickly.\n(cid:127) Front-end and end-to-end tests have not been written yet and are part of the roadmap.\nProject documentation | November 2026 | Amrutha Varshini Mannem Page 3 of 5\n\n[Table Page 3]:\nAPSRTC SMART YATRA ASSISTANT Version A | Extended Feature Set",
+    "chunk_index": 16,
+    "char_start": 7051,
+    "char_end": 7470,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 71,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_17_8eb52e",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "[Table Page 3]:\nAPSRTC SMART YATRA ASSISTANT Version A | Extended Feature Set\n\n[Table Page 3]:\nLayer | Technology | Role in the project\nFront end | React 18, TypeScript, Vite,\nTailwind CSS | Single-page interface, theming, six-language switcher,\nresponsive layout\nMaps | Leaflet, React-Leaflet | Bus stations, bus markers, nearest-stop view, city hub\nshortcuts\nState | Zustand with LocalStorage\npersistence | Keeps language, contrast and font settings between visits\nBack end | Python 3.12, FastAPI, Pydantic v2 | REST endpoints for assistant, safety trip and helpline data",
+    "chunk_index": 17,
+    "char_start": 7393,
+    "char_end": 7966,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 88,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_18_5c068c",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "Reliability | SlowAPI, Structlog, Pytest | Rate limiting, structured logs, automated tests (13 passing)\nAI | Google Gemini API with a\nrule-based fallback | Commuter questions, missed-bus advice, budget guidance\nVoice | Web Speech API | Speech recognition for commands and speech synthesis for\nnarration",
+    "chunk_index": 18,
+    "char_start": 7967,
+    "char_end": 8269,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 45,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_19_0a9368",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "--- Page 4 ---\nAPSRTC SMART YATRA ASSISTANT Version A | Extended Feature Set\n8. Current Status and Known Limitations\nThe project is still in development. The areas below are the ones that need the most work and are being\ntreated as priorities rather than hidden. Documenting them clearly keeps the roadmap honest.\nArea What is going wrong Planned fix\nMaps Bus positions are simulated, not real. Fix marker and route logic, test on mobile, then",
+    "chunk_index": 19,
+    "char_start": 8271,
+    "char_end": 8714,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 76,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_20_e3c10c",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "Marker placement, route lines and connect real vehicle tracking data when access is\nmap recentering are sometimes available.\ninaccurate or inconsistent, and map\nbehaviour on small screens needs\npolishing.\nAI agent The assistant does not always Add better prompts, structured responses, error\nrespond reliably. Answers can be handling and a clear conversation state; test with real\ninconsistent, the switch to the fallback scenarios.\nis not always smooth, and some\nmulti-step flows (missed bus, budget",
+    "chunk_index": 20,
+    "char_start": 8715,
+    "char_end": 9215,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 74,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_21_72d69c",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "is not always smooth, and some\nmulti-step flows (missed bus, budget\ninterview) stop partway.\nOffline mode The app needs a connection for most Build a Progressive Web App with cached stations,\nfunctions. Offline use is planned but schedules and helplines.\nnot built, which matters on low-signal\nrural and ghat routes.\nSafety alerts SOS depends on the commuter's Add a server-side SMS gateway.\nphone and links; there is no\nserver-side sending if the phone is off.",
+    "chunk_index": 21,
+    "char_start": 9148,
+    "char_end": 9609,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 75,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_22_a2d5f3",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "phone and links; there is no\nserver-side sending if the phone is off.\nTesting Only the back end is covered by tests. Add front-end and integration tests.\n9. Near-Term Improvements\n(cid:127) Repair the map issues first, since the map is the heart of the app.\n(cid:127) Make the AI agent dependable: clean prompts, validated outputs, retries and a predictable fallback.\n(cid:127) Create an offline-first version with a service worker and a local copy of stations and helplines.",
+    "chunk_index": 22,
+    "char_start": 9540,
+    "char_end": 10015,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 77,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_23_1bc0a7",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "(cid:127) Add loading, error and empty states throughout the interface.\n(cid:127) Check Telugu and Hindi narration quality and widen the list of voice commands.\n(cid:127) Write front-end tests and set up a simple deployment pipeline.\nProject documentation | November 2026 | Amrutha Varshini Mannem Page 4 of 5\n\n[Table Page 4]:\nAPSRTC SMART YATRA ASSISTANT Version A | Extended Feature Set",
+    "chunk_index": 23,
+    "char_start": 10016,
+    "char_end": 10404,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 61,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_24_38baa1",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "[Table Page 4]:\nAPSRTC SMART YATRA ASSISTANT Version A | Extended Feature Set\n\n[Table Page 4]:\nArea | What is going wrong | Planned fix\nMaps | Bus positions are simulated, not real.\nMarker placement, route lines and\nmap recentering are sometimes\ninaccurate or inconsistent, and map\nbehaviour on small screens needs\npolishing. | Fix marker and route logic, test on mobile, then\nconnect real vehicle tracking data when access is\navailable.\nAI agent | The assistant does not always\nrespond reliably. Answers can be\ninconsistent, the switch to the fallback\nis not always smooth, and some",
+    "chunk_index": 24,
+    "char_start": 10327,
+    "char_end": 10910,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 97,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_25_5f0474",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "inconsistent, the switch to the fallback\nis not always smooth, and some\nmulti-step flows (missed bus, budget\ninterview) stop partway. | Add better prompts, structured responses, error\nhandling and a clear conversation state; test with real\nscenarios.\nOffline mode | The app needs a connection for most\nfunctions. Offline use is planned but\nnot built, which matters on low-signal\nrural and ghat routes. | Build a Progressive Web App with cached stations,\nschedules and helplines.",
+    "chunk_index": 25,
+    "char_start": 10839,
+    "char_end": 11317,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 75,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_26_c15dc9",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "schedules and helplines.\nSafety alerts | SOS depends on the commuter's\nphone and links; there is no\nserver-side sending if the phone is off. | Add a server-side SMS gateway.\nTesting | Only the back end is covered by tests. | Add front-end and integration tests.",
+    "chunk_index": 26,
+    "char_start": 11293,
+    "char_end": 11554,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 46,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_27_914235",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "--- Page 5 ---\nAPSRTC SMART YATRA ASSISTANT Version A | Extended Feature Set\n10. Roadmap and Timeline\nThe schedule below runs from the current date and is tentative. Dates may move depending on\nacademic commitments and on whether official data access can be arranged.\nPeriod Focus Planned work\nDec 2026 - Stabilise Fix map markers, routes and mobile layout. Make the AI agent consistent\nJan 2027 and improve fallback handling. Add error states.",
+    "chunk_index": 27,
+    "char_start": 11556,
+    "char_end": 12000,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 74,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_28_62a6fb",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "Jan 2027 and improve fallback handling. Add error states.\nFeb - Mar Offline PWA Service worker, cached stations, schedules and helplines, offline banner\n2027 and sync on reconnect.\nMar - Apr Safety and data Server-side SMS gateway for SOS. Explore official vehicle tracking\n2027 (VTS) access or an approved data source.\nMay - Jul Payments and crowd UPI ticketing prototype and passenger reports on crowding and seat\n2027 data availability.",
+    "chunk_index": 28,
+    "char_start": 11943,
+    "char_end": 12382,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 70,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_29_86d902",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "2027 data availability.\nAug - Dec Voice and wayfinding Telugu dialect speech tuning and beacon-assisted station wayfinding as\n2027 a research pilot.\n11. Expected Outcome\nBy mid-2027 the aim is a dependable, installable app that works on weak networks, shows accurate\nmaps, answers commuter questions consistently and can alert a trusted contact without relying on the\ncommuter's phone. The later phases depend on official data access and are treated as stretch goals.\n12. Conclusion",
+    "chunk_index": 29,
+    "char_start": 12359,
+    "char_end": 12841,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 74,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_30_d3abd5",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "12. Conclusion\nThe project already demonstrates a broad and accessible idea for AP commuters. Its honest status is a\nstrong prototype with clear weaknesses in maps, AI behaviour and offline use. Fixing those three areas\nis the first priority, and the roadmap is ordered to do exactly that before adding new features.\nProject documentation | November 2026 | Amrutha Varshini Mannem Page 5 of 5\n\n[Table Page 5]:\nAPSRTC SMART YATRA ASSISTANT Version A | Extended Feature Set",
+    "chunk_index": 30,
+    "char_start": 12827,
+    "char_end": 13298,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 78,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_31_c3a303",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "[Table Page 5]:\nAPSRTC SMART YATRA ASSISTANT Version A | Extended Feature Set\n\n[Table Page 5]:\nPeriod | Focus | Planned work\nDec 2026 -\nJan 2027 | Stabilise | Fix map markers, routes and mobile layout. Make the AI agent consistent\nand improve fallback handling. Add error states.\nFeb - Mar\n2027 | Offline PWA | Service worker, cached stations, schedules and helplines, offline banner\nand sync on reconnect.\nMar - Apr\n2027 | Safety and data | Server-side SMS gateway for SOS. Explore official vehicle tracking\n(VTS) access or an approved data source.\nMay - Jul\n2027 | Payments and crowd",
+    "chunk_index": 31,
+    "char_start": 13221,
+    "char_end": 13806,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 103,
+      "page_count": 5,
+      "has_tables": true
+    }
+  },
+  {
+    "chunk_id": "doc_6486dcc3_chk_32_4c6e3b",
+    "document_id": "doc_6486dcc3",
+    "source_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+    "file_type": "pdf",
+    "content": "(VTS) access or an approved data source.\nMay - Jul\n2027 | Payments and crowd\ndata | UPI ticketing prototype and passenger reports on crowding and seat\navailability.\nAug - Dec\n2027 | Voice and wayfinding | Telugu dialect speech tuning and beacon-assisted station wayfinding as\na research pilot.",
+    "chunk_index": 32,
+    "char_start": 13730,
+    "char_end": 14023,
+    "metadata": {
+      "file_name": "APSRTC_Smart_Yatra_Documentation_A_Extended.pdf",
+      "file_type": "pdf",
+      "word_count": 49,
+      "page_count": 5,
+      "has_tables": true
+    }
   }
 ]

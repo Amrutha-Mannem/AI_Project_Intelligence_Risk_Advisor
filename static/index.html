@@ -102,6 +102,35 @@
         </div>
       </div>
 
+      <!-- Active Initiative & Document Details Banner -->
+      <div class="card" style="margin-bottom:18px;border-left:4px solid var(--primary);background:linear-gradient(90deg, rgba(0,102,204,0.08) 0%, var(--surface) 100%)">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px">
+          <div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;color:var(--primary-lt);text-transform:uppercase;margin-bottom:4px">Active Project Initiative</div>
+            <div id="home-project-title" style="font-size:16px;font-weight:700;color:var(--text);margin-bottom:6px">FinRelief AI - AI-Powered Debt Relief & Financial Recovery Platform</div>
+            <div id="home-project-desc" style="font-size:12.5px;color:var(--text-muted);max-width:850px;line-height:1.6">
+              AI-assisted debt settlement, structured loan consolidation, hardship letter generation, and financial recovery advisory platform.
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:center;padding:8px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius)">
+            <div>
+              <div style="font-size:10.5px;color:var(--text-dim);text-transform:uppercase;font-weight:600">Source Document</div>
+              <div id="home-source-file" style="font-size:12px;font-weight:600;color:#60a5fa">FinRelief_AI_Project_Documentation.pdf</div>
+            </div>
+            <div style="width:1px;height:24px;background:var(--border)"></div>
+            <div>
+              <div style="font-size:10.5px;color:var(--text-dim);text-transform:uppercase;font-weight:600">Document Type</div>
+              <div id="home-doc-type" style="font-size:12px;font-weight:600;color:var(--text)">PDF Specification (40 chunks)</div>
+            </div>
+            <div style="width:1px;height:24px;background:var(--border)"></div>
+            <div>
+              <div style="font-size:10.5px;color:var(--text-dim);text-transform:uppercase;font-weight:600">Intelligence Status</div>
+              <div id="home-intel-status" style="font-size:12px;font-weight:600;color:var(--success)">Active & Synced</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- KPI Summary Cards -->
       <div class="g4" style="margin-bottom:18px">
         <div class="stat blue">
@@ -196,7 +225,7 @@
     <!-- ───────────── 3. RAG SEMANTIC SEARCH ───────────── -->
     <div id="page-rag" class="page">
       <div class="page-hdr">
-        <div class="page-title">RAG Semantic Search</div>
+        <div class="page-title">RAG Vector Retrieval Explorer</div>
         <div class="page-sub">Hybrid dense vector and BM25 keyword retrieval across all indexed project artifacts</div>
       </div>
       <div class="card">
@@ -260,9 +289,15 @@
       </div>
 
       <div class="card">
-        <div class="card-label">Generated Agile User Stories</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <div>
+            <div class="card-label" style="margin-bottom:2px">Synthesized Agile User Stories</div>
+            <div style="font-size:12px;color:var(--text-muted)">Canonical user stories with Gherkin acceptance criteria ready for Jira / GitHub export.</div>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="runSingleAgent('documentation')">Generate User Stories</button>
+        </div>
         <div id="stories-panel">
-          <div class="empty"><p>Run analysis to generate user stories.</p></div>
+          <div class="empty"><p>Run analysis or click Generate User Stories to synthesize user stories.</p></div>
         </div>
       </div>
     </div>
@@ -275,6 +310,17 @@
           <div class="page-sub">Quantitative 5x5 severity matrix mapping with source document traceability</div>
         </div>
         <button class="btn btn-primary btn-sm" onclick="runPipeline()">Re-Evaluate Risks</button>
+      </div>
+
+      <!-- Quantitative Risk Severity Matrix (5x5 Grid) -->
+      <div class="card" style="margin-bottom:18px">
+        <div class="card-label">Quantitative Risk Severity Matrix (Probability vs Impact)</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-bottom:14px">
+          Color-coded probability x impact severity rubric with active project risks mapped.
+        </div>
+        <div id="risk-matrix-grid-container">
+          <div class="empty"><p>Analyze project artifacts to view mapped 5x5 severity matrix.</p></div>
+        </div>
       </div>
 
       <!-- Risk Matrix Explanation Box -->
@@ -311,7 +357,7 @@
 
       <!-- Risk Matrix Table -->
       <div class="card">
-        <div class="card-label">Identified Project Risk Register</div>
+        <div class="card-label">Formal Project Risk Register</div>
         <div id="risks-panel">
           <div class="empty"><p>No risks analyzed yet. Run analysis to populate the risk register.</p></div>
         </div>
